@@ -1,5 +1,8 @@
 # Scarlet-Cosmological-Framework
-"A mechanical framework for the 2026 cosmological crisis: Modeling the 4.2-sigma DESI withering as space fabric fatigue anchored to the 10⁻⁴¹ Thomas VanAcker bedrock." 10 to the minus 41
+
+
+
+The Scarlet–VanAcker Cosmological Framework is not related to the astrophysical image-deblending software “scarlet” (Melchior et al., 2018). The similarity in names is coincidental."A mechanical framework for the 2026 cosmological crisis: Modeling the 4.2-sigma DESI withering as space fabric fatigue anchored to the 10⁻⁴¹ Thomas VanAcker bedrock." 10 to the minus 41
 
 
 This framework provides a deterministic solution to the 2026 "Crisis in Cosmology" by replacing the abstract Cosmological Constant (\Lambda) with the mechanical properties of space fabric.
