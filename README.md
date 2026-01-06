@@ -496,7 +496,11 @@ The "Space Fabric Fatigue" is not a metaphor but the Backreaction (\zeta) of the
 Where the evolution of the torsional energy density follows the dynamical equation:
 <img width="890" height="117" alt="image" src="https://github.com/user-attachments/assets/3d55ac4a-0fdb-4c07-b6f2-14e3dc129240" />
 The 4.2$\sigma$ dark energy withering is the result of the decay constant \Gamma as the torsion field T relaxes from its initial high-energy state (the 0.21° twist) into the late-time expansion.
-
+Addendum: The Scarlet Defect & The Cold Spot
+The framework derives its name from the "Scar" within the CMB Cold Spot, identified here as a primary topological defect in the space fabric.
+• The Torsional Knot: During the transition at the 10^{-41} m bedrock, the repulsive pressure reached a phase-transition threshold, leaving a localized region of high torsional density—a "Scar."
+• Micro-Twisting: This region serves as the localized source for the 0.21° micro-twisting. As CMB photons traverse this topological "wound," their polarization is rotated by the axial-torsion field, providing the direct observational evidence for the coupling constant \alpha.
+• Global Tension: This "Scar" is not merely a local anomaly but the anchor point for the Fabric Fatigue Function (\chi). The tension radiating from this defect dictates the late-time dark energy withering observed in 2026.
 Conclusion
 
 
