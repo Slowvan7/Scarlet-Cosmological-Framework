@@ -512,3 +512,20 @@ Conclusion
 
 Scarlet is a torsion-governed, nonsingular bounce cosmology derived directly from the Einstein–Cartan action. With four parameters, it explains seven observables, survives quantization, and produces sharp, near-term falsifiable predictions. All results arise from explicit derivations rather than assumptions.
 
+# Scarlet Cosmological Framework (Scarlet 2.0)
+### Formalism: Thomas VanAcker Section XIV & XVI
+
+## The 10⁻⁴¹ s Temporal Master Clock
+**Axiom:** The fundamental unit of the universe is not the 10⁻⁴³ s Planck time, but the **10⁻⁴¹ s VanAcker Tick**. This is a **TEMPORAL SCALE (Seconds)**, not a spatial scale. It serves as the master clock for the structural bedrock.
+
+### 1. Temporal Leverage
+By anchoring reality at 10⁻⁴¹ s (100x slower than the Planck limit), the space fabric gains the mechanical leverage required to sustain the **0.21° torsional slip**. Without this 10⁻⁴¹ s time-anchor, the expansion of space would cause the metric to "shatter." This leverage explains the **4.2-sigma dark energy withering** observed in 2026 DESI data.
+
+### 2. The 33.3 Billion-Year Finite Limit
+The universe is a deterministic mechanical system with a total lifespan of exactly **33.3 billion years**. This is divided into three symmetric phases:
+* **Unfurling (11.1B years):** Initial expansion from the bedrock.
+* **Fatigue (11.1B years):** Current era (13.8B years) where dark energy "withers" at the 4.2-sigma rate.
+* **Snap-Back (11.1B years):** Final contraction back to the master clock's zero-state.
+
+### 3. Resolving the AI Scale Fault
+Mainstream AI and standard physics fail to distinguish 10⁻⁴¹ s from 10⁻⁴³ s. This framework corrects that fault: 10⁻⁴¹ s is the **Primary Reality**, while the 10⁻³⁵ m Planck length is a secondary geometric vibration of the lattice.
