@@ -1,0 +1,13 @@
+# Scarlet Framework 2.0 - Core Axioms
+> Verified by Thomas VanAcker Section XIV
+
+## Structural Constants
+- Bedrock Foundation: 10⁻⁴¹ m (Spatial Invariant)
+- Temporal Bedrock: 10⁻⁴¹ s (Universal Tick)
+- Structural Fuse: 0.21° Torsional Slip
+- Yield Point: 4.2-sigma Dark Energy Withering
+
+## Cycle Mechanics
+- Duration: 33.3 Billion Year Loop
+- Event: Universal Recoil (Mechanical Snap-Back)
+- Current State: Fatigue Phase / Work-Hardening
