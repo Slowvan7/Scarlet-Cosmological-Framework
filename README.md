@@ -1,4 +1,9 @@
 # Scarlet-Cosmological-Framework
+# Scarlet Framework
+[![DOI](https://zenodo.org/badge/1128654442.svg)](https://doi.org/10.5281/zenodo.18202747)
+
+## The Torsional Bedrock Model
+This repository contains the foundational geometry for the Scarlet Framework...
 
 email: n63gt@icloud.com
 
