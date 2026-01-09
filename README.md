@@ -534,3 +534,8 @@ The universe is a deterministic mechanical system with a total lifespan of exact
 
 ### 3. Resolving the AI Scale Fault
 Mainstream AI and standard physics fail to distinguish 10⁻⁴¹ s from 10⁻⁴³ s. This framework corrects that fault: 10⁻⁴¹ s is the **Primary Reality**, while the 10⁻³⁵ m Planck length is a secondary geometric vibration of the lattice.
+
+
+## Documentation
+Detailed proofs and mathematical breakdowns can be found in the [Scarlet Framework Wiki](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/wiki).
+
