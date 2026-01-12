@@ -7,6 +7,18 @@ This repository contains the foundational Scarlet core and the TCT expansion.
 * **[Torsional Periodic Table](./formalism/TCT_Formalism.md#vii-the-torsional-periodic-table-correspondence):** How elements correspond to space fabric stability.
 * **[Simulations](./simulations/):** Mathematical proofs of $\phi$-convergence (Coming Soon).
 
+## 🧪 The TCT Periodic Table Reference
+The Scarlet-VanAcker formalism interprets the Periodic Table not just as a list of protons, but as a map of **mechanical stability peaks** within the space fabric.
+
+| TCT Family | Representative Elements | Mechanical State | Geometric Logic |
+| :--- | :--- | :--- | :--- |
+| **Primordials** | H, He | Bare Torsion | Foundational "twists" in the fabric; minimal nesting. |
+| **Chiral-Bio** | C, N, O | Optimal $\phi$-flex | Geometric versatility allowing for complex recursive bonding. |
+| **Resonants** | Fe, Ni | Harmonic $\phi$-lock | Perfect resonance with background torsional frequencies. |
+| **Structural** | Ag, Au | High-Z Shielding | Multi-loop shielding against external torsional shear. |
+| **Yield-Edge** | Pb, Bi | Terminal Elasticity | The limit of stable $\phi$-nesting before structural failure. |
+| **Transients** | U, Pu | Topological Shedding | Mechanical failure; the fabric "unravels" (Radioactive Decay). |
+
 # Scarlet-Cosmological-Framework
 # Scarlet Framework
 [![DOI](https://zenodo.org/badge/1128654442.svg)](https://doi.org/10.5281/zenodo.18202747)
