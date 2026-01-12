@@ -1,3 +1,12 @@
+# 🌌 Scarlet-VanAcker Project
+
+This repository contains the foundational Scarlet core and the TCT expansion.
+
+## 📂 Project Navigation
+* **[The Formalism](./formalism/TCT_Formalism.md):** The complete "Theoretical Framework" including the 4 Postulates of TCT and the 0.21° Global Bias.
+* **[Torsional Periodic Table](./formalism/TCT_Formalism.md#vii-the-torsional-periodic-table-correspondence):** How elements correspond to space fabric stability.
+* **[Simulations](./simulations/):** Mathematical proofs of $\phi$-convergence (Coming Soon).
+
 # Scarlet-Cosmological-Framework
 # Scarlet Framework
 [![DOI](https://zenodo.org/badge/1128654442.svg)](https://doi.org/10.5281/zenodo.18202747)
