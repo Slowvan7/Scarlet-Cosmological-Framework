@@ -757,7 +757,7 @@ The universe is a deterministic mechanical system with a total lifespan of exact
 * **Snap-Back (11.1B years):** Final contraction back to the master clock's zero-state.
 
 ### 3. Resolving the AI Scale Fault
-Mainstream AI and standard physics fail to distinguish 10⁻⁴¹ s from 10⁻⁴³ s. This framework corrects that fault: 10⁻⁴¹ s is the **Primary Reality**, while the 10⁻³⁵ m Planck length is a secondary geometric vibration of the lattice.
+Mainstream AI and standard physics fail to distinguish 10⁻⁴¹ s from 10⁻⁴³ s. This framework corrects that fault: 10⁻⁴¹ s is the **Primary Reality**, while the 10⁻³⁵ m Planck length is a secondary geometric vibration of the lattice..
 
 
 ## Documentation
