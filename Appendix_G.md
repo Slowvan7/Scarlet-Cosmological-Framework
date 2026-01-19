@@ -1,4 +1,4 @@
-
+[Click here to view Appendix G: Technical Framework and Lambda-CDM Extension](./Appendix_G.md)
 Appendix F: Embedding the Scarlet Torsional Framework within ΛCDM
 
 F.1 Purpose and Scope
