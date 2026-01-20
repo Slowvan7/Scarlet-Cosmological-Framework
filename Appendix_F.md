@@ -1,184 +1,155 @@
-[Click here to view Appendix G: Technical Framework and Lambda-CDM Extension](./Appendix_G.md)
-Appendix F: Embedding the Scarlet Torsional Framework within ΛCDM
+
+Appendix F: Embedding the SCARLET Torsional Framework within ΛCDM
+
+
+
+⸻
 
 F.1 Purpose and Scope
 
-This appendix demonstrates that the Scarlet torsional framework can be incorporated as a consistent extension of ΛCDM, rather than a competing cosmological model. The key result is that Scarlet modifies perturbation dynamics and late-time structure growth, while leaving the ΛCDM background expansion intact.
+This appendix demonstrates that the SCARLET torsional framework can be incorporated as a consistent extension of ΛCDM, rather than as a competing cosmological model. The central result is that SCARLET modifies perturbation dynamics and late-time structure growth while leaving the ΛCDM background expansion exactly intact.
 
 ⸻
 
 F.2 ΛCDM Background Dynamics (Unmodified)
 
-ΛCDM assumes a homogeneous and isotropic Friedmann–Lemaître–Robertson–Walker (FLRW) spacetime with scale factor a(t). The background evolution is governed by:
+ΛCDM assumes a homogeneous and isotropic Friedmann–Lemaître–Robertson–Walker (FLRW) spacetime with scale factor a(t). The background evolution is governed by
 
-H^2 = \left( \frac{\dot a}{a} \right)^2
-= \frac{8\pi G}{3}\rho + \frac{\Lambda}{3}
+H^2 \equiv \left( \frac{\dot a}{a} \right)^2
+= \frac{8\pi G}{3}\rho + \frac{\Lambda}{3},
 
-\dot H = -4\pi G(\rho + p)
+\dot H = -4\pi G (\rho + p).
 
-Scarlet Assumption:
-The torsional bedrock does not modify these background equations.
-All torsional effects enter only at the perturbative and mesoscopic levels.
+SCARLET assumption.
+The torsional sector does not modify these background field equations. All torsional effects enter only at the perturbative and mesoscopic levels.
 
-This ensures:
-	•	Preservation of CMB peak positions
-	•	Preservation of BAO scale
-	•	Preservation of early-universe ΛCDM successes
+This construction ensures:
+	•	preservation of CMB acoustic peak positions,
+	•	preservation of the BAO scale,
+	•	retention of early-universe ΛCDM successes.
 
 ⸻
 
 F.3 Standard ΛCDM Growth of Matter Perturbations
 
-For sub-horizon scalar perturbations, ΛCDM predicts the evolution of the density contrast \delta = \delta\rho/\rho:
+For sub-horizon scalar perturbations, ΛCDM predicts the evolution of the matter density contrast \delta \equiv \delta\rho/\rho according to
 
-\ddot{\delta} + 2H\dot{\delta} - 4\pi G\rho\,\delta = 0
+\ddot{\delta} + 2H\dot{\delta}
+- 4\pi G \rho \, \delta = 0.
 
 This equation assumes:
-	•	Pressureless matter
-	•	No intrinsic spacetime dissipation
-	•	No geometric memory or torsion
+	•	pressureless matter,
+	•	absence of intrinsic spacetime dissipation,
+	•	no geometric memory or torsion.
 
 ⸻
 
-F.4 Scarlet Modification: Geometric Torsional Damping
+F.4 SCARLET Modification: Effective Torsional Damping
 
-Scarlet introduces a torsional fatigue field \zeta, representing a mechanical resistance of spacetime to coherent deformation.
+SCARLET introduces an effective torsional fatigue field \zeta, representing a geometric resistance of spacetime to coherent deformation.
 
-The growth equation becomes:
+The growth equation is modified to
 
-\ddot{\delta} + \left(2H + \Gamma_\zeta\right)\dot{\delta}
-- 4\pi G_{\text{eff}}\rho\,\delta = 0
+\ddot{\delta}
++ \left( 2H + \Gamma_\zeta \right)\dot{\delta}
+- 4\pi G_{\mathrm{eff}} \rho \, \delta = 0,
 
-where the torsional damping rate is defined as:
+where the torsional damping rate is defined as
 
-\Gamma_\zeta \equiv \alpha\,\zeta\,H
-	•	\zeta: dimensionless torsional fatigue parameter
-	•	\alpha: coupling constant fixing late-time strength
-	•	G_{\text{eff}} \to G in the weak-torsion limit
+\Gamma_\zeta \equiv \alpha \, \zeta \, H.
 
-Key property:
-\lim_{\zeta \to 0} \Gamma_\zeta = 0 \quad \Rightarrow \quad \text{ΛCDM recovered exactly}
+Here:
+	•	\zeta is a dimensionless torsional fatigue parameter,
+	•	\alpha is a coupling constant setting the late-time strength,
+	•	G_{\mathrm{eff}} \to G in the weak-torsion limit.
+
+Key property
+\lim_{\zeta \to 0} \Gamma_\zeta = 0
+\quad \Rightarrow \quad
+\text{ΛCDM recovered exactly.}
 
 ⸻
 
-F.5 Resolution of the S_8 Tension
+F.5 Implications for the S_8 Tension
 
-The observable parameter:
+The observable parameter
 
 S_8 \equiv \sigma_8 \sqrt{\Omega_m / 0.3}
 
 is sensitive to the integrated growth history of \delta.
-	•	ΛCDM predicts excess growth at late times
-	•	Scarlet suppresses growth through \Gamma_\zeta
-	•	No change to early-time normalization is required
+	•	ΛCDM predicts comparatively strong late-time growth,
+	•	SCARLET suppresses growth through the damping term \Gamma_\zeta,
+	•	no modification of early-time normalization is required.
 
-This yields a natural suppression:
+At late times, the growth may be approximated as
 
-\delta(a) \sim a^{\,1 - \epsilon(\zeta)}
+\delta(a) \sim a^{\,1 - \epsilon(\zeta)},
+\qquad
+\epsilon(\zeta) \sim \mathcal{O}(0.05\text{–}0.1),
 
-with:
-\epsilon(\zeta) \sim \mathcal{O}(0.05\text{–}0.1)
-
-matching KiDS-1000 and DESI low-redshift observations.
+yielding a level of suppression consistent with that inferred from low-redshift weak-lensing surveys such as KiDS-1000 and DESI.
 
 ⸻
 
 F.6 Relation to General Relativity with Torsion
 
-Scarlet is mathematically compatible with Einstein–Cartan theory, where torsion T^\lambda_{\;\mu\nu} supplements curvature.
+SCARLET is mathematically compatible with Einstein–Cartan theory, in which spacetime torsion T^\lambda_{\;\mu\nu} supplements curvature.
 
-The effective action may be written schematically as:
+A schematic effective action may be written as
 
 S = \int d^4x \sqrt{-g}
 \left[
-\frac{1}{16\pi G}R
-+ \zeta\,\mathcal{T}^2
+\frac{1}{16\pi G} R
++ \zeta \, \mathcal{T}^2
 + \mathcal{L}_m
-\right]
+\right],
 
 where:
-	•	R: Ricci scalar (standard GR)
-	•	\mathcal{T}^2: quadratic torsion invariant
-	•	\zeta: torsional stiffness
+	•	R is the Ricci scalar,
+	•	\mathcal{T}^2 is a quadratic torsion invariant,
+	•	\zeta controls torsional stiffness.
 
-In the cosmological limit:
-\mathcal{T}^2 \to 0 \quad \Rightarrow \quad \text{GR recovered}
+In the cosmological background limit,
+
+\mathcal{T}^2 \to 0
+\quad \Rightarrow \quad
+\text{standard GR is recovered}.
 
 ⸻
 
 F.7 Post-Newtonian Consistency
 
-Scarlet predicts small corrections to the PPN parameter \gamma:
+SCARLET predicts small corrections to the parametrized post-Newtonian parameter \gamma,
 
-\gamma = 1 - \epsilon_\zeta
-\quad\text{with}\quad
-\epsilon_\zeta \ll 10^{-5}
+\gamma = 1 - \epsilon_\zeta,
+\qquad
+\epsilon_\zeta \ll 10^{-5},
 
-This satisfies:
-	•	Solar system bounds
-	•	Binary pulsar constraints
-	•	Gravitational lensing limits
+satisfying constraints from:
+	•	solar-system tests,
+	•	binary pulsar timing,
+	•	gravitational lensing observations.
 
 ⸻
 
 F.8 Interpretation
-	•	ΛCDM governs what expands
-	•	Scarlet governs how structure resists collapse
-	•	ΛCDM provides kinematics
-	•	Scarlet provides mechanics
+	•	ΛCDM governs what expands,
+	•	SCARLET governs how structure resists collapse,
+	•	ΛCDM provides kinematics,
+	•	SCARLET provides effective mechanics.
 
-Scarlet functions as a viscoelastic completion of ΛCDM, introducing spacetime memory without altering early-universe physics.
-F.9 Summary
+SCARLET thus functions as a viscoelastic completion of ΛCDM, introducing spacetime memory while preserving early-universe physics.
 
+⸻
 
-Aspect
+F.9 Synthesis and Implications
 
-Î›CDM
+The analysis in Appendix F has treated SCARLET strictly as a constrained extension of the ΛCDM framework, preserving its empirical successes while introducing additional structure at sub-background order. By construction, SCARLET leaves the homogeneous expansion history unchanged and remains consistent with primary early-universe observables, including CMB and BAO measurements at leading order.
 
-Î›CDM + Scarlet
+Within this restricted regime, SCARLET introduces effective torsion-like contributions that do not propagate as independent degrees of freedom and that vanish smoothly in the general-relativistic limit. These contributions become relevant only in specific dynamical or environmental contexts, allowing departures from ΛCDM to remain suppressed where observational bounds are strongest, while offering mechanisms to address known late-time phenomenological tensions.
 
-Background expansion
+In particular, the framework permits a controlled suppression of late-time structure growth, potentially alleviating aspects of the S_8 discrepancy without modifying early-time physics. The same structural features also provide a basis for mesoscopic coherence effects that lie outside the explanatory scope of vanilla ΛCDM.
 
-âœ”
+These results should be interpreted as qualitative and conditional, not as definitive resolutions. The role of SCARLET at this stage is not to replace ΛCDM, but to demonstrate that a minimal, internally consistent extension can address multiple outstanding issues simultaneously while respecting existing observational constraints.
 
-âœ” (unchanged)
-
-CMB / BAO
-
-âœ”
-
-âœ”
-
-S_8 tension
-
-âœ–
-
-âœ”
-
-ISM coherence
-
-âœ–
-
-âœ”
-
-Torsion
-
-âœ–
-
-âœ”
-
-GR limit
-
-âœ”
-
-âœ”
-
-
-
-Conclusion (Appendix F)
-
-
-
-
-
-Scarlet is mathematically consistent with ΛCDM as a late-time, torsional extension. It preserves ΛCDM’s empirical successes while resolving known structural tensions through a physically motivated geometric damping mechanism.
+This synthesis motivates the concluding discussion, where the broader implications, limitations, and testable predictions of the ΛCDM + SCARLET framework are assessed.
