@@ -1,3 +1,7 @@
+## Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
+
+Full framework documentation: [SCARLET_2_0.md](SCARLET_2_0.md)
+
 * [Scarlet 2.0 — Full Framework](SCARLET_2_0.md)
 
 The Scarlet–VanAcker Cosmological Framework (Scarlet 2.0)
