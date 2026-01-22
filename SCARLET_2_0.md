@@ -1,5 +1,14 @@
 ## Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 
+
+Scarlet 2.0 presents the full torsional bedrock framework for late-time structure damping.
+Readers unfamiliar with the design principles, stability constraints, or the Fabric Fatigue formalism may find it helpful to first consult Appendix H￼ for a guided overview.
+This will provide context on how the bedrock scale, torsional damping, and ζ(t) integrate consistently with GR and observational constraints.
+
+
+
+
+
 Full framework documentation: [SCARLET_2_0.md](SCARLET_2_0.md)
 
 * [Scarlet 2.0 — Full Framework](SCARLET_2_0.md)
