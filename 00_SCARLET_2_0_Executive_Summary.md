@@ -1,3 +1,8 @@
+# Scarlet–VanAcker Cosmological Framework
+
+For a concise overview of Scarlet 2.0, see the [Executive Summary](00_SCARLET_2_0_Executive_Summary.md).  
+
+
 # Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 **Formalism:** Thomas VanAcker  
 **Date:** January 2026
