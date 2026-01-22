@@ -1,10 +1,7 @@
 ## Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 
 
-Scarlet 2.0 presents the full torsional bedrock framework for late-time structure damping.
-Readers unfamiliar with the design principles, stability constraints, or the Fabric Fatigue formalism may find it helpful to first consult Appendix H￼ for a guided overview.
-This will provide context on how the bedrock scale, torsional damping, and ζ(t) integrate consistently with GR and observational constraints.
-
+Scarlet 2.0 is built on the VanAcker Bedrock, a foundational spacetime scale t_\mathrm{Bedrock} = 10^{-41}\,\mathrm{s}, which governs the emergence of torsional effects in the late-time universe. The bedrock’s key observable signature is a global torsional twist of \beta_\mathrm{Bedrock} = 0.21^\circ, which simultaneously aligns the Higgs mass, late-time expansion (Hubble tension), and cosmic birefringence. Readers unfamiliar with the framework’s design principles, stability constraints, or the Fabric Fatigue formalism may find it helpful to consult Appendix H￼ for a guided overview before proceeding.
 
 
 
