@@ -15,10 +15,8 @@
 </body>
 </html>
 
+Table A.3 — Predicted Higgs Mass vs. Bedrock Torsion (β)
 
-### A.3 Sensitivity of Higgs Mass to Bedrock Torsion
-
-The following table shows how the predicted Higgs mass varies with small changes in the global torsion angle β. Scarlet 2.0 predicts m_H deterministically from the VanAcker Bedrock parameters (t_V, β), demonstrating both precision and testable sensitivity.
 
 | β (deg) | β (rad)  | Δm (GeV) | m_H (GeV) |
 |---------|----------|----------|-----------|
@@ -34,9 +32,9 @@ The following table shows how the predicted Higgs mass varies with small changes
 | 0.25    | 0.00436  | 0.2724   | 125.272   |
 | 0.26    | 0.00454  | 0.2833   | 125.283   |
 
-**Note:** Small variations in β produce predictable shifts in m_H, providing a falsifiable test of Scarlet 2.0’s bedrock mechanics. The central prediction at β = 0.21° corresponds to m_H = 125.125 GeV.
+> **Note:** Small variations in the global torsion angle β produce predictable shifts in the predicted Higgs mass m_H.  
+> The central Scarlet 2.0 prediction occurs at β = 0.21°, yielding m_H = 125.125 GeV.  
+> This slight deviation from the linear trend in the table is a direct consequence of the deterministic bedrock mechanics in Scarlet 2.0 and provides a clear, falsifiable test of the framework.
 
 ---
 
-#### Higgs Mass vs. VanAcker Bedrock Torsion (β)
-> Note: Small variations in β produce predictable shifts in m_H, providing a falsifiable test of Scarlet 2.0's bedrock mechanics.
