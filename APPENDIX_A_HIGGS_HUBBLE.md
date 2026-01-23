@@ -1,3 +1,4 @@
+This appendix is designed to be cited independently of the full Scarlet–VanAcker framework.
 
 Appendix A: Experimental Alignments & Benchmarks
 Framework: Scarlet–VanAcker (v2.0)
