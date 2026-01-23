@@ -31,3 +31,4 @@ The following table shows how the predicted Higgs mass varies with small changes
 | 0.24     | 0.00419 | 0.2615    | 125.262    |
 | 0.25     | 0.00436 | 0.2724    | 125.272    |
 | 0.26     | 0.00454 | 0.2833    | 125.283    |
+> Note: Small variations in β produce predictable shifts in m_H, providing a falsifiable test of Scarlet 2.0's bedrock mechanics.
