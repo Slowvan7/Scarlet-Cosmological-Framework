@@ -20,7 +20,7 @@ A Mechanical Resolution to the 2026 “Crisis in Cosmology”
 
 
 
-Formalism: Thomas VanAcker
+Formalism: Thomas VanAcker email n63gt@icloud.com
 
 Date: January 2026
 
