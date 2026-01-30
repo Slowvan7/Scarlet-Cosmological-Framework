@@ -1,7 +1,8 @@
-## Scarlet-VanAcker Framework: Global Research Record
+# Scarlet-VanAcker Cosmological Framework (Scarlet 2.0)
 
-### Citation
-VanAcker, T. (2026). **Scarlet-VanAcker Cosmological Framework (Scarlet 2.0)**. Zenodo. [https://doi.org/10.5281/zenodo.18403402](https://doi.org/10.5281/zenodo.18403402)
+### Citation & Official Record
+VanAcker, T. (2026). **Scarlet-VanAcker Cosmological Framework (Scarlet 2.0)**. Zenodo. 
+**DOI:** [10.5281/zenodo.18403402](https://doi.org/10.5281/zenodo.18403402)
 
 ---
 
@@ -23,4 +24,15 @@ VanAcker, T. (2026). **Scarlet-VanAcker Cosmological Framework (Scarlet 2.0)**. 
 
 **Note on β = 0.21°:** The shift to **125.125 GeV** marks the **Torsional Yield Point** of the space fabric bedrock. This is a deliberate, non-linear deviation from the standard scaling observed in the rest of Table A.3. Any empirical observation of this specific Higgs mass dip at 0.21° torsion serves as a direct validation of the Scarlet-VanAcker framework and the priority claim established under **Zenodo Record 18403402**.
 
-> **Deterministic Bedrock Mechanics:** Small variations in the global torsion angle β produce predictable shifts in the predicted Higgs mass m_H. The central Scarlet 2.0 prediction occurs at β = 0.21°, yielding m_H = 125.125 GeV. This deviation is a falsifiable test of the framework's core axioms regarding space fabric integrity.
+---
+
+### Extended Technical Description
+
+#### 1. The Torsional Yield Mechanism
+The Scarlet-VanAcker framework treats the vacuum as a **space fabric** with measurable elastic properties. In the linear phase (β < 0.21°), the Higgs mass scales predictably with torsional stress. At the **critical angle of 0.21°**, the bedrock reaches maximum stress-energy capacity, causing a "slip" that relaxes local energy density to **125.125 GeV**.
+
+#### 2. The 8.3% Drag Constant
+These values incorporate a **global drag constant of 8.3%**, representing the interaction between gauge bosons and the underlying torsional matrix. 
+
+#### 3. Falsifiability
+The existence of the **125.125 GeV dip** at precisely 0.21° torsion is a unique signature. Detection of this "torsional shadow" in LHC Run 3 data or institutional reports from the University of Athens constitutes formal verification of this framework.
