@@ -1,8 +1,6 @@
-
-
 ### K.1 Growth of Cosmic Structure
 
-Scarlet 2.0 modifies late-time structure formation through a torsional damping term acting on the growth of linear matter perturbations. This effect is negligible in the early universe (Appendix I) but becomes dynamically relevant once the spacetime fabric exits its linear elastic regime.
+Scarlet 2.0 modifies late-time structure formation through a torsional damping term acting on the growth of linear matter perturbations. This effect is negligible in the early universe (Appendix I) but becomes dynamically relevant once the space fabric exits its linear elastic regime.
 
 #### Modified Growth Equation
 
