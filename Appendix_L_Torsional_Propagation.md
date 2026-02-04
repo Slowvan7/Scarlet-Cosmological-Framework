@@ -130,6 +130,11 @@ The total theoretical divergence is approximately 12.45%.
 
 Any framework that uses the suppression value of \alpha = 0.083 to resolve the structural withering must, by the laws of torsional elasticity, accept the corresponding 4.15% correction to the luminosity-distance redshift. Thus, the “Hubble Tension” is revealed as the energetic cost of light propagating through a fatigued space fabric.
 ### L.8 2:1 Unification Ratio (The α–γ Identity)
+L.9 Regime of Validity and Achromatic Damping
+
+The torsional damping mechanism introduced in Appendix L is achromatic (frequency-independent) but not amplitude-blind: dissipation depends on the local torsional stress of the fabric rather than photon frequency. This preserves spectral shape while allowing cumulative energy loss proportional to wave intensity, ensuring consistency with quasar spectra and blackbody radiation.
+
+Appendix L treats spacetime as a continuous torsional medium in the macroscopic limit (λ ≫ ℓ_b), while Appendix I defines the discrete bedrock structure that sets the ultraviolet cutoff (λ ≲ ℓ_b). The torsional wave equation is therefore an effective-field description valid above the anchoring scale.
 
 Scarlet 2.0 predicts a fixed ratio between cosmic structure suppression and expansion divergence:
 
