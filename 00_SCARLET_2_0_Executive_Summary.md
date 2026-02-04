@@ -33,7 +33,7 @@ These constants govern:
 ## 3. Observational Predictions
 | Observable | Value |
 |------------|-------|
-| Higgs Mass (m_H) | 125.15 GeV |
+| Higgs Mass (m_H) | 125.125 GeV |
 | Scalar Spectral Tilt (n_s) | 0.965 |
 | Tensor-to-Scalar Ratio (r) | 0.003 |
 | Cosmic Birefringence (β) | 0.21° |
