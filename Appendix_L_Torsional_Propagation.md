@@ -129,3 +129,18 @@ The total theoretical divergence is approximately 12.45%.
 5. Conclusion
 
 Any framework that uses the suppression value of \alpha = 0.083 to resolve the structural withering must, by the laws of torsional elasticity, accept the corresponding 4.15% correction to the luminosity-distance redshift. Thus, the “Hubble Tension” is revealed as the energetic cost of light propagating through a fatigued space fabric.
+### L.8 2:1 Unification Ratio (The α–γ Identity)
+
+Scarlet 2.0 predicts a fixed ratio between cosmic structure suppression and expansion divergence:
+
+- **Structural withering (S8 tension):** ~8.3%
+- **Expansion correction (H0 tension):** ~4.15%
+
+This 2:1 ratio arises directly from the torsional damping mechanism, via the identity:
+
+\[
+\gamma = \alpha \cdot H_0
+\]
+
+It constitutes the framework’s unique predictive signature:  
+confirmation of this proportion in DESI, Euclid, or other surveys would provide strong empirical support for the Scarlet model.
