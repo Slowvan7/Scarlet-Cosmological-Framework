@@ -1,5 +1,5 @@
 
-Appendix O: Global Null-Geodesic Twisting and the Cosmic Dipole
+Appendix O: Global Null-Geodesic Twisting and the Cosmic Dipole 
 
 
 
