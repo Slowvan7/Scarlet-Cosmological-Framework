@@ -427,3 +427,7 @@ No preferred torsional axis exists.
 Dipole asymmetry is fully explained kinematically.
 Polarization fails to align with the Cold Spot axis.
 Birefringence is strictly zero at all redshifts.
+
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5d3a4ff7-5309-4fd7-a37d-649c3baf36ef" />
+
