@@ -1,3 +1,5 @@
+
+
 Appendix P
 
 
@@ -6,7 +8,7 @@ Appendix P
 
 
 
-Observable Consequences and Simulation Compatibility of Torsional Transport Loss
+Observable Consequences, Simulation Compatibility, and Microscopic–Macroscopic Consistency of Torsional Transport Loss
 
 
 
@@ -14,11 +16,11 @@ Observable Consequences and Simulation Compatibility of Torsional Transport Loss
 
 Purpose.
 
-This appendix translates the Scarlet Updated Lagrangian (UL) formulation into (i) observable cosmological signatures and (ii) numerical schemes that can directly implement transport loss without violating microscopic unitarity.
+This appendix translates the Scarlet Updated Lagrangian (UL) formulation into (i) observable cosmological signatures, (ii) numerical schemes suitable for direct implementation, and (iii) a consistency condition linking microscopic yield phenomena to macroscopic structure growth.
 
 
 
-Scarlet does not modify the Einstein field equations or gauge symmetries. It introduces an effective macroscopic transport-loss mechanism arising from accumulated torsional fatigue in the spacetime substrate.
+Scarlet does not modify Einstein field equations or gauge symmetries. It introduces an effective macroscopic transport-loss mechanism arising from accumulated torsional fatigue in the spacetime substrate.
 
 
 
@@ -33,7 +35,7 @@ P.1 Modified Growth Law
 
 
 
-From the Updated Lagrangian with Rayleigh dissipation, the effective linear growth equation becomes:
+From the Updated Lagrangian with Rayleigh dissipation, the linear growth equation becomes:
 
 
 
@@ -47,7 +49,7 @@ where
 
 H is the Hubble parameter,
 
-\rho is the background matter density,
+\rho is the background density,
 
 \eta(t) is the torsional transport-loss coefficient.
 
@@ -69,7 +71,7 @@ S_8^{\text{late}} = (1 - \alpha) S_8^{\Lambda\mathrm{CDM}}, \quad \alpha \approx
 
 
 
-This suppression emerges dynamically and is not imposed as a boundary condition.
+This suppression emerges dynamically from transport loss rather than altered forces.
 
 
 
@@ -90,7 +92,7 @@ Scarlet predicts:
 
 No deviation at recombination.
 No deviation for z > 2.
-Suppression activates at late times only.
+Suppression activates only at late times.
 
 
 
@@ -105,14 +107,14 @@ This distinguishes Scarlet from:
 
 
 
-early dark energy,
 modified gravity,
+early dark energy,
 massive neutrinos,
 
 
 
 
-all of which affect earlier epochs.
+which affect earlier epochs.
 
 
 
@@ -127,13 +129,13 @@ P.3 Compatible Simulation Classes
 
 
 
-Scarlet requires no modification of force laws or metric solvers. Only transport equations acquire a dissipative term.
+Scarlet modifies transport equations only. No metric or force law changes are required.
 
 
 
 
 
-(i) N-body Simulations (Particle-Based)
+(i) N-body Simulations
 
 
 
@@ -141,7 +143,7 @@ Scarlet requires no modification of force laws or metric solvers. Only transport
 
 Velocity update:
 
-\vec{v}_{n+1} = \vec{v}_n + \Delta t \left( \vec{a}_n - \eta \vec{v}_n \right)
+\vec{v}_{n+1} = \vec{v}_n + \Delta t(\vec{a}_n - \eta \vec{v}_n)
 
 
 
@@ -173,13 +175,12 @@ Density evolution:
 
 
 
-Implementable as:
+Implemented as:
 
 
 
 source term in Eulerian solvers,
-dissipation term in relativistic hydrodynamics,
-late-time correction only.
+dissipation term in relativistic hydrodynamics.
 
 
 
@@ -205,14 +206,14 @@ No change to:
 
 
 
+recombination physics,
 photon–baryon coupling,
-metric perturbations,
-recombination physics.
+metric perturbations.
 
 
 
 
-Activation occurs only for t \ge t_y.
+Activation occurs only after t_y.
 
 
 
@@ -233,11 +234,11 @@ Given the micro-tick:
 
 
 
-Scarlet naturally supports:
+Scarlet supports:
 
 
 
-cellular spacetime schemes,
+cellular spacetime models,
 symplectic integrators,
 causal lattice updates,
 
@@ -257,7 +258,8 @@ due to accumulated fatigue.
 
 
 
-P.4 Distinction from Modified Gravity 
+P.4 Distinction from Modified Gravity
+
 
 Feature
 
@@ -291,15 +293,12 @@ transport loss
 
 Early universe
 
-modified
+affected
 
 untouched
 
-Scarlet predicts:
+Scarlet predicts loss of clustering efficiency, not altered attraction.
 
-
-
-loss of clustering efficiency, not altered attraction.
 
 
 
@@ -341,7 +340,7 @@ P.6 Yield Epoch and Growth Bifurcation
 
 
 
-We define the Yield Epoch as:
+Define the Yield Epoch:
 
 t_y \equiv 11.1\,\mathrm{Gyr} \quad \Longleftrightarrow \quad z_y \approx 0.3
 
@@ -363,9 +362,9 @@ This epoch coincides with the observed late-time bifurcation between early-unive
 
 
 
-Thus, the Scarlet Yield Epoch provides a physical interpretation of the growth bifurcation:
+Thus, the Scarlet Yield Epoch provides a physical interpretation of the bifurcation:
 
-it represents the onset of macroscopic transport fatigue rather than a modification of gravity or initial conditions.
+the onset of macroscopic transport fatigue rather than modified gravity or altered initial conditions.
 
 
 
@@ -388,7 +387,7 @@ represents work done against torsional resistance.
 
 
 
-This energy is not destroyed but converted into internal degrees of freedom of the spacetime substrate:
+Energy is not destroyed but converted into internal substrate degrees of freedom:
 
 
 
@@ -402,12 +401,12 @@ interpreted as:
 
 accumulated torsional strain,
 microscopic substrate excitation,
-effective “bedrock heating.”
+effective bedrock heating.
 
 
 
 
-Therefore:
+Thus:
 
 
 
@@ -467,9 +466,58 @@ discrete spacetime models,
 
 
 
-using a single time-dependent parameter \eta(t) such that:
+using a single time-dependent parameter:
 
 \eta(t < t_y) = 0, \quad \eta(t \ge t_y) \neq 0
+
+
+
+
+
+
+
+
+P.9 Microscopic–Macroscopic Consistency (Higgs–Growth Connection)
+
+
+
+
+
+In Appendix A, a torsional slip factor
+
+\zeta \approx 0.21
+
+was shown to correspond to a yielding of the Higgs mass scale near 125.125\ \mathrm{GeV}, interpreted as a local manifestation of spacetime torsional fatigue at high energy density.
+
+
+
+In Appendix P, the same slip factor governs the suppression of macroscopic clustering:
+
+S_8^{\text{late}} = (1 - \alpha) S_8^{\Lambda\mathrm{CDM}}, \quad \alpha \approx 0.056
+
+
+
+Thus:
+
+
+
+the Higgs mass dip is a local yield of the spacetime substrate,
+the late-time S_8 suppression is a global yield of the same substrate.
+
+
+
+
+Both are governed by the same torsional slip constant \zeta.
+
+
+
+This establishes a closed consistency loop:
+
+\text{Higgs Yield} \;\Longleftrightarrow\; \text{Transport Slip} \;\Longleftrightarrow\; \text{Growth Yield}
+
+
+
+Any model reproducing the growth suppression using \zeta must also reproduce the Higgs yield, and vice versa. The microscopic and macroscopic sectors are therefore inseparable within the Scarlet formulation.
 
 
 
