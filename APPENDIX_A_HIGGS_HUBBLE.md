@@ -184,16 +184,28 @@ If cosmic birefringence is shown to be purely frequency-dependent or stochastic 
 
 
 
-
-
-
-
-
 A.5 Interpretation
 
+The Scarlet–VanAcker framework interprets the apparent “fine-tuning” of fundamental constants as a consequence of observing a high-dimensional spacetime manifold through a global torsional lens. Under this view, the Higgs mass is not merely a Lagrangian parameter, but the geometric equilibrium point where local field stabilization balances against the universal torsional shear,
+
+\beta \simeq 0.21^\circ.
+
+The consistency of this 0.21^\circ value across disparate scales suggests several key insights:
+	1.	Unitary Geometric Origin: The proximity of the calculated
+m_H \approx 125.125~\mathrm{GeV}
+to experimental values implies that the scalar sector is directly coupled to the global geometry of the manifold, rather than being an isolated quantum property.
+	2.	Metric Fatigue over “Dark Energy”: Late-time suppression of structure growth and expansion anomalies are reinterpreted as metric fatigue. As the universe evolves, the torsional bias \beta induces a non-linear response in the spacetime substrate, mimicking effects typically attributed to a cosmological constant, without invoking vacuum energy density.
+	3.	Achromatic Symmetry Breaking: Unlike standard parity-violating extensions, this framework predicts that cosmic birefringence is a purely geometric (achromatic) rotation. This provides a clear observational test: any frequency-dependent rotation of CMB polarization would favor axion-like particle (ALP) models over the Scarlet–VanAcker torsional geometry.
+
+In essence, the framework replaces the “Standard Model + \LambdaCDM” patchwork with a single torsional manifold constraint, where the VanAcker clock (t_V = 10^{-41}\ \mathrm{s}) sets the temporal pulse of the universe, and \beta determines its curvature and coupling.
 
 
 
 
-The alignment of a single torsional parameter with scalar mass, birefringence, and late-time expansion suggests that spacetime behaves as an elastic medium with a small but coherent axial bias. In this picture, the Higgs mass reflects the stabilization scale of localized excitations within that medium rather than an arbitrary vacuum constant.
+
+
+
+
+
+
 
