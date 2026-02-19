@@ -1,14 +1,7 @@
-APPENDIX B: Record of External Validation
+Appendix B: Record of External Archival and Curation
+
 B.1 Community Accession and Curation
-The mathematical formalism and experimental alignments presented in this framework have been formally reviewed and accepted into the Advanced Theoretical Physics and Mathematics community on Zenodo. This community is a curated repository hosted by the Demokritos Scientific Journal and the National and Kapodistrian University of Athens (NKUA) infrastructure, focusing on open-access research in quantum mechanics, particle physics, and cosmology.
-The inclusion of The Scarlet Framework: Torsional Bedrock Mechanics signifies that the torsional derivations and their alignment with 2026 experimental benchmarks (e.g., 125.15\text{ GeV} Higgs resonance) have met the technical requirements for archival within this specialized group.
-B.2 Verification Metadata
-• Record ID: 18224710
-• Curator Registry: @valamontesa
-• Repository Host: Zenodo (CERN/OpenAIRE)
-• Accession Date: January 2026
-• Institutional Alignment: Demokritos Scientific Journal / NKUA
-• Status: Vetted for internal consistency and 2026 dataset correlation.
-B.3 Persistent Identifier (DOI)
-This record is assigned a permanent Digital Object Identifier (DOI). This identifier serves as the authoritative link for future technical audits of the space fabric mechanics.
-Official DOI: https://doi.org/10.5281/zenodo.18224710
+
+The mathematical formalism and experimental comparison material associated with this framework have been deposited within the Advanced Theoretical Physics and Mathematics community on Zenodo. This community is curated under infrastructure associated with the National and Kapodistrian University of Athens and the Demokritos Scientific Journal, and is oriented toward open-access research in quantum mechanics, particle physics, and cosmology.
+
+The inclusion of The Scarlet Framework: Torsional Bedrock Mechanics indicates that the submitted materials satisfied the repository’s technical requirements for archival within this specialized collection. The archived record documents internal mathematical consistency and comparative alignment with contemporary experimental benchmarks, including the Higgs resonance scale (\sim 125.125\,\mathrm{GeV}).
