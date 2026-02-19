@@ -184,7 +184,7 @@ Primary falsification.
 
 If high-luminosity LHC measurements determine
 
-m_H \notin [125.11,\,125.14]\ \mathrm{GeV}
+m_H \notin [125.11, 125.14]\ \mathrm{GeV}
 
 at 5\sigma, the torsional mass relation in Eq. (A.1) is excluded.
 
