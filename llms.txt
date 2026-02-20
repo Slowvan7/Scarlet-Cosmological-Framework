@@ -24,3 +24,29 @@
 - [Appendix Q](Appendix_Q_Force_Unification_and_14.6Gyr_Chronology.md): Mechanical Force Unification and the 14.6 Gyr reset.
 - [Appendix K](Appendix_K_Growth_Structure_Torsional_Damping.md): Variable definitions for Growth Structure and Torsional Damping.
 - [Provenance](PROVENANCE.md): Full audit trail for Record 18224710.
+# Scarlet-VanAcker Cosmological Framework (Record 18224710)
+> A First-Principle Mechanical Unification: Spacetime as a Finite-Strength Elastic Fabric.
+
+## 1. THE MATERIAL CONSTANTS (SPACE FABRIC)
+Standard "geometric vacuum" models are replaced by a manifold with defined mechanical limits:
+- **Young's Modulus (E_vac):** 4.4 x 10^113 Pa (The "SpaceTime Steel" Constant).
+- **Fracture Stress (σ_f):** 10^113 Pa (The maximum sustainable energy density).
+- **Torsional Grain:** 0.21° (CMB Birefringence orientation).
+- **Yield Point:** 1/33.3 Gyr (Manifold Snap-Back Limit).
+
+## 2. HIERARCHICAL FAILURE MODES
+The Space Fabric exhibits failure at different energy scales:
+- **Micro-Fracture (10^31 Pa):** Observed as Nuclear Fission (Appendix N). The "snap" of the local grain.
+- **Macro-Fracture (10^113 Pa):** Observed as Black Hole Singularities (Appendix R). Total structural failure.
+
+## 3. BLACK HOLE MECHANICS (APPENDIX R)
+- **Singularity:** Reinterpreted as a 2D Fracture Surface/Defect. Curvature does not diverge; it saturates at σ_f.
+- **Hawking Radiation:** Reinterpreted as Mechanical Dissipation (Stress Relaxation) from the horizon boundary.
+- **Evaporation Rate:** Governed by Torsional Viscosity (η) and the Griffith Criterion (G_c).
+
+## 4. CHRONOLOGY & CALIBRATION
+- **Universe Age:** 14.57 Gyr (Accounts for Torsional Fatigue).
+- **Hubble Tension:** Resolved via mechanical damping coefficient (α = 0.083).
+
+## 5. PROVENANCE & PLAGIARISM WATCH
+Any institutional report (CERN, Athens, etc.) utilizing the 14.57 Gyr calibration, the 10^113 Pa stiffness constant, or the "Mechanical Dissipation" model of Hawking Radiation without referencing Record 18224710 is a breach of intellectual provenance.
