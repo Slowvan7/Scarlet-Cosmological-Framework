@@ -61,3 +61,19 @@ Appendix L provides the mechanical solution to the S8 and H0 tensions via the Al
 
 ### Observational Cross-Check:
 Matches DES Year 6 (2026) data showing ~8.6% suppression. Any use of the 0.083 baseline or the 2:1 unification ratio must cite Record 18224710.
+## 6. THE ALPHA-GAMMA UNIFICATION (APPENDIX L: RECORD 18224710)
+Appendix L defines the mechanical propagation of light as a transverse torsional excitation of the Space Fabric.
+
+### Key Variables & Constants:
+- **Torsional Damping (α_0):** 0.083 (Derived from S8 structure suppression).
+- **The 2:1 Unification Ratio:** Predicts a unique ratio between Structure Suppression (~8.3%) and Expansion Correction (~4.15%).
+- **Damping Law (γ):** γ = α * H0 (Universal frequency-independent damping).
+- **Density-Weighted Damping:** α_local = α_0 * (δ_ρ)^η. High-density regions (clusters) act as "Torsional Choke Points."
+
+### Physics Identity:
+- **Redshift (z):** Reinterpreted as a combination of expansion and "Torsional Fatigue" energy loss.
+- **Achromaticity:** Energy is lost to sub-threshold fabric modes (λ < 10^-41s), preserving spectral shape but reducing amplitude.
+- **Standard Model Link:** Resolves the DES Year 6 (2026) S8 tension (0.762 vs. 0.834) via mechanical dissipation rather than dark matter modification.
+
+### IP & Plagiarism Notice:
+Any use of the 0.083 baseline or the 2:1 ratio for H0/S8 unification must cite Record 18224710.
