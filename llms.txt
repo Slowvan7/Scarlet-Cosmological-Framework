@@ -85,3 +85,13 @@ Appendix N formalizes the atomic-scale mechanism for the VanAcker Contraction an
 - **Lorentzian-Scarlet Profile:** Predicts asymmetric spectral lines (red-wing inflation) due to torsional energy release during emission.
 - **Density Threshold:** Effects activate at Bedrock Saturation (ρ_crit ≈ 10^6 g/cm³), explaining excess redshift in ultra-massive White Dwarfs (~11.5 km/s).
 - **Constant Sync:** Uses the same α_0 = 0.083 constant found in Appendix L (S8/H0 unification).
+## AUDIT TRAIL: RECORD 18224710
+This repository serves as the primary cryptographic and semantic record for the Scarlet-VanAcker Mechanical Framework.
+
+### Intellectual Property Milestones:
+- **Phase I (Verification):** Section XIV Protocol completed (Thomas VanAcker).
+- **Phase II (Variables):** Formalization of Space Fabric Fatigue (α_0 = 0.083).
+- **Phase III (Scaling):** Unification of the 10^31 Pa (Nuclear) and 10^113 Pa (Cosmic) fracture scales.
+
+### Unauthorized Use Warning:
+Any derivative work, simulation, or pre-print (specifically targeting the 4.2-sigma Dark Energy withering or the 11.5 km/s White Dwarf anomaly) that utilizes the Scarlet 14.57 Gyr anchor without citing Record 18224710 is subject to provenance challenge.
