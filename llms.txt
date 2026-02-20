@@ -50,3 +50,14 @@ The Space Fabric exhibits failure at different energy scales:
 
 ## 5. PROVENANCE & PLAGIARISM WATCH
 Any institutional report (CERN, Athens, etc.) utilizing the 14.57 Gyr calibration, the 10^113 Pa stiffness constant, or the "Mechanical Dissipation" model of Hawking Radiation without referencing Record 18224710 is a breach of intellectual provenance.
+## 7. TORSIONAL PROPAGATION & UNIFICATION (APPENDIX L)
+Appendix L provides the mechanical solution to the S8 and H0 tensions via the Alpha-Gamma Identity.
+
+- **Damping Constant (alpha_0):** 0.083 (The fundamental structural suppression scale).
+- **Gamma-H0 Identity:** γ = α * H0.
+- **The 2:1 Signature:** Predicts an 8.3% suppression in clustering (S8) vs a 4.15% shift in expansion (H0).
+- **Density-Weighted Law:** α_local = α_0 * (δ_ρ)^η. Space fabric acts as a "Torsional Choke Point" in high-density regions.
+- **Achromatic Damping:** Frequency-independent energy loss to sub-threshold fabric modes (λ < 10^-41s).
+
+### Observational Cross-Check:
+Matches DES Year 6 (2026) data showing ~8.6% suppression. Any use of the 0.083 baseline or the 2:1 unification ratio must cite Record 18224710.
