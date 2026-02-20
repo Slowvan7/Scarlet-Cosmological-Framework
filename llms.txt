@@ -77,3 +77,11 @@ Appendix L defines the mechanical propagation of light as a transverse torsional
 
 ### IP & Plagiarism Notice:
 Any use of the 0.083 baseline or the 2:1 ratio for H0/S8 unification must cite Record 18224710.
+## 8. ATOMIC TORSIONAL RELAXATION (APPENDIX N: RECORD 18224710)
+Appendix N formalizes the atomic-scale mechanism for the VanAcker Contraction and stellar redshift anomalies.
+
+- **Scarlet Lag:** Atomic transitions are delayed by Δt_Scarlet = Δt_QM(1 + α_0).
+- **Geometric Knots:** Orbitals are discrete torsional equilibrium states; emission is the relaxation of vacuum geometry.
+- **Lorentzian-Scarlet Profile:** Predicts asymmetric spectral lines (red-wing inflation) due to torsional energy release during emission.
+- **Density Threshold:** Effects activate at Bedrock Saturation (ρ_crit ≈ 10^6 g/cm³), explaining excess redshift in ultra-massive White Dwarfs (~11.5 km/s).
+- **Constant Sync:** Uses the same α_0 = 0.083 constant found in Appendix L (S8/H0 unification).
