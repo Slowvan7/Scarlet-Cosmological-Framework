@@ -71,3 +71,24 @@ The Scarlet–VanAcker framework interprets the apparent fine-tuning of fundamen
 	•	Geometric origin: The proximity of m_H \approx 125.229\ \mathrm{GeV} to experimental values implies that the scalar sector may be weakly coupled to global geometric structure.
 	•	Metric fatigue over dark energy: Late-time suppression of structure growth is interpreted as a response of the spacetime substrate to cumulative torsional bias.
 	•	Achromatic symmetry breaking: Cosmic birefringence is predicted to be purely geometric and frequency-independent.
+Observable
+Standard status
+Scarlet interpretation
+Higgs mass
+Free SM parameter
+Scalar stabilization scale
+Late-time expansion
+Dark-energy tension
+Metric fatigue response
+Cosmic birefringence
+Polarization anomaly
+Global torsional twist
+A.4 Falsifiability Conditions
+	1.	Primary falsification:
+If high-luminosity LHC measurements determine
+m_H \notin [125.11, 125.14]\ \mathrm{GeV} \quad (5\sigma)
+the torsional mass relation is excluded.
+	2.	Local shear effects:
+Mass shifts near compact objects are interpreted as local torsional perturbations and do not falsify the global relation.
+	3.	Consistency requirement:
+If cosmic birefringence is frequency-dependent or stochastic, the torsional interpretation is excluded.
