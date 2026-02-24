@@ -57,7 +57,7 @@ No modification of the primordial power spectrum is required; the effect enters 
 A.4 Falsifiability Conditions
 	1.	Primary falsification.
 If high-luminosity LHC measurements determine
-m_H \notin [125.11,\125.14]\ \mathrm{GeV} \quad (5\sigma),
+m_H \notin [125.11,125.14]\ \mathrm{GeV} \quad (5\sigma),
 the torsional mass relation is excluded.
 	2.	Local shear effects.
 Mass shifts measured in strong gravitational environments are interpreted as local torsional perturbations and do not falsify the global relation.
