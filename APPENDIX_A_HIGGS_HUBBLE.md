@@ -77,3 +77,5 @@ Cosmic birefringence is predicted to be purely geometric and frequency-independe
 In this view, the Standard Model and late-time cosmology are linked through a single geometric parameter, with the VanAcker clock
 t_V = 10^{-41}\ \mathrm{s}
 setting the temporal scale and \beta determining the geometric coupling.
+
+For a unified geometric derivation of both the Higgs and W/Z vector masses using the same 133.3 torsional scaling factor, see Appendix T — Geometric Correspondence of Scalar and Vector Masses. This derivation preserves the benchmark Higgs mass of 125.125 GeV and demonstrates how scalar and vector masses emerge coherently from a single torsional bias.
