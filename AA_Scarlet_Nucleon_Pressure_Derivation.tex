@@ -1,8 +1,7 @@
 Appendix AA: Torsional Feedback Loops — Mechanical Estimate of Nucleon Pressure
 
 Framework: Scarlet–VanAcker Cosmological Framework (v2.0)
-Experimental Benchmark: Nucleon pressure peak P \sim 10^{35}\ \mathrm{Pa}, inferred from generalized parton distributions measured at Jefferson Lab.
-
+Experimental Benchmark: Nucleon pressure peak ~ 1 × 10³⁵ Pa, inferred from generalized parton distributions measured at Jefferson Lab.
 Objective: Derive the characteristic internal pressure scale of a nucleon within the Scarlet torsional-lattice interpretation of QCD confinement, incorporating both baseline energy density and angular torsional stress.
 
 ⸻
@@ -10,38 +9,31 @@ Objective: Derive the characteristic internal pressure scale of a nucleon within
 1. Baseline Nucleon Energy Density
 
 The nucleon rest-energy provides a natural baseline for internal pressure:
+	•	Energy: E = m_p c² ≈ 1.503 × 10⁻¹⁰ J
+	•	Proton radius: r_p ≈ 0.84 fm
+	•	Volume: V = (4/3) π r_p³ ≈ 2.5 × 10⁻⁴⁵ m³
+	•	Baseline energy density: ρ₀ = E / V ≈ 6.0 × 10³⁴ Pa
 
-E = m_p c^2 \approx 1.503 \times 10^{-10}\ \mathrm{J}
-
-Using the measured proton charge radius r_p \approx 0.84\ \mathrm{fm}, the effective nucleon volume is:
-
-V = \frac{4}{3} \pi r_p^3 \approx 2.5 \times 10^{-45}\ \mathrm{m^3}
-
-The baseline energy density then becomes:
-
-\rho_0 = \frac{E}{V} \approx 6.0 \times 10^{34}\ \mathrm{Pa}
-
-This sets the baseline nucleon pressure scale.
+This sets the reference scale for nucleon pressure.
 
 ⸻
 
 2. Torsional Stress Amplification
 
-Nucleons are modeled as stable torsional knots in the 11D spacetime filament lattice. Peak internal pressure arises from additional torsional confinement stress:
+In the Scarlet framework, nucleons are stable torsional knots in the 11D spacetime filament lattice. Peak internal pressure arises from additional torsional confinement stress.
+	•	Torsional amplification factor: ξ = π × (θ_scale / N_roots)
+	•	θ_scale = 133.3 (geometric mapping factor linking torsion to electroweak masses)
+	•	N_roots = 240 (filament root multiplicity)
+	•	Calculated factor: ξ ≈ 1.74
 
-\xi \equiv \pi \frac{\theta_{\mathrm{scale}}}{N_{\mathrm{roots}}}
-	•	\theta_{\mathrm{scale}} = 133.3 (electroweak–torsion mapping, Appendix T)
-	•	N_{\mathrm{roots}} = 240 (filament root multiplicity, Appendix Y.2)
-
-\xi \approx 1.74
-
-The circular factor \pi accounts for the torsional loop geometry of the nucleon knot.
+The circular factor π accounts for the torsional loop geometry of the nucleon knot.
 
 ⸻
 
 3. Peak Internal Pressure (First Estimate)
 
-P_{\mathrm{peak}} = \xi \rho_0 = 1.74 \times (6.0 \times 10^{34}) \approx 1.0 \times 10^{35}\ \mathrm{Pa}
+Multiplying the baseline density by the amplification factor:
+	•	P_peak = ξ × ρ₀ ≈ 1.0 × 10³⁵ Pa
 
 This reproduces the experimentally inferred peak within order-unity agreement.
 
@@ -49,23 +41,14 @@ This reproduces the experimentally inferred peak within order-unity agreement.
 
 4. Angular Torsional Stress Derivation
 
-A more detailed mechanical derivation treats the torsional stress as axially distributed:
-	1.	Effective torsional modulus:
-
-G_\tau = \frac{\rho_0}{2} \cdot \frac{\theta_{\mathrm{scale}}}{N_{\mathrm{roots}}}
-
-The 1/2 factor accounts for equipartition of torsional energy between radial and looped components.
-	2.	Angular stress distribution:
-
-\sigma(\theta) = G_\tau \sin(\theta), \quad \theta \in [0, \pi]
-
-Stress vanishes at the axial poles (\theta = 0, \pi) and peaks at the vortex equator (\theta = \pi/2).
-	3.	Integrated peak pressure:
-
-P_{\mathrm{peak}} = \int_0^\pi \sigma(\theta) \, d\theta = 2 G_\tau
-	4.	Numerical substitution with Scarlet constants:
-
-P_{\mathrm{peak}} = 2 \cdot \frac{6.0 \times 10^{34}}{2} \cdot \frac{133.3}{240} \cdot \pi \approx 1.05 \times 10^{35}\ \mathrm{Pa}
+A detailed mechanical derivation treats torsional stress as axially distributed:
+	1.	Effective torsional modulus: G_τ = ρ₀ / 2 × (θ_scale / N_roots)
+(1/2 factor accounts for equipartition between radial and looped energy)
+	2.	Angular stress distribution: σ(θ) = G_τ × sin(θ), θ ∈ [0, π]
+Stress vanishes at axial poles (θ = 0, π) and peaks at the vortex equator (θ = π/2)
+	3.	Integrated peak pressure: P_peak = ∫₀^π σ(θ) dθ = 2 × G_τ
+	4.	Numerical substitution:
+P_peak ≈ 1.05 × 10³⁵ Pa
 
 This confirms the baseline estimate and provides a geometric, first-principles derivation.
 
@@ -74,205 +57,29 @@ This confirms the baseline estimate and provides a geometric, first-principles d
 5. Physical Interpretation
 	•	Gluon fields correspond to localized shear stress within the torsional lattice.
 	•	The nucleon is a stable torsional knot balancing confinement stress and lattice tension.
-	•	The torsional stress scale aligns with the global cosmological torsion parameter \beta \approx 0.21^\circ (Appendix B).
-	•	The peak pressure represents the maximum torsional compression achievable before lattice relaxation or “Hard Core” onset at r \lesssim 0.1\ \mathrm{fm}.
+	•	The torsional stress scale aligns with the global cosmological torsion parameter β ≈ 0.21° (Appendix B).
+	•	Peak pressure represents the maximum torsional compression achievable before lattice relaxation or “Hard Core” onset at r < 0.1 fm.
 	•	Collective stiffness of the 240 filament roots manifests as the physical analogue of the QCD confinement pressure.
-
-Physical Meaning
-
-Appendix Reference
-
-Î²
-
-0.21Â°
-
-Global torsional bias of the 11D bedrock
-
-T, AA
-
-Î¸_scale
-
-133.3
-
-Geometric mapping factor linking torsion to electroweak masses
-
-T, AA
-
-N_roots
-
-240
-
-Number of mechanically permissible torsional phase channels in the filament lattice
-
-Y.2, AA
-
-N_total / N_active
-
-349 / 332
-
-Total torsional modes in 11D bulk vs modes projecting into 4D matter
-
-Y.5, Z.2
-
-r_p
-
-0.84 fm
-
-Proton charge radius used for baseline energy density
-
-AA
-
-Ï_0
-
-6.0 Ã— 10Â³â´ Pa
-
-Baseline nucleon energy density
-
-AA
-
-Î¾
-
-1.74
-
-Torsional amplification factor for nucleon peak pressure
-
-AA
-
-P_peak
-
-~1.0 Ã— 10Â³âµ Pa
-
-Estimated nucleon peak internal pressure
-
-AA
-
-t_V
-
-10â»â´Â¹ s
-
-VanAcker bedrock torsional relaxation timescale
-
-Z.3, Y.1
-
-Î´_t
-
-0.083
-
-Torsional drag / shear-induced decoherence
-
-Y.8, Z.6.2
-
-z_f
-
-1.5
-
-Onset redshift for torsional relaxation (proton fatigue)
-
-Z.4, Z.12.2
-
-Îµ_f
-
-0.0487
-
-Fractional reduction of proton mass due to torsional relaxation
-
-Z.4, Z.12.1
-
 
 ⸻
 
-6. Implications
-	•	Suggests the nucleon pressure peak may reflect a mechanical limit of the spacetime lattice, not purely QCD vacuum dynamics.
-	•	Deviations in future measurements of P_{\mathrm{peak}} would require adjusting the torsional amplification factor \xi, providing a direct test of the lattice interpretation.
+6. Key Parameters and Constants
+	•	β = 0.21° — Global torsional bias of the 11D bedrock (Appendix B)
+	•	θ_scale = 133.3 — Geometric mapping factor linking torsion to electroweak masses (Appendices T, AA)
+	•	N_roots = 240 — Mechanically permissible torsional phase channels (Appendices Y.2, AA)
+	•	N_total / N_active = 349 / 332 — Total 11D torsional modes vs modes projecting into 4D matter (Appendices Y.5, Z.2)
+	•	r_p = 0.84 fm — Proton charge radius (Appendix AA)
+	•	ρ₀ = 6.0 × 10³⁴ Pa — Baseline nucleon energy density (Appendix AA)
+	•	ξ = 1.74 — Torsional amplification factor for nucleon peak pressure (Appendix AA)
+	•	P_peak ≈ 1.0 × 10³⁵ Pa — Estimated nucleon peak pressure (Appendix AA)
+	•	t_V = 10⁻⁴¹ s — VanAcker bedrock torsional relaxation timescale (Appendices Z.3, Y.1)
+	•	δ_t = 0.083 — Torsional drag / shear-induced decoherence (Appendices Y.8, Z.6.2)
+	•	z_f = 1.5 — Onset redshift for torsional relaxation (proton fatigue) (Appendices Z.4, Z.12.2)
+	•	ε_f = 0.0487 — Fractional reduction of proton mass due to torsional relaxation (Appendices Z.4, Z.12.1)
+
+⸻
+
+7. Implications
+	•	The nucleon pressure peak may reflect a mechanical limit of the spacetime lattice, not purely QCD vacuum dynamics.
+	•	Deviations in future measurements of P_peak would require adjusting the torsional amplification factor ξ, providing a direct test of the lattice interpretation.
 	•	Integrates cosmological torsion effects with subnuclear mechanical properties, linking microphysics and large-scale spacetime structure.
-
-
-
-\appendix
-\section*{Appendix AA: Torsional Feedback Loops}
-\addcontentsline{toc}{section}{Appendix AA: Torsional Feedback Loops}
-
-\textbf{Framework:} Scarlet--VanAcker Cosmological Framework (v2.0) \\
-\textbf{Experimental Benchmark:} Nucleon pressure peak $P \sim 10^{35}\ \mathrm{Pa}$ inferred from generalized parton distributions measured at Jefferson Lab. \\
-
-\textbf{Objective:} Estimate the characteristic internal pressure scale of a nucleon within the Scarlet torsional-lattice interpretation of QCD confinement.
-
-\subsection*{1. Baseline Nucleon Energy Density}
-The rest-energy density of a nucleon provides a natural baseline scale for internal pressure.
-
-\begin{align}
-E &= m_p c^2 \approx 1.503 \times 10^{-10}\ \mathrm{J},\\
-r_p &\approx 0.84\ \mathrm{fm}, \\
-V &= \frac{4}{3} \pi r_p^3 \approx 2.5 \times 10^{-45}\ \mathrm{m^3},\\
-\rho_0 &= \frac{E}{V} \approx 6.0 \times 10^{34}\ \mathrm{Pa}.
-\end{align}
-
-This establishes the baseline nucleon pressure scale, noting that in relativistic systems energy density and pressure share identical units.
-
-\subsection*{2. Torsional Stress Amplification}
-In the Scarlet framework, nucleons correspond to stable torsional knots within the spacetime filament lattice. The peak internal pressure arises from additional torsional confinement stress.  
-
-Define a dimensionless amplification factor $\xi$, representing the ratio between average nucleon energy density and the maximum torsional compression inside the knot core:
-
-\begin{equation}
-\xi \equiv \pi \frac{\theta_{\mathrm{scale}}}{N_{\mathrm{roots}}}
-\end{equation}
-
-where $\pi$ reflects the circular torsional loop geometry associated with the nucleon knot core. Using Scarlet lattice constants:
-
-\begin{align}
-\theta_{\mathrm{scale}} &= 133.3,\\
-N_{\mathrm{roots}} &= 240,\\
-\xi &\approx 1.74.
-\end{align}
-
-The constants $\theta_{\mathrm{scale}}$ and $N_{\mathrm{roots}}$ arise from the electroweak--torsional lattice mapping (Appendix T) and the filament root multiplicity (Appendix Y.2).
-
-\subsection*{3. Peak Internal Pressure}
-The estimated nucleon peak pressure is:
-
-\begin{align}
-P_{\mathrm{peak}} &= \xi \rho_0,\\
-P_{\mathrm{peak}} &= 1.74 \times (6.0 \times 10^{34}\ \mathrm{Pa}),\\
-\boxed{P_{\mathrm{peak}} &\approx 1.0 \times 10^{35}\ \mathrm{Pa}}.
-\end{align}
-
-\subsection*{4. Comparison With Experimental Inference}
-Experimental reconstructions of the proton pressure distribution derived from deeply virtual Compton scattering indicate a peak central pressure $P_{\mathrm{exp}} \sim 10^{35}\ \mathrm{Pa}$, consistent with generalized parton distribution measurements at Jefferson Lab. The Scarlet estimate reproduces this scale within order-unity agreement.
-
-\subsection*{5. Physical Interpretation}
-Within the Scarlet torsional lattice picture:
-\begin{itemize}
-   \item \textbf{Gluon fields} correspond to localized shear stress within the spacetime lattice.
-   \item The \textbf{nucleon} represents a stable torsional knot maintaining equilibrium between confinement stress and lattice tension.
-   \item The \textbf{torsional stress scale} is consistent with the global torsion parameter $\beta \approx 0.21^\circ$ derived from cosmological birefringence (Appendix B).
-   \item The calculated pressure corresponds to the \textbf{maximum torsional compression} achievable before lattice relaxation.
-   \item The torsional stress acts as a geometric analogue of the confinement pressure usually attributed to gluon field dynamics in QCD.
-\end{itemize}
-
-\subsection*{6. Deep Derivation of Torsional Shear Stress}
-The nucleon pressure peak can also be derived as the mechanical yield point of the 11D filament lattice:
-
-\begin{align}
-G_\tau &= \frac{\rho_0}{2} \left( \frac{\theta_{\mathrm{scale}}}{N_{\mathrm{roots}}} \right),\\
-\sigma(\theta) &= G_\tau \sin(\theta),\\
-P_{\mathrm{peak}} &= \int_0^{\pi} \sigma(\theta) \, d\theta = 2 G_\tau.
-\end{align}
-
-Substituting constants and including the geometric loop factor $\pi$:
-
-\begin{align}
-P_{\mathrm{peak}} &= 2 \cdot \frac{6.0 \times 10^{34}}{2} \cdot \frac{133.3}{240} \cdot \pi,\\
-\boxed{P_{\mathrm{peak}} &\approx 1.05 \times 10^{35}\ \mathrm{Pa}}.
-\end{align}
-
-\subsection*{7. Mechanical Interpretation}
-\begin{enumerate}
-   \item \textbf{Geometric Emergence:} The peak pressure results naturally from integrating the sinusoidal stress field, without ad-hoc insertion.
-   \item \textbf{Polar Convergence:} Integration over $0 \rightarrow \pi$ represents full alignment of torsional flux through the nucleon knot core.
-   \item \textbf{Collective Stiffness:} The peak reflects the collective torsional stiffness of the 240 filament roots. At $r < 0.1\ \mathrm{fm}$, the density reaches the ``Hard Core'' limit, manifesting as the $10^{35}$ Pa pressure wall.
-   \item \textbf{Gluon Saturation:} The ``Gluon Wall'' observed in high-energy collisions represents maximum occupancy of the filament roots (torsional saturation).
-\end{enumerate}
-
-\subsection*{8. Implication}
-The nucleon pressure peak may reflect a universal mechanical limit of the spacetime lattice rather than purely QCD vacuum dynamics. Deviations in future measurements would provide a direct test of the torsional lattice interpretation by constraining the amplification factor $\xi$.
