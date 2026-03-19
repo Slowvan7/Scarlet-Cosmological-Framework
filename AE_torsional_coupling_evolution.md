@@ -319,7 +319,9 @@ Then:
 
 
 
+
 AE.11 Physical Interpretation
+
 
 
 
@@ -352,3 +354,19 @@ The lattice background energy is internally proportional to \kappa_T(t), removin
 Stability conditions reduce to a purely dimensionless geometric constraint
 No arbitrary normalization constants are required
 The framework is now fully self-contained and dimensionally consistent
+
+AE.X — Testable Predictions
+
+This appendix yields the following direct, falsifiable predictions:
+	•	CMB Polarization Rotation (Birefringence):
+A non-zero, redshift-independent rotation of the CMB polarization plane (non-vanishing TB and EB correlations), consistent with a global torsional background.
+	•	Redshift-Dependent Deviation in Expansion History:
+Small departures from the ΛCDM H(z) curve that scale with the evolution of the strain parameter \epsilon(z), observable in Type Ia supernovae and BAO distance measurements.
+	•	Suppression of Structure Growth:
+A measurable reduction in the matter clustering amplitude S_8 relative to ΛCDM, with a suppression profile that varies systematically with redshift.
+	•	Modified Gravitational Wave Ringdown:
+Detectable deviations in black hole merger ringdown frequencies and damping times compared to General Relativity predictions, consistent across high signal-to-noise events.
+	•	Nucleosynthesis Abundance Shifts:
+Small but consistent deviations in primordial element abundances (particularly ^4\text{He}, deuterium, and ^7\text{Li}) relative to standard Big Bang nucleosynthesis predictions.
+	•	Parity-Related Asymmetries:
+Statistically significant chirality bias in polarization or spin-related observables beyond Standard Model expectations, consistent with a torsional handedness of the underlying lattice.
