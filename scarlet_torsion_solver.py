@@ -1,139 +1,160 @@
 #!/usr/bin/env python3
 
+"""
+Scarlet 2.0 — Torsional Cosmology Solver
+
+Evolves torsion energy density in redshift space and computes:
+- H0 correction
+- S8 suppression
+
+All dynamics are derived from:
+- mode_ratio (w_eff = -mode_ratio)
+- relaxation time t_v
+"""
+
 import argparse
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 from scipy.integrate import solve_ivp
 
-# --------------------------------------------
-# Cosmology baseline parameters
-# --------------------------------------------
 
-H0_LCDM = 67.4        # km/s/Mpc baseline Planck value
-Omega_m = 0.315
-Omega_lambda = 0.685
+# --------------------------------------------------
+# Cosmological constants (Planck baseline)
+# --------------------------------------------------
 
-# --------------------------------------------
-# Torsion evolution equation
-# dρ_tors/dt + 3H(1+w)ρ_tors = -Γ
-# --------------------------------------------
+H0_KM = 67.4                  # km/s/Mpc
+MPC_TO_KM = 3.0857e19
+H0 = H0_KM / MPC_TO_KM        # convert to 1/s
 
-def torsion_evolution(z, rho_tors, mode_ratio, t_v):
-   H = H0_LCDM * np.sqrt(Omega_m * (1+z)**3 + Omega_lambda)
-
-   # Effective equation-of-state for torsion
-   w_eff = -1 + (1 - mode_ratio)
-
-   # decay constant tied to relaxation time
-   Gamma = 1.0 / t_v
-
-   drho_dz = -(3 * (1 + w_eff) * rho_tors) + (Gamma * 1e-50)
-
-   return drho_dz
+OMEGA_M = 0.315
+OMEGA_L = 0.685
 
 
-# --------------------------------------------
-# Solve torsion density evolution
-# --------------------------------------------
+# --------------------------------------------------
+# Hubble function
+# --------------------------------------------------
 
-def solve_torsion(mode_ratio, t_v, z_max):
-
-   z_span = (0, z_max)
-   z_eval = np.linspace(0, z_max, 200)
-
-   rho0 = [1e-5]
-
-   sol = solve_ivp(
-       torsion_evolution,
-       z_span,
-       rho0,
-       t_eval=z_eval,
-       args=(mode_ratio, t_v),
-       method="RK45"
-   )
-
-   return sol.t, sol.y[0]
+def H(z):
+    """Hubble parameter in 1/s"""
+    return H0 * np.sqrt(OMEGA_M * (1 + z)**3 + OMEGA_L)
 
 
-# --------------------------------------------
-# Compute H0 correction
-# --------------------------------------------
+# --------------------------------------------------
+# Torsion evolution equation (in redshift space)
+# --------------------------------------------------
 
-def compute_h0_shift(rho_tors):
+def d_rho_dz(z, rho, mode_ratio, t_v):
+    """
+    Evolution equation:
 
-   # simple scaling relation
-   correction = rho_tors * 0.1
-   h0_values = H0_LCDM * (1 + correction)
+    dρ/dt + 3H(1+w)ρ = -Γ
 
-   return h0_values
+    Converted to redshift:
+    d/dt = -(1+z)H d/dz
+    """
 
+    Hz = H(z)
 
-# --------------------------------------------
-# Compute S8 suppression curve
-# --------------------------------------------
+    # Effective equation of state
+    w = -mode_ratio
 
-def compute_s8_suppression(z, rho_tors):
+    # Decay rate
+    Gamma = 1.0 / t_v
 
-   s8_base = 0.83
-   suppression = np.exp(-rho_tors * 50)
-
-   s8 = s8_base * suppression
-
-   return s8
+    return ((3 * (1 + w) * rho) - (Gamma / Hz)) / (1 + z)
 
 
-# --------------------------------------------
-# Main pipeline
-# --------------------------------------------
+# --------------------------------------------------
+# Solver
+# --------------------------------------------------
+
+def solve_torsion(mode_ratio, t_v, z_initial):
+
+    z_span = (z_initial, 0)
+    z_eval = np.linspace(z_initial, 0, 300)
+
+    rho_init = [1e-5]
+
+    solution = solve_ivp(
+        d_rho_dz,
+        z_span,
+        rho_init,
+        t_eval=z_eval,
+        args=(mode_ratio, t_v),
+        method="RK45"
+    )
+
+    return solution.t, solution.y[0]
+
+
+# --------------------------------------------------
+# Derived observables
+# --------------------------------------------------
+
+def compute_h0(rho):
+    """H0 correction from torsion density"""
+    return H0_KM * (1 + 0.1 * rho)
+
+
+def compute_s8(rho):
+    """S8 suppression from torsion"""
+    S8_BASE = 0.83
+    return S8_BASE * np.exp(-50 * rho)
+
+
+# --------------------------------------------------
+# Main execution
+# --------------------------------------------------
 
 def main():
 
-   parser = argparse.ArgumentParser()
-   parser.add_argument("--ratio", type=float, required=True)
-   parser.add_argument("--t_v", type=float, required=True)
-   parser.add_argument("--zf", type=float, required=True)
+    parser = argparse.ArgumentParser(description="Scarlet torsion solver")
+    parser.add_argument("--ratio", type=float, required=True, help="Mode ratio")
+    parser.add_argument("--t_v", type=float, required=True, help="Relaxation time (s)")
+    parser.add_argument("--zf", type=float, required=True, help="Initial redshift")
 
-   args = parser.parse_args()
+    args = parser.parse_args()
 
-   mode_ratio = args.ratio
-   t_v = args.t_v
-   zf = args.zf
+    print("\n--- Scarlet 2.0 Solver ---")
+    print("Mode ratio:", args.ratio)
+    print("Relaxation time:", args.t_v)
+    print("Initial redshift:", args.zf)
 
-   print("Running Scarlet torsion solver...")
-   print("Mode ratio:", mode_ratio)
-   print("Relaxation time:", t_v)
+    # Ensure output directory
+    os.makedirs("results", exist_ok=True)
 
-   z, rho_tors = solve_torsion(mode_ratio, t_v, zf)
+    # Solve evolution
+    z, rho = solve_torsion(args.ratio, args.t_v, args.zf)
 
-   h0 = compute_h0_shift(rho_tors)
-   s8 = compute_s8_suppression(z, rho_tors)
+    # Compute observables
+    h0 = compute_h0(rho)
+    s8 = compute_s8(rho)
 
-   # ----------------------------------------
-   # Save H0 correction
-   # ----------------------------------------
+    # Save results
+    df = pd.DataFrame({
+        "redshift": z,
+        "torsion_density": rho,
+        "H0_corrected": h0,
+        "S8": s8
+    })
 
-   df = pd.DataFrame({
-       "redshift": z,
-       "torsion_density": rho_tors,
-       "H0_corrected": h0
-   })
+    df.to_csv("results/scarlet_torsion_results.csv", index=False)
 
-   df.to_csv("results/h0_correction.csv", index=False)
+    # Plot S8 suppression
+    plt.figure()
+    plt.plot(z, s8)
+    plt.xlabel("Redshift")
+    plt.ylabel("S8")
+    plt.title("Scarlet 2.0 — Torsional Suppression")
+    plt.savefig("results/s8_suppression.png")
 
-   # ----------------------------------------
-   # Plot S8 suppression
-   # ----------------------------------------
+    print("\nResults saved to /results")
+    print("Run complete.\n")
 
-   plt.figure()
-   plt.plot(z, s8)
-   plt.xlabel("Redshift")
-   plt.ylabel("S8")
-   plt.title("Scarlet 2.0 Torsional Suppression")
-   plt.savefig("results/s8_suppression_curve.png")
 
-   print("Outputs written to results/")
-
+# --------------------------------------------------
 
 if __name__ == "__main__":
-   main()
+    main()
