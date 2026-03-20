@@ -1,38 +1,38 @@
 {
- "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
- "@type": "SoftwareSourceCode",
- "name": "SCARLET 2.0 Torsional Solver",
- "identifier": "https://zenodo.org/records/18224710",
- "description": "Numerical closure for the SCARLET 2.0 framework implementing the 332/349 torsional mode degeneracy used to test cosmological observables including S8 and H0.",
- "version": "2.0.0",
- "codeRepository": "https://github.com/Slowvan7/Scarlet-Cosmological-Framework",
- "programmingLanguage": "Python 3.11",
- "runtimePlatform": "REANA",
- "keywords": [
-   "Torsional Dynamics",
-   "11D Space Fabric",
-   "Proton Fatigue",
-   "Cosmology"
- ],
- "author": {
-   "@type": "Person",
-   "name": "Thomas VanAcker"
- },
- "variableMeasured": [
-   {
-     "@type": "PropertyValue",
-     "name": "Torsional Mode Ratio",
-     "value": "0.951289",
-     "description": "332/349 active-to-total torsional mode degeneracy constant (Appendix Z.2)."
-   },
-   {
-     "@type": "PropertyValue",
-     "name": "Torsional Relaxation Timescale",
-     "value": "1e-41",
-     "unitText": "seconds",
-     "description": "VanAcker bedrock ultraviolet cutoff timescale."
-   }
- ],
- "license": "https://spdx.org/licenses/CC-BY-4.0.html",
- "datePublished": "2026-01-09"
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "SCARLET 2.0 Torsional Solver",
+  "identifier": "https://zenodo.org/records/18224710",
+  "description": "Numerical closure for the SCARLET 2.0 framework implementing the 332/349 torsional mode degeneracy used to test cosmological observables including S8 and H0.",
+  "version": "2.0.0",
+  "codeRepository": "https://github.com/Slowvan7/Scarlet-Cosmological-Framework",
+  "programmingLanguage": "Python 3.11",
+  "runtimePlatform": "REANA",
+  "keywords": [
+    "Torsional Dynamics",
+    "11D Space Fabric",
+    "Proton Fatigue",
+    "Cosmology"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Thomas VanAcker"
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Torsional Mode Ratio",
+      "value": 0.951289,
+      "description": "332/349 active-to-total torsional mode degeneracy constant (Appendix Z.2)."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Torsional Relaxation Timescale",
+      "value": 1e-41,
+      "unitText": "seconds",
+      "description": "VanAcker bedrock ultraviolet cutoff timescale."
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "datePublished": "2026-01-09"
 }
