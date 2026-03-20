@@ -1,372 +1,48 @@
+Appendix AE — Reduction to Field Gradient Form
 
+AE.1 Scalar Contraction of Contortion
 
-Appendix AE — Dynamical Evolution of the Torsional Coupling in an Expanding Lattice
+The contraction of the contortion tensor defines a scalar relation between geometric torsion and field gradients. For the trace-vector torsion sector considered in this framework, the invariant takes the form
 
+K^\beta_{\ \mu\nu} K_\beta^{\ \mu\nu} = c \, (\partial_\mu \phi)(\partial^\mu \phi),
 
+where c \in [1.5, 6] is an order-unity coefficient that depends on spacetime signature, torsion normalization, and index contraction conventions.
 
+⸻
 
+AE.2 Definition of Torsional Strain
 
-Framework: Scarlet–VanAcker Cosmological Framework (v2.0)
+The torsional strain amplitude \epsilon is defined as the dimensionless invariant
 
-Objective: Derive the evolution of the torsional coupling \kappa_T from lattice dynamics driven by cosmological expansion, and express particle stability conditions in a fully self-consistent, dimensionally coherent, and internally derived form.
+\epsilon \equiv \frac{1}{\Lambda_0} \sqrt{K^\beta_{\ \mu\nu} K_\beta^{\ \mu\nu}}.
 
+Substituting the contraction result yields
 
+\epsilon = \frac{\sqrt{c}}{\Lambda_0} \sqrt{\left|(\partial_\mu \phi)(\partial^\mu \phi)\right|},
 
+where the absolute value ensures a positive-definite strain measure in Lorentzian signature.
 
+⸻
 
+AE.3 Cosmological Reduction
 
+In the cosmological regime, where spatial gradients dominate over temporal derivatives (quasi-static approximation), the invariant reduces to a spatial gradient-dominated form. In this limit,
 
+\epsilon \approx \frac{|\nabla \phi|}{\Lambda_0},
 
-AE.1 Lattice-Based Definition of the Torsional Coupling
+up to order-unity factors associated with c.
 
+⸻
 
+AE.4 Physical Interpretation
 
+This result establishes a direct mapping between the geometric torsion invariant and the effective field-gradient strain used throughout the framework. The invariant K^\beta_{\ \mu\nu} K_\beta^{\ \mu\nu} encodes the full torsional geometry, while the reduced expression \epsilon \sim |\nabla \phi| / \Lambda_0 provides a practical and intuitive representation for cosmological and lattice-scale analysis.
 
+⸻
 
-\kappa_T(t) \equiv \frac{\Sigma_f(t)\, g(t)^3}{\hbar c}
+AE.5 Consistency Statement
 
-
-
-where:
-
-
-
-\Sigma_f(t): effective lattice tension (energy density scale)
-g(t): lattice spacing
-\hbar c: normalization constant
-
-
-
-
-Dimensional property:
-
-\kappa_T \sim \frac{1}{\text{length}}
-
-
-
-Thus, \kappa_T is treated as a scale-dependent inverse-length coupling emerging from lattice structure.
-
-
-
-
-
-
-
-
-AE.2 Cosmological Expansion Rate
-
-
-
-
-
-H(t) \equiv \frac{\dot{a}(t)}{a(t)}
-
-
-
-where:
-
-
-
-a(t): cosmological scale factor
-H(t): Hubble parameter (units of inverse time)
-
-
-
-
-
-
-
-
-
-AE.3 Strain Dynamics of the Lattice
-
-
-
-
-
-Define strain:
-
-
-
-\epsilon(t) \equiv \frac{g(t) - g_0}{g_0}
-
-
-
-The lattice evolves according to:
-
-
-
-\frac{d\epsilon}{dt} + \Gamma_L \epsilon = H(t)
-
-
-
-where:
-
-
-
-\Gamma_L: intrinsic lattice relaxation rate (1/\text{time})
-
-
-
-
-This equation represents a linear response of the lattice to cosmological expansion.
-
-
-
-
-
-
-
-
-AE.4 Solution for Strain
-
-
-
-
-
-\epsilon(t) = e^{-\Gamma_L t} \left( \epsilon_0 + \int_0^t e^{\Gamma_L t'} H(t') \, dt' \right)
-
-
-
-
-
-
-
-
-AE.5 Lattice Spacing Evolution
-
-
-
-
-
-g(t) = g_0 (1 + \epsilon(t))
-
-
-
-Assumption: isotropic scaling of the lattice.
-
-
-
-
-
-
-
-
-AE.6 Lattice Tension Evolution
-
-
-
-
-
-\Sigma_f(t) = \Sigma_0 \exp(-\lambda \epsilon(t))
-
-
-
-where:
-
-
-
-\lambda: dimensionless deformation sensitivity
-\Sigma_0: baseline tension
-
-
-
-
-
-
-
-
-
-AE.7 Emergent Torsional Coupling
-
-
-
-
-
-\kappa_T(t) = \frac{\Sigma_0 g_0^3}{\hbar c} \cdot (1+\epsilon(t))^3 \cdot \exp(-\lambda \epsilon(t))
-
-
-
-Define:
-
-
-
-\kappa_{T,0} \equiv \frac{\Sigma_0 g_0^3}{\hbar c}
-
-
-
-So:
-
-
-
-\kappa_T(t) = \kappa_{T,0} \cdot (1+\epsilon(t))^3 \cdot \exp(-\lambda \epsilon(t))
-
-
-
-
-
-
-
-
-AE.8 Lattice-Based Background Energy Scale
-
-
-
-
-
-The background energy is defined entirely in lattice terms as:
-
-
-
-E_{\text{bg}}(t) \sim \Sigma_f(t)\, V_{\text{eff}}(t)
-
-
-
-with:
-
-
-
-V_{\text{eff}}(t) \sim g(t)^3
-
-
-
-Thus:
-
-
-
-E_{\text{bg}}(t) \sim \Sigma_f(t)\, g(t)^3
-
-
-
-Substituting:
-
-
-
-E_{\text{bg}}(t) \sim \kappa_T(t)\, \hbar c
-
-
-
-Key result:
-
-The background energy scale is directly proportional to the torsional coupling, establishing a fully internal lattice-based energy measure.
-
-
-
-
-
-
-
-
-AE.9 Critical Stability Condition
-
-
-
-
-
-From the neutron hybrid stability requirement:
-
-
-
-\kappa_T(t)\, \mathcal{F}(N_{\text{roots}}, \gamma)\, \eta_{\text{geom}} \gtrsim E_{\text{bg}}(t)/(\hbar c)
-
-
-
-Substituting E_{\text{bg}}(t) \sim \kappa_T(t)\hbar c:
-
-
-
-\kappa_T(t)\, \mathcal{F}\, \eta_{\text{geom}} \gtrsim \kappa_T(t)
-
-
-
-Canceling \kappa_T(t) (nonzero regime):
-
-
-
-\mathcal{F}(N_{\text{roots}}, \gamma)\, \eta_{\text{geom}} \gtrsim 1
-
-
-
-
-
-
-
-
-AE.10 Dimensionless Stability Criterion
-
-
-
-
-
-Define the stability ratio:
-
-
-
-\mathcal{S}(t) \equiv \mathcal{F}(N_{\text{roots}}, \gamma)\, \eta_{\text{geom}}
-
-
-
-Then:
-
-
-
-\mathcal{S}(t) \gtrsim 1
-
-
-
-
-
-
-
-
-
-AE.11 Physical Interpretation
-
-
-
-
-
-
-The lattice background energy and torsional coupling are not independent; they are proportional
-Particle stability depends primarily on dimensionless geometric structure, not absolute energy scales
-Cosmological expansion influences stability indirectly through:
-strain \epsilon(t)
-which modifies lattice geometry
-which in turn affects \mathcal{F} and \eta_{\text{geom}}
-
-
-
-
-
-
-
-
-
-AE.12 Summary
-
-
-
-
-
-The torsional coupling \kappa_T(t) emerges from lattice tension and spacing
-Its evolution is governed by cosmological expansion via a strain-driven relaxation equation
-The lattice background energy is internally proportional to \kappa_T(t), removing the need for external energy scales
-Stability conditions reduce to a purely dimensionless geometric constraint
-No arbitrary normalization constants are required
-The framework is now fully self-contained and dimensionally consistent
-
-AE.X — Testable Predictions
-
-This appendix yields the following direct, falsifiable predictions:
-	•	CMB Polarization Rotation (Birefringence):
-A non-zero, redshift-independent rotation of the CMB polarization plane (non-vanishing TB and EB correlations), consistent with a global torsional background.
-	•	Redshift-Dependent Deviation in Expansion History:
-Small departures from the ΛCDM H(z) curve that scale with the evolution of the strain parameter \epsilon(z), observable in Type Ia supernovae and BAO distance measurements.
-	•	Suppression of Structure Growth:
-A measurable reduction in the matter clustering amplitude S_8 relative to ΛCDM, with a suppression profile that varies systematically with redshift.
-	•	Modified Gravitational Wave Ringdown:
-Detectable deviations in black hole merger ringdown frequencies and damping times compared to General Relativity predictions, consistent across high signal-to-noise events.
-	•	Nucleosynthesis Abundance Shifts:
-Small but consistent deviations in primordial element abundances (particularly ^4\text{He}, deuterium, and ^7\text{Li}) relative to standard Big Bang nucleosynthesis predictions.
-	•	Parity-Related Asymmetries:
-Statistically significant chirality bias in polarization or spin-related observables beyond Standard Model expectations, consistent with a torsional handedness of the underlying lattice.
+The construction is:
+	•	Lorentz-consistent at the invariant level,
+	•	dimensionally normalized by the fundamental scale \Lambda_0, and
+	•	compatible with the effective field theory (LEFT) approximation adopted in this framework.
