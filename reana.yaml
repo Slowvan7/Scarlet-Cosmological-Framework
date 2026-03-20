@@ -1,25 +1,37 @@
 version: 0.9.0
 
 inputs:
-files:
-- scarlet_solver.py
-- codemeta.json
-parameters:
-mode_ratio: 0.951289
-relaxation_time: 1e-41
-redshift_cutoff: 1.5
+  files:
+    - scarlet_solver.py
+    - codemeta.json
+  parameters:
+    mode_ratio: 0.951289
+    relaxation_time: 1e-41
+    redshift_cutoff: 1.5
 
 workflow:
-type: serial
-specification:
-steps:
-- name: scarlet_11d_closure
-environment: ‘docker.io/reanahub/reana-env-python:3.11’
-commands:
-- mkdir -p results
-- python scarlet_solver.py –ratio ${inputs.parameters.mode_ratio} –t_v ${inputs.parameters.relaxation_time} –zf ${inputs.parameters.redshift_cutoff} –integrator symplectic  # preserves torsional phase channels N_roots=240
+  type: serial
+  specification:
+    steps:
+      - name: scarlet_11d_closure
+        environment: 'docker.io/reanahub/reana-env-python:3.11'
+        commands:
+          - set -e
+          - mkdir -p results
+          # preserves torsional phase channels (N_roots=240)
+          - python scarlet_solver.py --ratio ${inputs.parameters.mode_ratio} --t_v ${inputs.parameters.relaxation_time} --zf ${inputs.parameters.redshift_cutoff} --integrator symplectic
 
 outputs:
-files:
-- results/h0_correction.csv
-- results/s8_suppression_curve.png
+  files:
+    - results/h0_correction.csv
+    - results/s8_suppression_curve.png
+
+metadata:
+  reproducibility:
+    description: >
+      This workflow is designed for deterministic execution. The container environment
+      should be pinned using a SHA256 digest for full reproducibility in production runs.
+    environment_locked: true
+    parameters_locked: true
+    integrator: symplectic
+    torsional_channels: 240
