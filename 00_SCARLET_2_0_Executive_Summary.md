@@ -1,73 +1,83 @@
-# Scarlet–VanAcker Cosmological Framework
+Executive Summary — Scarlet–VanAcker Cosmological Framework
 
-For a concise overview of Scarlet 2.0, see the [Executive Summary](00_SCARLET_2_0_Executive_Summary.md).  
+Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 
+Formalism: Thomas VanAcker
+Date: January 2026
 
-# Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
-**Formalism:** Thomas VanAcker  
-**Date:** January 2026
+⸻
 
----
-
-## 1. VanAcker Bedrock & Signature Constants
-- **Master Clock (t_V):** 10⁻⁴¹ s — the fundamental temporal scale of the universe  
-- **Global Torsional Twist (β):** 0.21° — the bedrock’s key observable signature  
+1. VanAcker Bedrock & Signature Constants
+	•	Master Clock (t_V): 10^{-41}\,\mathrm{s} — the fundamental temporal scale of the universe
+	•	Global Torsional Twist (\beta): 0.21^\circ — the bedrock’s key observable signature
 
 These constants govern:
-- Higgs mass alignment (m_H ≈ 125.15 GeV)  
-- Hubble tension resolution (DESI 4.2σ deviation)  
-- Cosmic birefringence (CMB rotation 0.21°)  
 
-**Catchphrase:** “The 0.21° torsion of the VanAcker Bedrock aligns mass, expansion, and light.”
+The Higgs mass alignment is characterized by m_H \approx 125.125\,\mathrm{GeV}.
+The framework also addresses the Hubble tension, consistent with DESI observations at approximately 4.2σ deviation.
+In addition, the same torsional structure predicts cosmic birefringence corresponding to a CMB polarization rotation of approximately 0.21^\circ.
 
----
+Catchphrase:
+“The 0.21° torsion of the VanAcker Bedrock aligns mass, expansion, and light.”
 
-## 2. Framework Overview
-- **Mechanical Cosmology:** Replaces Λ with the mechanical properties of spacetime (“Fabric Fatigue Function” ζ(t)).  
-- **Bedrock Anchor:** t_V sets the fundamental scale for all pre-bounce dynamics.  
-- **Torsional Coupling:** Axial torsion produces late-time expansion damping and achromatic cosmic birefringence.  
-- **Pre-Bounce Dynamics:** Hard-Stop bounce prevents metric singularities using bedrock-anchored torsion.
+⸻
 
----
+2. Framework Overview
+	•	Mechanical Cosmology: Replaces \Lambda with the Fabric Fatigue Function \zeta(t), describing spacetime as a dynamical medium rather than a static vacuum energy background.
+	•	Bedrock Anchor: The scale t_V sets the fundamental temporal reference governing pre-bounce and early-universe dynamics.
+	•	Torsional Coupling: Axial torsion contributes to late-time expansion damping and produces achromatic cosmic birefringence.
+	•	Pre-Bounce Dynamics: A Hard-Stop bounce mechanism prevents metric singularities through torsion-stabilized geometric effects.
 
-## 3. Observational Predictions
-| Observable | Value |
-|------------|-------|
-| Higgs Mass (m_H) | 125.125 GeV |
-| Scalar Spectral Tilt (n_s) | 0.965 |
-| Tensor-to-Scalar Ratio (r) | 0.003 |
-| Cosmic Birefringence (β) | 0.21° |
-| Dark Matter Fraction (Ω_DM) | 0.26 |
-| Fabric Fatigue Timeline (t_yield) | 11.1 Gyr |
-| Hubble Tension (S_8 deviation) | 4.2σ |
+⸻
 
----
+3. Observational Predictions
 
-## 4. Key Mechanisms
-- **Master Clock Enforcement:** t_V regulates non-singular bounce.  
-- **Axial Torsion / Baryogenesis:** Produces baryon asymmetry η_B ≈ 6×10⁻¹⁰.  
-- **Dark Matter:** Arises as localized torsional stress knots in 11D bulk.  
-- **Fabric Fatigue Function:** ζ(t) replaces Λ, yielding late-time suppression of expansion.  
-- **Snap-Back Mechanics:** Predicts late-time Hubble blueshift as fabric recoils toward bedrock.
+The framework predicts a scalar spectral tilt of n_s \approx 0.965, a tensor-to-scalar ratio of r \approx 0.003, and a cosmic birefringence angle of \beta \approx 0.21^\circ.
 
----
+It also predicts a dark matter fraction of approximately \Omega_{\mathrm{DM}} \approx 0.26, a Fabric Fatigue timeline on the order of t_{\mathrm{yield}} \approx 11.1 Gyr, and a resolution of the Hubble tension at the level of roughly a 4.2σ deviation in structure growth measurements such as S_8.
 
-## 5. Falsifiability Criteria
+⸻
+
+4. Key Mechanisms (with Appendix Links)
+	•	Master Clock Enforcement:
+The temporal scale t_V regulates non-singular bounce dynamics and early-universe evolution.
+(See Appendix A for Higgs/Hubble alignment and Appendix Z for numerical enforcement of the bounce conditions.)
+	•	Axial Torsion / Baryogenesis:
+Torsion couples to fermionic axial currents, generating baryon asymmetry of order
+\eta_B \approx 6 \times 10^{-10}.
+(Derived in Appendix AG and implemented consistently within the numerical framework of Appendix Z.)
+	•	Dark Matter as Torsional Stress:
+Dark matter emerges as localized torsional configurations (“knots”) embedded in higher-dimensional structure.
+(Topological classification and stability are described in Appendix AH, with structural consistency ensured in Appendix AG.)
+	•	Fabric Fatigue Function:
+The function \zeta(t) replaces the cosmological constant \Lambda, producing late-time suppression of expansion.
+(Conceptual basis in Appendix H; structural and dynamical integration in Appendix AG.)
+	•	Snap-Back Mechanics:
+The framework predicts a late-time recoil behavior in the expansion rate as spacetime evolves toward the bedrock regime.
+(Emerges from torsional damping (Appendix F) combined with fatigue evolution (Appendix H), and is implemented numerically in Appendix Z.)
+
+⸻
+
+5. Falsifiability Criteria
+
 The Scarlet–VanAcker framework is falsifiable if:
-1. No birefringence step observed near z ≈ 2  
-2. Late-time structure suppression S_8 < 0.5%  
-3. CMB bispectrum is purely parity-even  
+	1.	No birefringence step is observed near z \approx 2 (Appendices AG, H)
+	2.	Late-time structure measurements do not support significant suppression trends (Appendix H, Appendix Z)
+	3.	The CMB bispectrum is found to be purely parity-even with no torsion-induced signatures (Appendix AH for topology, Appendix AG for coupling structure)
 
----
+⸻
 
-## 6. Recommended Reading Order
-1. **Executive Summary** (this document) — high-level constants, predictions  
-2. **SCARLET_2_0.md** — full derivation and formalism  
-3. **Appendices (A–H)** — detailed experimental alignment, torsional damping, and observational validation
+6. Recommended Reading Order
+	1.	Executive Summary — high-level constants, predictions, and conceptual overview
+	2.	SCARLET_2_0.md — full derivation and formalism
+	3.	Appendices (A–H, Z, AG, AH) — detailed derivations, numerical implementation, damping mechanisms, and observational validation
 
----
+⸻
 
-**References / Key Appendices:**
-- Appendix A: Higgs & Hubble alignment  
-- Appendix F: Torsional damping derivations  
-- Appendix H: Fabric Fatigue guided overview
+References / Key Appendices
+	•	Appendix A: Higgs & Hubble alignment
+	•	Appendix F: Torsional damping derivations
+	•	Appendix H: Fabric Fatigue guided overview
+	•	Appendix Z: Numerical closure & implementation
+	•	Appendix AG: Structural integration & consistency
+	•	Appendix AH: Topological torsion & knot invariants
