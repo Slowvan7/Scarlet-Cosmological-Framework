@@ -1,15 +1,15 @@
+
+
 #!/usr/bin/env python3
 
 """
-Scarlet 2.0 — Torsional Cosmology Solver
+Scarlet 2.0 — Torsional Cosmology Solver (Stiff + Normalized Version)
 
-Evolves torsion energy density in redshift space and computes:
-- H0 correction
-- S8 suppression
-
-All dynamics are derived from:
-- mode_ratio (w_eff = -mode_ratio)
-- relaxation time t_v
+Improvements over previous version:
+- Uses stiff ODE solver (BDF)
+- Normalizes torsion density to a dimensionless fractional form
+- Improves numerical stability for large relaxation rates
+- Maintains torsional damping proportional to density
 """
 
 import argparse
@@ -42,28 +42,38 @@ def H(z):
 
 
 # --------------------------------------------------
-# Torsion evolution equation (in redshift space)
+# Torsion evolution equation (normalized form)
 # --------------------------------------------------
 
 def d_rho_dz(z, rho, mode_ratio, t_v):
     """
-    Evolution equation:
+    Evolution equation in redshift space:
 
-    dρ/dt + 3H(1+w)ρ = -Γ
+        dρ/dz = [3(1+w)ρ + (Γ/H)ρ] / (1+z)
 
-    Converted to redshift:
-    d/dt = -(1+z)H d/dz
+    where:
+        w = -mode_ratio
+        Γ = 1 / t_v
+
+    This version evolves a normalized torsion density.
     """
+
+    rho = rho[0]
+
+    # Prevent unphysical negative or extreme values
+    rho = np.clip(rho, 0.0, 1.0)
 
     Hz = H(z)
 
-    # Effective equation of state
     w = -mode_ratio
-
-    # Decay rate
     Gamma = 1.0 / t_v
 
-    return ((3 * (1 + w) * rho) - (Gamma / Hz)) / (1 + z)
+    # Dimensionless damping factor
+    damping = (Gamma / Hz) * rho
+
+    drho_dz = (3 * (1 + w) * rho + damping) / (1 + z)
+
+    return [drho_dz]
 
 
 # --------------------------------------------------
@@ -71,10 +81,18 @@ def d_rho_dz(z, rho, mode_ratio, t_v):
 # --------------------------------------------------
 
 def solve_torsion(mode_ratio, t_v, z_initial):
+    """
+    Solve torsion evolution from z_initial → 0
+    using a stiff solver for numerical stability.
+    """
+
+    if z_initial <= 0:
+        raise ValueError("Initial redshift must be > 0")
 
     z_span = (z_initial, 0)
     z_eval = np.linspace(z_initial, 0, 300)
 
+    # Normalized initial condition (dimensionless fraction)
     rho_init = [1e-5]
 
     solution = solve_ivp(
@@ -83,8 +101,13 @@ def solve_torsion(mode_ratio, t_v, z_initial):
         rho_init,
         t_eval=z_eval,
         args=(mode_ratio, t_v),
-        method="RK45"
+        method="BDF",   # <-- stiff solver
+        rtol=1e-8,
+        atol=1e-10
     )
+
+    if not solution.success:
+        raise RuntimeError("ODE solver failed to converge")
 
     return solution.t, solution.y[0]
 
@@ -94,12 +117,16 @@ def solve_torsion(mode_ratio, t_v, z_initial):
 # --------------------------------------------------
 
 def compute_h0(rho):
-    """H0 correction from torsion density"""
+    """
+    H0 correction (phenomenological mapping)
+    """
     return H0_KM * (1 + 0.1 * rho)
 
 
 def compute_s8(rho):
-    """S8 suppression from torsion"""
+    """
+    S8 suppression (phenomenological mapping)
+    """
     S8_BASE = 0.83
     return S8_BASE * np.exp(-50 * rho)
 
@@ -109,26 +136,25 @@ def compute_s8(rho):
 # --------------------------------------------------
 
 def main():
+    parser = argparse.ArgumentParser(description="Scarlet torsion solver (stiff version)")
 
-    parser = argparse.ArgumentParser(description="Scarlet torsion solver")
     parser.add_argument("--ratio", type=float, required=True, help="Mode ratio")
     parser.add_argument("--t_v", type=float, required=True, help="Relaxation time (s)")
     parser.add_argument("--zf", type=float, required=True, help="Initial redshift")
 
     args = parser.parse_args()
 
-    print("\n--- Scarlet 2.0 Solver ---")
+    print("\n--- Scarlet 2.0 Solver (Stiff + Normalized) ---")
     print("Mode ratio:", args.ratio)
     print("Relaxation time:", args.t_v)
     print("Initial redshift:", args.zf)
 
-    # Ensure output directory
     os.makedirs("results", exist_ok=True)
 
-    # Solve evolution
+    # Solve torsion evolution
     z, rho = solve_torsion(args.ratio, args.t_v, args.zf)
 
-    # Compute observables
+    # Derived observables
     h0 = compute_h0(rho)
     s8 = compute_s8(rho)
 
@@ -147,7 +173,7 @@ def main():
     plt.plot(z, s8)
     plt.xlabel("Redshift")
     plt.ylabel("S8")
-    plt.title("Scarlet 2.0 — Torsional Suppression")
+    plt.title("Scarlet 2.0 — Torsional Suppression (Stiff Solver)")
     plt.savefig("results/s8_suppression.png")
 
     print("\nResults saved to /results")
