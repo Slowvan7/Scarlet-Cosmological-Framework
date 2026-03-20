@@ -1,83 +1,73 @@
-## Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 
 
-Scarlet 2.0 is built on the VanAcker Bedrock, a foundational spacetime scale t_\mathrm{Bedrock} = 10^{-41}\,\mathrm{s}, which governs the emergence of torsional effects in the late-time universe. The bedrock’s key observable signature is a global torsional twist of \beta_\mathrm{Bedrock} = 0.21^\circ, which simultaneously aligns the Higgs mass, late-time expansion (Hubble tension), and cosmic birefringence. Readers unfamiliar with the framework’s design principles, stability constraints, or the Fabric Fatigue formalism may find it helpful to consult Appendix H￼ for a guided overview before proceeding.
+Scarlet Cosmological Framework (Scarlet 2.0) — Corrected Version
 
 
 
 
-Full framework documentation: [SCARLET_2_0.md](SCARLET_2_0.md)
 
-* [Scarlet 2.0 — Full Framework](SCARLET_2_0.md)
 
-The Scarlet–VanAcker Cosmological Framework (Scarlet 2.0)
 
 
 
 
+Overview
 
-A Mechanical Resolution to the 2026 “Crisis in Cosmology”
 
 
 
-Formalism: Thomas VanAcker email n63gt@icloud.com
 
-Date: January 2026
+The Scarlet Cosmological Framework is an effective field theory of gravity formulated on a Riemann–Cartan manifold in which torsion is parameterized by a scalar field \phi. The theory introduces a UV scale \Lambda_0 and treats torsion as an emergent, dynamically constrained degree of freedom rather than an independent tensor field.
 
 
 
+The framework operates as a coarse-grained effective description, where microscopic geometric structure is integrated out to produce macroscopic observables.
 
 
 
 
 
-I. Executive Summary
 
 
 
+Degrees of Freedom
 
 
-Scarlet–VanAcker Cosmology replaces the abstract Cosmological Constant (\Lambda) with the mechanical properties of space fabric.
 
 
 
-Structural Origin: Cosmic expansion is the unfurling of a physical spacetime fabric anchored at the VanAcker Bedrock, a fundamental temporal scale
-t_V = 10^{-41}\ \mathrm{s}.
-Fatigue Mechanism: The observed 4.2σ suppression of late-time expansion is interpreted as material fatigue, indicating the spacetime manifold is approaching its elastic yield point.
-Torsion Coupling: The reduction in expansion rate is mechanically coupled to a global axial torsion twist, producing achromatic cosmic birefringence
-\beta \simeq 0.21^\circ \;(5\times 10^{-3}\ \mathrm{rad}).
+Metric tensor: g_{\mu\nu}
+Scalar torsion potential: \phi
+Matter fields: \psi
 
 
 
 
+Torsion is encoded through the scalar field and its derivatives.
 
 
 
 
 
-II. Mathematical Formalism
 
 
 
+Torsion Ansatz
 
 
-The framework is formulated in Riemann–Cartan geometry, where the metricg_{\mu\nu} and torsion tensor \mathcal{T}^{\alpha}{}_{\mu\nu} are independent degrees of freedom.
 
 
 
-The null energy condition (NEC) is transiently violated by axial torsion near the bedrock, consistent with non-Riemannian bounce models.
-Ghost instabilities are avoided via the Nieh–Yan identity, ensuring positive-definite kinetic terms.
+The torsion tensor is defined as:
 
 
 
+S^\lambda_{\ \mu\nu} = \frac{1}{\Lambda_0} \left( \delta^\lambda_{\ \mu} \partial_\nu \phi - \delta^\lambda_{\ \nu} \partial_\mu \phi \right)
 
-Assumptions:
 
 
+This represents a restricted (vector/trace) torsion sector. Higher torsion components are neglected within this effective description.
 
-Spacetime is a mechanical medium with global torsion coherence.
-The 11-dimensional bulk geometry influences 4D observable physics via torsional stress.
-The VanAcker bedrock sets the fundamental temporal scale for all pre-bounce dynamics.
 
 
 
@@ -85,162 +75,163 @@ The VanAcker bedrock sets the fundamental temporal scale for all pre-bounce dyna
 
 
 
+Gravitational Action
 
 
-III. The 10⁻⁴¹ s Master Clock
 
 
 
+S = \int d^4x \sqrt{-g} \left[ \frac{1}{2\kappa} \left( R + \alpha_1 S_{\alpha\mu\nu} S^{\alpha\mu\nu} \right) + \mathcal{L}_m(\psi, g_{\mu\nu}) \right]
 
 
-The VanAcker Tick
 
-t_V = 10^{-41}\ \mathrm{s}
+Where:
 
-serves as the master clock of the universe, providing mechanical leverage to enforce a non-singular Hard-Stop bounce, preventing metric “shattering” during the pre-bounce phase.
 
 
+R is the Ricci scalar constructed from the full affine connection (including torsion)
+\alpha_1 is an effective coupling constant
+torsion contributions appear through both R and explicit quadratic invariants
 
 
 
 
 
 
-IV. The Scarlet–VanAcker Action
 
 
 
+Energy–Momentum Exchange
 
 
-The dynamics follow from a Poincaré Gauge action dominated by quadratic torsion at the bedrock:
 
 
 
-S = \int d^4x \sqrt{-g} \left[ \frac{1}{2\kappa} \left( R + \alpha_1 T_{\alpha\mu\nu} T^{\alpha\mu\nu} + \alpha_2 T_{\mu\alpha}{}^\alpha T^{\mu\beta}{}_\beta \right) + \mathcal{L}_m \right].
+The matter and torsion sectors exchange energy through an interaction term derived from the full action:
 
 
 
-Couplings \alpha_i are normalized to t_V^2, ensuring a stable Hard-Stop bounce at t = t_V.
-R is the Ricci scalar; \mathcal{L}_m is the matter Lagrangian.
+\nabla_\mu T^{\mu\nu}_{(m)} = \mathcal{Q}^\nu, \quad \nabla_\mu T^{\mu\nu}_{(\phi)} = -\mathcal{Q}^\nu
 
 
 
+ensuring total conservation:
 
 
 
+\nabla_\mu \left( T^{\mu\nu}_{(m)} + T^{\mu\nu}_{(\phi)} \right) = 0
 
 
 
-V. Modified Friedmann Equations
+Here:
 
 
 
+\mathcal{Q}^\nu is not an independent input but is implicitly determined by the interaction structure of the action.
 
 
-The background evolution satisfies
 
 
 
-H^2 = \frac{8\pi G}{3}\,\rho \left(1 - \frac{\rho}{\rho_\mathrm{crit}}\right) + \frac{\zeta(t)}{3},
 
 
 
-where \zeta(t) is the Fabric Fatigue Function, replacing \Lambda.
 
+Scalar Field Dynamics
 
 
-Units: [\zeta] = \mathrm{time}^{-2}
-\rho_\mathrm{crit} is the critical density determined by the bedrock scale.
 
 
 
+In a cosmological background, the scalar field evolves as:
 
 
 
+\ddot{\phi} + (3H + \gamma)\dot{\phi} - \frac{1}{a^2}\nabla^2 \phi + \frac{dV}{d\phi} = 0
 
 
 
-VI. Axial Clock Evolution
+Where:
 
 
 
+H is the Hubble parameter
+\gamma is an effective damping term representing coarse-grained dissipation
+V(\phi) is an effective potential
 
 
-The axial clock S_0(\tau) regulates the bedrock:
 
 
+This equation is understood as an effective, large-scale description of the scalar dynamics.
 
-S_0(\tau) = \int \sqrt{g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu}\, d\tau ,
 
 
 
-with proper-time dimension [S_0] = \mathrm{s}. It modulates torsional dynamics throughout cosmic history.
 
 
 
 
+Torsional Energy Density
 
 
 
 
-VII. Scalar Power Spectrum and Spectral Tilt
 
+The torsion sector contributes an effective energy density of the form:
 
 
 
+\rho_{\mathrm{torsion}} = \frac{1}{2}(\partial \phi)^2 + V(\phi)
 
-Torsional slow-roll parameters:
 
 
+This enters cosmological evolution through the Friedmann equation:
 
-\epsilon_T \equiv -\frac{\dot{H}_T}{H_T^2}, \quad \eta_T \equiv \frac{\dot{\epsilon}_T}{H_T \epsilon_T}.
 
 
+H^2 = \frac{8\pi G}{3} \left( \rho_{\mathrm{matter}} + \rho_{\mathrm{torsion}} \right)
 
-The scalar spectral tilt is:
 
 
 
-n_s = 1 - 4\epsilon_T + 2\eta_T.
 
 
 
-Using bedrock-anchored values:
 
+UV Scale and Effective Description
 
 
-\epsilon_T \approx 0.0115, \quad \eta_T \approx 0.0055,
 
 
 
-we obtain
+The parameter \Lambda_0 defines the ultraviolet cutoff of the effective theory and sets the scale at which torsional corrections become significant.
 
 
 
-\boxed{n_s = 0.965}.
+All observables are interpreted in a coarse-grained sense, where microscopic degrees of freedom are integrated out.
 
 
 
-No alternative temporal anchor reproduces Planck/ACT values.
 
 
 
 
 
+Dissipation Scaling
 
 
-VIII. Tensor-to-Scalar Ratio
 
 
 
+The damping coefficient is modeled as:
 
 
-Tensor modes arise gravitationally at the bounce and are suppressed by fabric rigidity:
 
+\gamma \sim \frac{\gamma_0}{N_{\mathrm{roots}}}
 
 
-\boxed{r \simeq 0.003}.
 
+This expresses an effective scaling relation between internal structural complexity and dissipation strength. This is a phenomenological parameterization within the effective framework.
 
 
 
@@ -248,204 +239,212 @@ Tensor modes arise gravitationally at the bounce and are suppressed by fabric ri
 
 
 
-IX. Cosmic Birefringence (Achromatic)
 
+Cosmological Perturbations and Tilt
 
 
 
 
-Photon propagation through the twisted fabric produces:
 
+Define:
 
 
-\boxed{\beta \simeq 3.66\times10^{-3}\ \mathrm{rad} \; (0.21^\circ)}.
 
+\epsilon_T = -\frac{\dot{H}}{H^2}, \quad \eta_T = \frac{\dot{\epsilon}_T}{H \epsilon_T}
 
 
 
+The scalar spectral tilt is given (at leading order in the effective slow-roll expansion) by:
 
 
 
+n_s = 1 - 4\epsilon_T + 2\eta_T
 
-X. Parallel Connection and Numerical Convergence
 
 
+This relation is model-dependent and reflects torsion-modified perturbation dynamics.
 
 
 
-Parallel connection:
 
 
 
-\Gamma_\parallel = \frac{\kappa S_0}{2}, \quad \kappa \approx 0.087,
 
 
+Cosmic Birefringence
 
-set by the Planck–VanAcker scale ratio and modulated by the 11D geometric packing fraction. Numerical integration reproduces the observed 0.21° rotation.
 
 
 
 
+Photon polarization rotates due to coupling with the scalar torsion field:
 
 
 
+\beta \propto \int \dot{\phi}(t)\, dt
 
-XI. Torsional Baryogenesis
 
 
 
 
+Leading-Order Property
 
-Axial torsion induces CP violation through the Dirac–Hehl interaction:
 
 
 
-\mathcal{L}_\mathrm{int} = \bar{\psi} \gamma^\mu \gamma^5 \psi\, S_\mu.
 
+At leading order in the effective theory, the birefringence is achromatic:
 
 
-The spacetime fabric acts as a handedness filter, producing the baryon asymmetry:
 
+\beta = \beta_{\mathrm{geom}} \quad (\text{independent of } \omega)
 
 
-\boxed{\eta_B \simeq 6\times10^{-10}}
 
+Subleading corrections may introduce small frequency dependence, but these are beyond leading-order effects.
 
 
-during the 10^{-41}\ \mathrm{s} bounce.
 
 
 
 
 
 
+Topological Sector (Coarse-Grained)
 
 
-XII. Dark Matter as Localized Torsional Stress
 
 
 
+Topological structure is characterized by mappings:
 
 
-Dark matter corresponds to stable 3D torsion knots, with abundance:
 
+S^3 \rightarrow S^2
 
 
-\boxed{\Omega_\mathrm{DM} \simeq 0.26}.
 
+with associated Hopf invariant Q_{\text{top}}.
 
 
-This arises naturally from stress redistribution into the 11D bulk.
 
+Field strength:
 
 
 
+F_{jk} = \hat{n} \cdot (\partial_j \hat{n} \times \partial_k \hat{n})
 
 
 
+Q_{\text{top}} \in \mathbb{Z}
+Computed in a coarse-grained or limiting sense
+Encodes global linking of field configurations
 
-XIII. The Scarlet Defect (Cold Spot)
 
 
 
 
 
-The CMB Cold Spot marks the origin scar of the fabric:
 
 
 
-Modeled as a Dirichlet boundary condition on the torsion vector \phi
-Fixes a global torsional axis across the manifold
+Topological Stability
 
 
 
 
 
+Topological invariants constrain the dynamics:
 
 
 
+Continuous evolution preserves Q_{\text{top}}
+Dissipation reduces local energy but does not change topology
+Transitions between sectors require non-perturbative processes
 
-XIV. 4.2-Sigma Withering: \zeta(t) \to w(z)
 
 
 
+Macroscopic observables correspond to statistical averages over many microscopic configurations.
 
 
-The Fabric Fatigue Function:
 
 
 
-\zeta(t) = \Lambda_V \exp\Big(-\frac{t^2}{t_\mathrm{yield}^2}\Big), \quad t_\mathrm{yield} \approx 11.1\ \mathrm{Gyr}.
 
 
 
-Mapping to the dark-energy equation of state:
+Baryogenesis Mechanism
 
 
 
-w(z) = -1 + \eta \left[ \frac{2}{H(z)t_\mathrm{yield}^2} \int_0^z \frac{dz'}{H(z')(1+z')} \right],
 
 
+The scalar field couples to fermions via an axial interaction:
 
-reproduces the DESI 2026 4.2σ deviation, interpreted as the material response of spacetime.
 
 
+\mathcal{L}_{\mathrm{int}} = \bar{\psi}\gamma^\mu \gamma^5 \psi \, \partial_\mu \phi
 
 
 
+This induces an effective chemical potential:
 
 
 
-XV. Finite Lifetime
+\mu_{\mathrm{eff}} \sim \dot{\phi}
 
 
 
+leading to baryon asymmetry generation:
 
 
-The universe evolves deterministically over 33.3 billion years, with three symmetric phases:
 
+\eta_B \propto \int \dot{\phi}\, dt
 
 
-Unfurling
-Fatigue (current)
-Snap-Back
 
 
 
 
 
 
+Interpretation of Dark Sector
 
 
 
-XVI. Snap-Back Mechanics
 
 
+Torsional energy density contributes to cosmic acceleration
+Coherent or localized torsional configurations behave as effective dark matter components
+No additional fundamental dark sector fields are required within the effective description
 
 
 
-As w \to 0, the Hubble rate declines toward zero. Late-time observers encounter a blueshift horizon as the fabric recoils toward the bedrock.
 
 
 
 
 
 
+Late-Time Dynamics
 
 
-XVII. Resolution of Inflation
 
 
 
+At late times, evolution is governed by:
 
 
-Traditional inflation is replaced. Flatness and horizon problems are resolved by the pre-bounce phase, which reduces to an effective quasi–de Sitter expansion in the weak-torsion limit.
 
+expansion damping
+dissipation \gamma
+decay of torsional energy density
 
 
-Scale-invariant fluctuations arise naturally from the torsion-dominated metric unfurling.
 
 
+The interplay of these effects determines the observed large-scale cosmological behavior.
 
 
 
@@ -453,51 +452,54 @@ Scale-invariant fluctuations arise naturally from the torsion-dominated metric u
 
 
 
-XVIII. Stability and Ghost Avoidance
 
+Falsifiability
 
 
 
 
-Ghosts: Eliminated via the Nieh–Yan identity, ensuring positive-definite kinetic terms.
-Tachyons: Bounce stabilized by an effective potential V(T) with
-V''(T) > 0
-at bedrock density.
 
+The framework is empirically testable through:
 
 
 
+Detection of cosmic birefringence consistent with an achromatic leading-order signal
+Reproduction of cosmological observables from torsion-driven dynamics
+Consistency with baryon asymmetry generation from scalar evolution
+Agreement with expansion history without introducing a cosmological constant
 
 
 
 
+The framework is challenged if:
 
-XIX. Falsifiability
 
 
+No birefringence is observed within experimental sensitivity
+Strong leading-order chromatic birefringence is detected
+Cosmological observables cannot be reproduced within the torsion EFT
 
 
 
-The Scarlet–VanAcker Framework is falsifiable if:
 
 
 
-No birefringence step is observed near z \approx 2
-Late-time structure suppression S_8 < 0.5\%
-The CMB bispectrum is purely parity-even
 
 
 
+Summary
 
-Validation Table
 
 
 
-Conclusion
 
+Scarlet 2.0 describes gravity as an effective torsion-inclusive theory where:
 
 
 
-
-The universe is not vacuum-driven; it behaves as a mechanical system returning to its foundation. The 2026 anomalies are natural consequences of spacetime reaching its elastic limit.
-
+Torsion is encoded via a scalar field \phi
+The Ricci scalar is constructed from the full connection
+Energy exchange between matter and torsion is conserved
+Cosmological observables emerge from scalar-torsion dynamics
+Topological invariants govern stability and discrete transitions
+Leading-order birefringence is achromatic and geometrically determined
