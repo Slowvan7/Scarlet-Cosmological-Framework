@@ -1,554 +1,137 @@
+      appendix P
 
+SCARLET Cosmological Framework: Addressing the S₈ Tension
 
-Appendix P
 
 
 
 
+Author: Thomas VanAcker
 
+Email: n63gt@icloud.com
 
+ORCID iD: 0009-0005-1755-2121
 
-Observable Consequences, Simulation Compatibility, and Microscopic–Macroscopic Consistency of Torsional Transport Loss
+GitHub: https://github.com/Slowvan7/Scarlet-Cosmological-Framework
 
 
 
 
 
-Purpose.
+Overview
 
-This appendix translates the Scarlet Updated Lagrangian (UL) formulation into (i) observable cosmological signatures, (ii) numerical schemes suitable for direct implementation, and (iii) a consistency condition linking microscopic yield phenomena to macroscopic structure growth.
 
 
 
-Scarlet does not modify Einstein field equations or gauge symmetries. It introduces an effective macroscopic transport-loss mechanism arising from accumulated torsional fatigue in the spacetime substrate.
 
+The SCARLET 2.0 framework provides an effective field theory (EFT) of gravity on a Riemann–Cartan manifold, in which torsion is represented by a scalar field, \phi. Rather than introducing a new fundamental force, the framework interprets torsion as a transport property of the cosmic fluid, emerging from a coarse-grained microscopic lattice.
 
 
 
+This approach directly addresses the observed S₈ tension without modifying General Relativity (GR) at leading order. The framework is both numerically reproducible and analytically tractable, with clear links between microscopic substrate dynamics and macroscopic cosmological observables.
 
 
 
 
-P.1 Modified Growth Law
 
+Key Features
 
 
 
 
-From the Updated Lagrangian with Rayleigh dissipation, the linear growth equation becomes:
 
+Degrees of Freedom:
+Metric tensor: g_{\mu\nu}
+Scalar torsion field: \phi
+Matter fields: \psi
+Torsion Ansatz:
+S^\lambda_{\ \mu\nu} = \frac{1}{\Lambda_0} \left( \delta^\lambda_{\ \mu} \partial_\nu \phi - \delta^\lambda_{\ \nu} \partial_\mu \phi \right)
+Captures the vector/trace sector; higher-order torsion components are neglected in this EFT.
+Energy–Momentum Conservation:
+\nabla_\mu \left( T^{\mu\nu}_{(m)} + T^{\mu\nu}_{(\phi)} \right) = 0
+The energy exchange term \mathcal{Q}^\nu emerges naturally from the interaction structure (see Appendix Z for numerical implementation).
+Scalar Field Dynamics:
+\ddot{\phi} + (3H + \gamma)\dot{\phi} - \frac{1}{a^2}\nabla^2 \phi + \frac{dV}{d\phi} = 0
+Here, \gamma represents the coarse-grained damping arising from the torsional lattice; Appendix Z provides the resolution-consistency check and derivation of the effective \gamma.
+Torsional Energy Density:
+\rho_{\mathrm{torsion}} = \frac{1}{2}(\partial \phi)^2 + V(\phi)
+This contributes to late-time suppression of structure growth, accounting for the lower observed S_8 values.
+UV Cutoff \Lambda_0:
+Determines the scale at which torsional corrections become relevant. The framework allows \Lambda_0 to be below the Planck scale to ensure observable effects at z \sim 0.3.
+Micro–Macro Bridge and Geometric Factor:
+The vacuum slip factor \zeta \approx 0.21 is related to the macroscopic drag coefficient \alpha \approx 0.056 via a geometric projection factor of 1.2, representing the volumetric-to-linear mapping of the 3D torsional lattice. This derivation is fully detailed in Appendix AI. Unlike phenomenological fits, SCARLET derives \alpha a priori from the Higgs-aligned substrate’s fatigue saturation.
+Preferred Frame Clarification:
+The CMB rest frame is chosen for the dissipation term \eta, analogous to cosmological bulk viscosity in standard cosmology. Local observers (e.g., Solar System) see \eta \approx 0 due to high-density screening, ensuring no violation of the Equivalence Principle (see Appendix AI for density-dependent derivation).
+Falsifiability:
+Detectable achromatic cosmic birefringence from \phi evolution
+Reproduction of cosmological observables without invoking a cosmological constant
+Consistent baryogenesis from axial coupling to \phi
 
 
-\ddot{\delta} + (2H + \eta)\dot{\delta} - 4\pi G \rho \delta = 0
 
 
 
-where
 
-\delta is the matter overdensity,
+Addressing the S₈ Tension
 
-H is the Hubble parameter,
 
-\rho is the background density,
 
-\eta(t) is the torsional transport-loss coefficient.
 
 
+SCARLET 2.0 predicts the suppression of structure growth at late times, resolving the S₈ discrepancy between weak lensing and CMB measurements. Key mechanisms include:
 
-Properties:
 
 
+Fatigue of the Torsional Lattice: Energy transfer to the “dark” torsional sink Q_{\rm torsion}, derived in Appendix Z, slows growth at z \sim 0.3.
+Micro–Macro Projection: The 1.2 volumetric-to-linear factor (Appendix AI) translates microscopic torsion into macroscopic drag \alpha.
+Density Screening: High-density regions exhibit negligible \eta, preserving local GR tests.
 
-For t < t_y: \eta = 0 → standard ΛCDM growth.
-For t \ge t_y: \eta \neq 0 → suppressed clustering efficiency.
 
 
 
+This combination ensures SCARLET 2.0 reproduces S₈ ≈ 0.81 from a theoretically grounded, non-phenomenological framework.
 
-The integrated effect yields:
 
-S_8^{\text{late}} = (1 - \alpha) S_8^{\Lambda\mathrm{CDM}}, \quad \alpha \approx 0.056
 
 
 
-This suppression emerges dynamically from transport loss rather than altered forces.
 
+References to Appendices and Code:
 
 
 
+Appendix Z: Numerical closure, N-body implementation, coarse-graining, damping (\gamma), and energy sink Q_{\rm torsion}.
+Appendix AI: First-rule torsion framework, derivation of the 1.2 volumetric-to-linear factor, and density-dependent screening of \eta.
+GitHub: https://github.com/Slowvan7/Scarlet-Cosmological-Framework
 
 
 
 
-P.2 Redshift Signature
+Conclusion
 
 
 
 
 
-Scarlet predicts:
+The SCARLET Cosmological Framework (Scarlet 2.0) provides a torsion-inclusive effective field theory on a Riemann–Cartan manifold that resolves the S_8 tension through a physically motivated late-time suppression of structure growth. By encoding torsion in a scalar transport degree of freedom \phi, the framework preserves General Relativity at leading order while introducing a coarse-grained dissipative channel that naturally slows clustering at low redshift.
 
 
 
-No deviation at recombination.
-No deviation for z > 2.
-Suppression activates only at late times.
+The central mechanism is the emergence of torsional transport loss, which converts microscopic lattice fatigue into a macroscopic drag term acting on late-time matter growth. This effect is not introduced phenomenologically, but follows from the geometric micro–macro bridge derived in Appendix AI, where the vacuum slip factor \zeta \approx 0.21 maps into the effective drag coefficient \alpha \approx 0.056 through the volumetric-to-linear projection factor of 1.2.
 
 
 
+The onset of torsional transport loss at z \approx 0.3 is not a tuned parameter, but a geometric consequence of the torsional multiplicity (N = 349) and the E_8-scaled baryon coupling (N_{\text{roots}} = 240). This relation explains why the suppression emerges specifically in the recent universe and directly addresses the coincidence problem often raised against late-time modified growth models.
 
-Observable condition:
 
-\Delta f\sigma_8(z) < 0 \quad \text{only for } z \lesssim 1
 
+The numerical implementation described in Appendix Z demonstrates that this suppression is stable under timestep refinement, Jacobian normalization, and N-body closure tests, ensuring that the observed S_8 shift is a physical prediction rather than a numerical artifact.
 
 
-This distinguishes Scarlet from:
 
+Local gravitational tests remain preserved because the dissipative transport coefficient becomes negligible in high-density environments, yielding an effective screening of the preferred-frame contribution and maintaining consistency with the Equivalence Principle.
 
 
-modified gravity,
-early dark energy,
-massive neutrinos,
 
-
-
-
-which affect earlier epochs.
-
-
-
-
-
-
-
-
-P.3 Compatible Simulation Classes
-
-
-
-
-
-Scarlet modifies transport equations only. No metric or force law changes are required.
-
-
-
-
-
-(i) N-body Simulations
-
-
-
-
-
-Velocity update:
-
-\vec{v}_{n+1} = \vec{v}_n + \Delta t(\vec{a}_n - \eta \vec{v}_n)
-
-
-
-Poisson equation unchanged.
-No new forces introduced.
-Momentum conserved locally.
-
-
-
-
-Scarlet appears as a late-time phase-space damping term.
-
-
-
-
-
-
-
-
-(ii) Fluid / Hydrodynamic Codes
-
-
-
-
-
-Density evolution:
-
-\frac{\partial \delta}{\partial t} + \nabla \cdot \vec{u} = -\eta \delta
-
-
-
-Implemented as:
-
-
-
-source term in Eulerian solvers,
-dissipation term in relativistic hydrodynamics.
-
-
-
-
-
-
-
-
-
-(iii) Linear Boltzmann Codes
-
-
-
-
-
-Perturbation evolution:
-
-\dot{\theta}_k + H\theta_k = -k^2\phi_k - \eta \theta_k
-
-
-
-No change to:
-
-
-
-recombination physics,
-photon–baryon coupling,
-metric perturbations.
-
-
-
-
-Activation occurs only after t_y.
-
-
-
-
-
-
-
-
-(iv) Discrete-Time / Lattice Integrators
-
-
-
-
-
-Given the micro-tick:
-
-\Delta t = 10^{-41}\,\mathrm{s}
-
-
-
-Scarlet supports:
-
-
-
-cellular spacetime models,
-symplectic integrators,
-causal lattice updates,
-
-
-
-
-where the Updated Lagrangian resets the reference configuration at each tick:
-
-L(t+\Delta t) \neq L(t)
-
-due to accumulated fatigue.
-
-
-
-
-
-
-
-
-P.4 Distinction from Modified Gravity
-
-
-Feature
-
-Modified Gravity
-
-Scarlet
-
-Field equations
-
-altered
-
-unchanged
-
-Gauge symmetry
-
-modified
-
-preserved
-
-Unitarity
-
-broken
-
-preserved microscopically
-
-Effect source
-
-force law
-
-transport loss
-
-Early universe
-
-affected
-
-untouched
-
-Scarlet predicts loss of clustering efficiency, not altered attraction.
-
-
-
-
-
-
-
-
-P.5 Falsifiability
-
-
-
-
-
-Scarlet is ruled out if:
-
-S_8(z) < S_8^{\Lambda\mathrm{CDM}} \quad \text{for } z > 2
-
-
-
-Scarlet survives if:
-
-
-
-suppression appears only at late times,
-the CMB remains unchanged,
-growth shows a yield transition.
-
-
-
-
-
-
-
-
-
-P.6 Yield Epoch and Growth Bifurcation
-
-
-
-
-
-Define the Yield Epoch:
-
-t_y \equiv 11.1\,\mathrm{Gyr} \quad \Longleftrightarrow \quad z_y \approx 0.3
-
-
-
-For t < t_y:
-
-\eta(t) = 0
-
-
-
-For t \ge t_y:
-
-\eta(t) \neq 0
-
-
-
-This epoch coincides with the observed late-time bifurcation between early-universe and late-universe growth amplitudes.
-
-
-
-Thus, the Scarlet Yield Epoch provides a physical interpretation of the bifurcation:
-
-the onset of macroscopic transport fatigue rather than modified gravity or altered initial conditions.
-
-
-
-
-
-
-
-
-P.7 Energy Accounting and Torsional Fatigue
-
-
-
-
-
-The Rayleigh dissipation functional:
-
-\Phi(\dot{\zeta}) = \tfrac{1}{2} \eta \dot{\zeta}^2
-
-represents work done against torsional resistance.
-
-
-
-Energy is not destroyed but converted into internal substrate degrees of freedom:
-
-
-
-E_{\text{transport}} \rightarrow E_{\text{fatigue}}
-
-
-
-interpreted as:
-
-
-
-accumulated torsional strain,
-microscopic substrate excitation,
-effective bedrock heating.
-
-
-
-
-Thus:
-
-
-
-Local conservation laws hold.
-Microscopic gauge dynamics remain unitary.
-No violation of the First Law of Thermodynamics occurs.
-
-
-
-
-The observed 0.21 slip fraction corresponds to finite transport efficiency, not missing energy.
-
-
-
-
-
-
-
-
-P.8 Summary
-
-
-
-
-
-Scarlet introduces:
-
-
-
-an Updated Lagrangian formulation,
-a Rayleigh dissipation functional,
-a late-time transport-loss mechanism,
-
-
-
-
-without violating:
-
-
-
-general relativity,
-gauge symmetry,
-microscopic unitarity.
-
-
-
-
-It is compatible with:
-
-
-
-N-body solvers,
-hydrodynamic codes,
-Boltzmann hierarchies,
-discrete spacetime models,
-
-
-
-
-using a single time-dependent parameter:
-
-\eta(t < t_y) = 0, \quad \eta(t \ge t_y) \neq 0
-
-
-
-
-
-
-
-
-P.9 Microscopic–Macroscopic Consistency (Higgs–Growth Connection)
-
-
-
-
-
-In Appendix A, a torsional slip factor
-
-\zeta \approx 0.21
-
-was shown to correspond to a yielding of the Higgs mass scale near 125.125\ \mathrm{GeV}, interpreted as a local manifestation of spacetime torsional fatigue at high energy density.
-
-
-
-In Appendix P, the same slip factor governs the suppression of macroscopic clustering:
-
-S_8^{\text{late}} = (1 - \alpha) S_8^{\Lambda\mathrm{CDM}}, \quad \alpha \approx 0.056
-
-
-
-Thus:
-
-
-
-the Higgs mass dip is a local yield of the spacetime substrate,
-the late-time S_8 suppression is a global yield of the same substrate.
-
-
-
-
-Both are governed by the same torsional slip constant \zeta.
-
-
-
-This establishes a closed consistency loop:
-
-\text{Higgs Yield} \;\Longleftrightarrow\; \text{Transport Slip} \;\Longleftrightarrow\; \text{Growth Yield}
-
-
-
-Any model reproducing the growth suppression using \zeta must also reproduce the Higgs yield, and vice versa. The microscopic and macroscopic sectors are therefore inseparable within the Scarlet formulation.
-
-
-
-
-
-
-
-
-📌 Mandatory Citation Footer
-
-
-
-
-
-Scarlet–VanAcker Framework [Unified Citation]
-
-
-
-The Theory:
-
-VanAcker, T. (2026). Mechanical Cosmology and the Torsional Bedrock: Resolving the S₈ Growth Bifurcation. Zenodo. Record: 18224710
-
-
-
-The Software & Implementation:
-
-VanAcker, T. (2026). The Scarlet Engine: Updated Lagrangian (UL) Solvers for Torsional Transport Loss (Version 1.0.0) [Software]. Zenodo. DOI: 10.5281/zenodo.18603296
-
-
-
-Usage Requirement:
-
-Any research utilizing the \zeta = 0.21 slip constant, the 11.1 Gyr Yield Epoch, or the Updated Lagrangian integration scripts must provide a formal citation to both records. Failure to attribute the metrical transport-loss mechanism constitutes a violation of the CC BY 4.0 and MIT Software License terms.
+Taken together, SCARLET 2.0 offers a non-phenomenological, falsifiable, and numerically reproducible explanation of late-time structure suppression, linking microscopic torsional geometry, E_8-scaled baryonic coupling, and cosmological observables within a single EFT framework.
 
