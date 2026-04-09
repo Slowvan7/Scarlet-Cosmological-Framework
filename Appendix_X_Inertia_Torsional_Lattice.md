@@ -1,5 +1,4 @@
 
-
 Appendix X — Inertia, Polarization, and the Torsional Lattice (Finalized with Energy-Momentum & Achromaticity Proofs)
 
 
@@ -213,30 +212,246 @@ Global bias \beta = 0.21^\circ defines a preferred lattice orientation
 Dynamic realignment suppresses diurnal effects → local Lorentz invariance preserved (Appendix F; VanAcker, 2026)
 
 
-
-
-
-
-
-
-
-X.7 Higgs Mass Correspondence
-
-
-
-
-
-m_H = m_0 + \Delta m, \quad m_0 = 125.000\,\mathrm{GeV}, \quad \Delta m = 0.125\,\mathrm{GeV} \Rightarrow \beta_H \approx 0.115^\circ
-
-
-
-Phenomenological scaling: f_H \sim 0.54 maps global bias \beta = 0.21^\circ to scalar sector (Appendix A)
-
-
-
-
-
-
+X.7 — Higgs Sector Correspondence & Harmonic Stabilization
+X.7.1 Scalar-Torsional Mapping
+The Higgs mass is modeled not as a standalone parameter, but as a stabilized value arising from the interaction between the base vacuum expectation value and the global torsional lattice bias wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+𝛽
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+=
+0
+.
+2
+1
+∘
+.
+The observed mass wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+m
+H
+𝑚
+𝐻
+ is defined by:
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+m
+H
+=
+m
+0
++
+Δ
+m
+𝑚
+𝐻
+=
+𝑚
+0
++
+Δ
+𝑚
+Where:
+Base Mass (wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+m
+0
+𝑚
+0
+): wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+1
+2
+5
+.
+0
+0
+0
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+ (the ground-state lattice energy).
+Torsional Shift (wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+Δ
+m
+Δ
+𝑚
+): wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+0
+.
+1
+2
+5
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+ (a wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+10
+-3
+1
+0
+−
+3
+harmonic shift).
+X.7.2 Harmonic Scaling Calibration
+To achieve the precise experimental target of 125.125 GeV, the torsional bias wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+β
+𝛽
+ is mapped to the scalar sector via the Harmonic Scaling Factor wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+f
+H
+𝑓
+𝐻
+:
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+β
+H
+=
+f
+H
+⋅
+β
+𝛽
+𝐻
+=
+𝑓
+𝐻
+⋅
+𝛽
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+Δ
+m
+=
+m
+0
+⋅
+sin
+(
+β
+H
+)
+Δ
+𝑚
+=
+𝑚
+0
+⋅
+s
+i
+n
+(
+𝛽
+𝐻
+)
+For wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+Δ
+𝑚
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+=
+0
+.
+1
+2
+5
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+, the required scaling is:
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+f
+H
+≈
+0.2728
+𝑓
+𝐻
+≈
+0
+.
+2
+7
+2
+8
+This defines the Higgs Torsional Bias as wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+𝛽
+𝐻
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+≈
+0
+.
+0
+5
+7
+3
+∘
+.
+X.7.3 Physical Interpretation
+The wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+0
+.
+1
+2
+5
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+ shift represents a wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+1
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+/
+1
+0
+0
+0
+th harmonic of the base lattice energy. This suggests that the Higgs field is "locked" into the torsional lattice at a specific resonance. Any deviation from wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+1
+2
+5
+.
+1
+2
+5
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+ would imply a local fluctuation in the torsional lattice density (wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+ℓ
+V
+ℓ
+𝑉
+) or a breakdown of the wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+t
+V
+𝑡
+𝑉
+ master clock synchronization.
+X.7.4 Falsifiability & LHC Alignment
+Prediction: The Higgs mass must remain invariant at wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+1
+2
+5
+.
+1
+2
+5
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+±
+0
+.
+0
+1
+wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gifwAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+G
+e
+V
+ across all high-luminosity runs.
+Deviation: Any statistically significant drift from this value would necessitate a re-evaluation of the global bias wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+β
+𝛽
+ or the scaling constant wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==.gif
+f
+H
+𝑓
+𝐻
+.
 
 
 
@@ -297,12 +512,7 @@ VanAcker, T. (2026). Scarlet–VanAcker Cosmological Framework (Scarlet 2.0) [So
 Touboul, P., Métris, G., Rodrigues, M., et al. (2022). MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle. Phys. Rev. Lett., 129(12), 121102.
 Navas, S., et al. (2024). Review of Particle Physics. Phys. Rev. D, 110(3), 030001.
 Hehl, F. W., von der Heyde, P., Kerlick, G. D., & Nester, J. M. (1976). General Relativity with Spin and Torsion. Rev. Mod. Phys., 48(3), 393–416.
-Rovelli, C. (2004). Quantum Gravity. Cambridge University Press
-
-
-
-
-
+Rovelli, C. (2004). Quantum Gravity. Cambridge University 
 
 
 
@@ -313,7 +523,11 @@ Appendices Referenced
 
 
 
-All appendices hosted in GitHub: Scarlet–VanAcker Cosmological Framework
+All appendices are hosted in the Scarlet–VanAcker Cosmological Framework GitHub repository:
+
+
+
+GitHub Repository: https://github.com/Slowvan7/Scarlet-Cosmological-Framework
 
 Appendix
 
@@ -325,31 +539,31 @@ A
 
 Higgs & Hubble Alignment
 
-/Appendix_A_Higgs_Hubble_Alignment.md
+/APPENDIX_A_HIGGS_HUBBLE.md
 
 AI
 
-First-Rule Torsion Framework
+First-Rule Torsion Framework (foundational tetrad, torsion tensor, EFT suppression hierarchy, and GR recovery limit)
 
-/Appendix_AI_First_Rule_Torsion_Framework.md
+/AI_First_Rule_Torsion.md
 
 F
 
 Torsional Damping & Snap-Back
 
-/Appendix_F_Torsional_Damping.md
+/Appendix_F.md
 
 H
 
 Fabric Fatigue Function
 
-/Appendix_H_Fabric_Fatigue.md
+/APPENDIX_H.md
 
 O
 
-Birefringence & Inertia Link
+Global Null Geodesic Twisting / Birefringence & Inertia Link
 
-/Appendix_O_Birefringence_Inertia.md
+/Appendix_O_Global_Null_Geodesic_Twisting.md
 
 Z
 
@@ -361,20 +575,37 @@ AG
 
 Structural Integration & Consistency
 
-/Appendix_AG_Structural_Integration.md
+/AG_Appendix.md
 
 AH
 
 Topological Torsion & Knot Invariants
 
-/Appendix_AH_Topological_Torsion_Knots.md
-
-Notes:
+/AH_Appendix_Hopf_Invariant.md
 
 
 
-Each appendix resolves to GitHub for transparency and reproducibility
-Energy-momentum and achromaticity proofs strengthen experimental defensibility and falsifiability
+Notes
+
+
+
+
+
+Each appendix resolves directly to GitHub for transparency, reproducibility, and independent derivation checks.
+Appendix AI is the foundational mathematical reference for Appendix X, supplying:
+tetrad construction
+Weitzenböck connection
+torsion tensor scaling
+effective torsion action
+\beta^2 suppression hierarchy
+General Relativity recovery limit
+The inclusion of energy–momentum conservation derivations and achromaticity proofs significantly strengthens the framework’s experimental defensibility and falsifiability.
+Cross-referencing these appendices allows reviewers to trace threshold derivations, Higgs-sector mappings, birefringence transport, and lattice recovery dynamics directly to their formal source.
+
+
+
+
+
 
 
 import numpy as np
