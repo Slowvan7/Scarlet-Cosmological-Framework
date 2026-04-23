@@ -342,99 +342,109 @@ controls deviations from classical General Relativity.
 
 Appendix AI.13 — Density Screening, Local GR Recovery, and the Warp–Weft Origin of the First Rule
 
-AI.13.1 Overview
 
-The First Rule introduced in Appendix AI is formulated as a microscopic alignment principle:
+Appendix AI.13 — Density Screening, Local GR Recovery, and Warp–Weft Origin of the First Rule
 
-\boxed{
-\text{Microscopic degrees of freedom evolve toward alignment with a common center}
-}
-
-governed by the Bedrock Horizon Scale
-
-t_* = 10^{-41}\,\mathrm{s},
-\qquad
-\ell_* = 10^{-35}\,\mathrm{m}.
-
-These scales define the minimum physically meaningful temporal and spatial resolution of the spacetime fabric. Below this scale, spacetime is not treated as a continuous manifold, but as a pre-dynamic geometric phase in which ordinary metric descriptions no longer apply.
-
-In the effective field theory developed in Appendix AI, this alignment principle is encoded through the tetrad field, torsion tensor, and the resulting Riemann–Cartan geometry. However, the formal structure does not require specification of the deeper microscopic origin of these alignment dynamics.
-
-This section provides that constitutive interpretation and explains how the same framework preserves precision local tests of General Relativity through density screening.
-
-The First Rule is understood as arising from the interaction of two constitutive alignment sectors of the vacuum manifold: the Warp sector and the Weft sector. Their coherence generates the emergent tetrad structure, while imperfect local closure produces torsion and higher-order geometric corrections.
-
-This is not introduced as an additional dynamical theory, but as the physical origin of the effective theory already defined in Appendix AI.
+(Rewritten in formal EFT / Riemann–Cartan framework form)
 
 
-AI.13.2 Pre-Geometric Warp–Weft Structure
+AI.13.1 Fundamental Alignment Postulate
 
-We postulate the existence of two fundamental pre-geometric alignment sectors:
+We postulate a microscopic alignment principle governing pre-geometric degrees of freedom at the Bedrock Horizon Scale:
 
-\mathcal{W}
-\qquad
-\text{(Warp Sector)}
+\ell_* = 10^{-35}\,\mathrm{m}, \qquad
+t_* = \frac{\ell_*}{c}
 
-and
+such that:
 
-\mathcal{F}
-\qquad
-\text{(Weft Sector)}
+\boxed{\ell_* = c t_*}
 
-which belong to a pre-metric configuration space
+This identifies the causal propagation speed of alignment dynamics with the observed invariant speed c:
 
-\mathcal{P}.
+c_{\mathrm{eff}} = c
 
-These sectors are not embedded spacetime hypersurfaces and do not initially possess metric structure in the General Relativistic sense. They are constitutive alignment sectors whose interaction defines the microscopic origin of geometry.
+Below this scale, spacetime is not described by a differentiable Lorentzian manifold but by a pre-geometric alignment phase with no metric structure.
 
-The Warp sector provides persistent longitudinal geometric anchoring, while the Weft sector provides transverse closure and local alignment recovery.
 
-Spacetime geometry emerges from the coherence of these two sectors rather than from a pre-existing metric background.
+AI.13.2 Expansion Parameter and EFT Regime
 
-Their mutual compatibility is described by the constitutive coherence functional
+We define the dimensionless expansion parameter:
+
+\boxed{\beta \equiv \frac{\ell_*}{L} \ll 1}
+
+where L is a macroscopic curvature scale.
+
+All observables admit a systematic expansion in powers of \beta, defining a controlled effective field theory.
+
+
+AI.13.3 Warp–Weft Constitutive Structure
+
+Spacetime geometry emerges from two pre-geometric alignment sectors:
+
+\mathcal{W} \quad (\text{Warp sector}), \qquad
+\mathcal{F} \quad (\text{Weft sector})
+
+defined on a non-metric configuration space \mathcal{P}.
+
+The tetrad field is defined as a coarse-grained constitutive functional:
 
 \boxed{
-\mathcal{C} :
-\mathcal{P}\times\mathcal{P}
-\rightarrow
-\mathbb{R}
+e^a_{\ \mu}(x;\ell_*) =
+\mathcal{E}^a_{\ \mu}[\mathcal{W},\mathcal{F};x,\ell_*]
 }
 
-with
+with perturbative expansion:
 
-\mathcal{C}(\mathcal{W},\mathcal{F})
+e^a_{\ \mu} = \delta^a_{\ \mu} + \beta\,\omega^a_{\ \mu} + \mathcal{O}(\beta^2)
 
-measuring the degree of local geometric coherence between the two sectors.
+The map \mathcal{E} encodes coarse-graining over pre-geometric alignment cells of size \ell_*.
 
-Perfect coherence corresponds to uniform alignment, while incomplete coherence generates residual geometric strain within the structured torsion-capable vacuum manifold.
 
-We define the emergent relation
+AI.13.4 Metric Structure
+
+The emergent metric is constructed from the tetrad:
 
 \boxed{
-e^a_{\ \mu}(x)
-\sim
-\mathcal{C}(\mathcal{W},\mathcal{F})
+g_{\mu\nu} = \eta_{ab}\, e^a_{\ \mu} e^b_{\ \nu}
 }
 
-so that the tetrad field represents the coarse-grained macroscopic response of local alignment deviation.
+with expansion:
 
-Thus, the tetrad is not assumed to be fundamental, but emerges as the geometric response of warp–weft coherence.
+g_{\mu\nu} =
+\eta_{\mu\nu}
++
+\beta(\omega_{\mu\nu}+\omega_{\nu\mu})
++
+\mathcal{O}(\beta^2)
 
 
-AI.13.3 Emergence of Torsion
+AI.13.5 Connections and Torsion
 
-Local failure of perfect warp–weft coherence produces gradients in the emergent tetrad field:
+Levi–Civita Connection
 
-\partial_\nu e^a_{\ \mu},
+\nabla_\lambda g_{\mu\nu} = 0
 
-which generate the Weitzenböck connection
+defines the standard curvature sector:
 
+R(\nabla) \sim \partial^2 g
+
+
+Weitzenböck Connection
+
+\boxed{
 \Gamma^{(W)\lambda}_{\ \ \mu\nu}
 =
-e^\lambda_a
-\partial_\nu e^a_{\ \mu}.
+e^\lambda_a \partial_\nu e^a_{\ \mu}
+}
 
-The antisymmetric part defines the torsion tensor:
+satisfies:
+
+\nabla^{(W)}_\lambda g_{\mu\nu} = 0,
+\qquad
+R(\Gamma^{(W)}) \equiv 0
+
+
+Torsion Tensor
 
 \boxed{
 T^\lambda_{\ \mu\nu}
@@ -444,292 +454,165 @@ T^\lambda_{\ \mu\nu}
 \Gamma^{(W)\lambda}_{\ \ \nu\mu}
 }
 
-Torsion therefore represents the residual geometric memory of incomplete local alignment.
-
-In this interpretation:
-
-uniform warp–weft coherence without local gradients corresponds to vanishing torsion,
-finite torsion corresponds to persistent alignment gradients,
-metric curvature governs leading-order gravitational dynamics,
-torsion corrections appear as higher-order effective contributions.
-Thus torsion is not introduced as an auxiliary correction, but as the geometric imprint of incomplete constitutive closure itself.
-
-It is the constitutive record of how the spacetime fabric locally resists perfect geometric alignment.
-
-
-AI.13.4 Bedrock Horizon Scale and Torsional Stiffness
-
-The Bedrock Horizon Scale
-
-t_* = 10^{-41}\,\mathrm{s},
-\qquad
-\ell_* = 10^{-35}\,\mathrm{m}
-
-defines the intrinsic resolution limits of the alignment process.
-
-These scales represent the smallest physically meaningful temporal and spatial excitations of the fabric and establish the lower bound below which classical geometry is no longer valid.
-
-The effective alignment propagation scale is defined by
+Scaling:
 
 \boxed{
-c_{\mathrm{eff}}
+T^\lambda_{\ \mu\nu}
+\sim
+\frac{\beta}{L}
 =
-\frac{\ell_*}{t_*}
+\frac{\ell_*}{L^2}
 }
 
-which characterizes the maximum rate at which alignment information can propagate through the emergent manifold.
 
-This quantity may coincide with the observed speed of light or represent a deeper geometric alignment scale from which relativistic propagation emerges.
+AI.13.6 Torsion Invariant and Scaling Hierarchy
 
-In material terms, this propagation is governed by the Torsional Stiffness of the vacuum manifold:
+Define:
 
-c^2
+\boxed{
+\mathcal{I}_T
 =
-\frac{K_t}{\rho_t}
-
-where
-
-K_t is the Torsional Stiffness,
-\rho_t is the Torsional Inertia Density.
-Together these define how rapidly the spacetime fabric restores equilibrium after local torsional displacement.
-
-Photon propagation couples to transverse torsional transport modes of the vacuum manifold, while standard electromagnetic gauge structure remains unchanged.
-
-This preserves Maxwell theory and the observed U(1) gauge symmetry while providing a constitutive interpretation of propagation through the structured vacuum.
-
-
-AI.13.5 Emergent Lorentz Symmetry
-
-The pre-geometric Warp and Weft sectors are not required to obey Lorentz symmetry at the microscopic level.
-
-Lorentz invariance is instead interpreted as an emergent infrared symmetry of the effective manifold after coarse-graining across many alignment cells of size \ell_*.
-
-Thus,
-
-\text{Pre-geometric alignment sectors}
-\neq
-\text{Lorentz-invariant spacetime}
-
-while
-
-\text{Macroscopic vacuum manifold}
-\rightarrow
-\text{Lorentz-invariant effective dynamics}.
-
-This prevents interpretation of the framework as a classical ether theory.
-
-The pre-geometric sector does not define an observable kinematic ether frame because Lorentz symmetry emerges in the effective metric sector.
-
-There is therefore no experimentally accessible preferred rest frame, even though deeper constitutive structure exists at the Bedrock Horizon Scale.
-
-The First Rule does not describe matter moving through a pre-existing medium; it describes the constitutive process by which spacetime itself emerges.
-
-Observable relativity is preserved because Lorentz symmetry is a large-scale statistical property of the aligned manifold.
-
-
-AI.13.6 Not Teleparallel Gravity
-
-Although the framework uses tetrads, torsion, and the Weitzenböck connection, Scarlet is not a formulation of pure Teleparallel Equivalent General Relativity (TEGR).
-
-In TEGR, one typically imposes
-
-R(\Gamma^{(W)}) = 0
-
-and rewrites gravity entirely in terms of torsion.
-
-Scarlet instead remains a Riemann–Cartan effective field theory in which both curvature and torsion are physically present:
-
-\boxed{
-R(\nabla) \neq 0,
-\qquad
-T^\lambda_{\ \mu\nu} \neq 0
+T^\lambda_{\ \mu\nu} T_\lambda^{\ \mu\nu}
 }
 
-where:
+Scaling:
 
-R(\nabla) is the Ricci scalar of the Levi-Civita connection governing leading-order gravitational dynamics,
-torsion provides suppressed higher-order corrections within the effective action.
-Thus:
+\mathcal{I}_T \sim \frac{\beta^2}{L^2}
 
-curvature is the dominant gravitational response,
-torsion is the constitutive correction arising from imperfect warp–weft coherence.
-Scarlet therefore preserves the Einsteinian limit while extending General Relativity through controlled torsional corrections rather than replacing curvature entirely.
+Einstein curvature scale:
 
+G_{\mu\nu} \sim \frac{1}{L^2}
 
-AI.13.7 Density Screening and Local GR Recovery
-
-A central requirement of any torsion-inclusive gravitational framework is consistency with precision local tests of General Relativity.
-
-Observations within the Solar System strongly constrain deviations from Einstein gravity through:
-
-post-Newtonian orbital tests,
-light deflection,
-gravitational redshift,
-binary pulsar timing,
-gravitational wave propagation.
-Since Scarlet treats spacetime as a structured torsion-capable vacuum manifold with effective dissipation and geometric drag, the framework must explain why these effects do not produce observable violations of local General Relativistic behavior.
-
-The resolution is density screening.
-
-Torsional dissipation and late-time geometric drag are not universal local corrections of fixed magnitude. They are effective large-scale responses of the vacuum manifold that self-suppress in sufficiently high-density regions.
-
-Thus:
+Hence:
 
 \boxed{
-\eta_{\mathrm{eff}}(\rho)
-\rightarrow
-0
-\qquad
-\text{for}
-\qquad
-\rho \gg \rho_c
+\mathcal{I}_T \sim \beta^2 G_{\mu\nu}
 }
 
-where \rho_c is the critical screening density.
-
-This ensures local recovery of standard General Relativity while preserving cosmological torsional corrections at low-density large scales.
+establishing torsion as a second-order EFT correction.
 
 
-AI.13.8 Effective Density-Dependent Screening
+AI.13.7 Effective Action
 
-We define the effective torsional viscosity as
+The low-energy effective action is:
+
+\boxed{
+S = \int d^4x\,\sqrt{-g}
+\left[
+\frac{1}{2\kappa} R(\nabla)
++
+\frac{\alpha}{\ell_*^2}\,\mathcal{I}_T
+\right]
+}
+
+with:
+
+\kappa \sim \ell_*^2
+
+The torsion sector is thus UV-sensitive but IR-suppressed by \beta^2.
+
+
+AI.13.8 Emergent Lorentz Symmetry
+
+Lorentz invariance arises as an infrared fixed-point symmetry after coarse-graining:
+
+\text{microscopic sector} \neq \text{Lorentz invariant}
+
+\text{effective manifold} \rightarrow \text{Lorentz invariant EFT}
+
+No preferred observable frame exists despite underlying pre-geometric structure.
+
+
+AI.13.9 Density Screening Mechanism
+
+Torsional dissipation is environment-dependent and suppressed in high-density regimes.
+
+We define an effective viscosity:
 
 \boxed{
 \eta_{\mathrm{eff}}(\rho)
 =
-\eta_0
-\exp\left(
--\frac{\rho}{\rho_c}
-\right)
+\eta_0 \exp\!\left(-\frac{\rho}{\rho_c}\right)
 }
 
-where:
+with:
 
-\eta_0 is the unscreened cosmological torsional viscosity,
-\rho is the local matter density,
-\rho_c is the critical density scale for screening.
-This form is phenomenological and chosen as the minimal monotonic constitutive model; alternative screening profiles preserve the same effective field theory structure.
+\rho_c: critical screening density
+\rho: local matter density
+Limits:
 
-It captures the constitutive behavior of the spacetime fabric:
+\rho \gg \rho_c \Rightarrow \eta_{\mathrm{eff}} \to 0
+\qquad
+\rho \ll \rho_c \Rightarrow \eta_{\mathrm{eff}} \to \eta_0
 
-low-density regions retain full torsional response,
-high-density regions suppress non-Einsteinian corrections.
-Thus:
-
-\rho \ll \rho_c
-\quad\Rightarrow\quad
-\eta_{\mathrm{eff}} \approx \eta_0
-
-for cosmological scales, while
-
-\rho \gg \rho_c
-\quad\Rightarrow\quad
-\eta_{\mathrm{eff}} \approx 0
-
-for stellar and planetary environments.
-
-The fabric becomes locally rigid under high-density anchoring.
+This ensures restoration of General Relativity in high-density environments.
 
 
-AI.13.9 Screening Radius
+AI.13.10 Screening Radius
 
-For a localized gravitating source of mass M, we define the screening radius r_s by
+Defined implicitly by:
 
 \boxed{
-\rho(r_s)
-\sim
-\rho_c
+\rho(r_s) = \rho_c
 }
 
-such that:
+Regimes:
 
-r < r_s
-\quad\Rightarrow\quad
-\text{local GR recovery}
-
-and
-
-r > r_s
-\quad\Rightarrow\quad
-\text{torsional corrections become effective}.
-
-For viable parameter choices, r_s is expected to exceed Solar System precision-test scales, ensuring agreement with post-Newtonian constraints and local gravitational observations.
-
-Local gravity remains effectively Einsteinian because the manifold is locally locked.
+r < r_s: GR-dominated regime
+r > r_s: torsion-active regime
+This guarantees consistency with Solar System constraints.
 
 
-AI.13.10 Why Gravitational Waves Do Not Exhibit Lattice Drag
+AI.13.11 Gravitational Waves
 
-A common objection to any structured-medium interpretation of spacetime is:
-
-If spacetime possesses material properties such as stiffness and viscosity, why do gravitational waves not behave like sound waves moving through matter?
-
-The resolution is that gravitational waves are not external objects moving through a medium.
-
-They are coherent geometric excitations of the manifold itself.
-
-They propagate along the effective metric structure rather than through an independent background substance.
-
-At leading order:
+Gravitational waves correspond to metric perturbations of the emergent manifold:
 
 \boxed{
-\text{GW propagation is metric-governed and effectively non-dispersive}
+\text{GW propagation is metric-governed and non-dispersive at leading order}
 }
 
-with only higher-order torsional corrections entering through
+Torsional corrections enter only at:
 
-\Delta_{\mathrm{GW}}
-\sim
-\mathcal{O}(\beta^2).
-
-Since
-
-\beta
-=
-\frac{\ell_*}{L}
-\ll 1,
-
-these corrections are strongly suppressed for astrophysical wavelengths.
+\mathcal{O}(\beta^2)
 
 Thus:
 
-no ordinary lattice drag appears,
-no large dispersive violation is expected,
-only small cumulative ringdown corrections survive.
-This is the origin of the predicted \sim 5\% damping modification in the dominant Kerr quasinormal mode, as derived in Appendix X and the associated ringdown technical memorandum.
+no lattice drag
+no leading dispersion
+only suppressed cumulative phase/ringdown corrections
+Any nonlinear enhancement (e.g., “Snap regime” effects) is interpreted as a higher-order strong-field amplification beyond the perturbative EFT regime.
 
 
-AI.13.11 Interpretation
+AI.13.12 Interpretation of the First Rule
 
-The First Rule may therefore be summarized as:
+The emergent structure is:
 
 \boxed{
-\text{Warp–Weft Coherence}
-\rightarrow
-\text{Emergent Tetrad}
-\rightarrow
-\text{Torsion}
-\rightarrow
-\text{Curvature}
-\rightarrow
-\text{Macroscopic Gravity}
+\text{Warp–Weft coherence}
+\;\rightarrow\;
+\text{tetrad field}
+\;\rightarrow\;
+\text{torsion}
+\;\rightarrow\;
+\text{curvature}
+\;\rightarrow\;
+\text{macroscopic gravity}
 }
 
-Spacetime is not treated as an abstract empty background, but as a structured torsion-capable vacuum manifold with finite stiffness, fatigue thresholds, recovery dynamics, and discrete anchoring scales.
+Spacetime is therefore a structured Riemann–Cartan medium characterized by:
 
-Gravity emerges as the leading-order curvature response of this medium.
+stiffness (elastic response)
+torsional inertia
+density-dependent screening
+UV cutoff at \ell_*
+General Relativity is recovered as the leading-order IR limit:
 
-Torsion is the residual geometric memory of incomplete alignment.
-
-The Bedrock Horizon Scale provides the lower bound of valid geometry, while the effective manifold preserves Lorentz symmetry and the equivalence principle at observable scales.
-
-The purpose is precision, not rebranding.
-
-If a quantity behaves as stiffness, it is named stiffness.
-If a quantity behaves as fatigue, it is named fatigue.
-If a structure functions as a geometric anchor, it is named accordingly.
-
-The First Rule is therefore not a statement about matter moving through space, but about the physical mechanism by which spacetime itself becomes possible.
+\boxed{
+\beta \to 0 \;\Rightarrow\; R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R = \kappa T_{\mu\nu}
+}
 
 
+Final Statement
+
+The First Rule is not a dynamical law of matter in spacetime, but a constitutive principle of spacetime emergence from pre-geometric alignment sectors. It defines General Relativity as the infrared fixed point of a torsion-suppressed Riemann–Cartan effective field theory.
 
