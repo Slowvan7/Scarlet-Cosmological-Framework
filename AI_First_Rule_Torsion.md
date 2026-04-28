@@ -446,6 +446,259 @@ R(\Gamma^{(W)}) \equiv 0
 
 Torsion Tensor
 
+Appendix AI.14 — Observation–Reality Separation Principle
+
+
+AI.14.1 Fundamental Postulate
+
+Standard cosmology does not assume naïve direct access to physical reality; rather, observables are reconstructed from measurements after applying known geometric, radiative, and instrumental corrections.
+
+SCARLET extends this framework by introducing an additional physical modulation arising from spacetime coherence dynamics.
+
+The foundational statement is:
+
+\boxed{
+\mathcal{O}
+=
+\mathcal{P}
+\left[
+\mathcal{R}, \zeta
+\right]
+}
+
+\mathcal{O}=\mathcal{P}[\mathcal{R},\zeta]
+
+where:
+
+\mathcal{O} is the observed quantity
+\mathcal{R} is the underlying bedrock physical state
+\zeta(x^\mu) is the spacetime coherence relaxation field
+\mathcal{P} is the projection operator induced by propagation through a torsion-bearing medium
+Observation is therefore not a direct measurement of reality, but a transformation of reality through signal propagation across a structured spacetime background.
+
+
+AI.14.2 Path-Dependent Projection Operator
+
+In full generality, the projection is defined along the propagation path:
+
+\[
+\boxed{
+\mathcal{B}[\gamma]
+=
+\exp
+\left[
+-
+\int_{\gamma}
+\zeta(x^\mu)\, d\\lambda
+\right]
+}
+\]
+
+\mathcal{B}[\gamma]=\exp\left[-\int_{\gamma}\zeta(x^\mu),d\lambda\right]
+
+where:
+
+\gamma is the null or timelike signal trajectory
+\lambda is an affine (or proper-time) parameter chosen such that \zeta\,d\lambda is dimensionless
+\zeta(x^\mu) encodes the local rate of coherence relaxation
+This emphasizes that observation depends on propagation history, not merely local pointwise evaluation.
+
+
+AI.14.3 Homogeneous Cosmological Limit
+
+In a spatially homogeneous FRW background, the path-dependent projection reduces to a time-dependent form:
+
+\boxed{
+\mathcal{B}(t)
+=
+\exp
+\left[
+-
+\int
+\zeta(t)\,dt
+\right]
+}
+
+\mathcal{B}(t)=\exp\left[-\int\zeta(t)dt\right]
+
+where:
+
+\zeta(t) is the spatially averaged coherence relaxation rate
+\mathcal{B}(t) is the cumulative observational attenuation over cosmic time
+For a fatigued cosmological medium:
+
+0 < \mathcal{B}(t) < 1
+
+so observed quantities may differ systematically from their underlying physical values.
+
+
+AI.14.4 Leading-Order Approximation
+
+For weak coherence relaxation and approximately homogeneous propagation conditions, the full projection operator reduces to the leading-order approximation:
+
+\boxed{
+\mathcal{O}
+\approx
+\mathcal{R}
+\cdot
+\mathcal{B}(t)
+}
+
+\mathcal{O}\approx\mathcal{R}\cdot\mathcal{B}(t)
+
+This approximation is valid only when:
+
+coherence gradients are small
+backreaction on geometry is subleading
+propagation remains close to homogeneous
+It is not assumed to hold universally.
+
+
+AI.14.5 Physical Interpretation
+
+The universe is not directly observed.
+
+Instead:
+
+physical sources generate signals
+signals propagate through a torsion-bearing spacetime medium
+coherence relaxation modifies effective amplitudes and inferred parameters
+phase corrections may arise depending on the propagation channel
+observers reconstruct physical quantities from filtered signals
+Thus measured quantities are not identical to underlying physical states, but are projections through a dynamically evolving medium.
+
+
+AI.14.6 Observable Relations
+
+Luminosity Distance
+
+Let d_L^{\mathrm{true}} denote the metric luminosity distance determined by the underlying spacetime geometry.
+
+Coherence attenuation modifies the inferred flux relation, producing:
+
+\boxed{
+d_L^{\mathrm{obs}}
+=
+\frac{
+d_L^{\mathrm{true}}
+}{
+\mathcal{B}(t)
+}
+}
+
+d_L^{\mathrm{obs}}=\frac{d_L^{\mathrm{true}}}{\mathcal{B}(t)}
+
+Thus attenuation causes distant sources to appear dimmer and therefore farther away than the purely geometric metric distance would imply.
+
+
+Neutrino Sector (consistent with Appendix AK)
+
+\boxed{
+m_{\nu,\mathrm{eff}}
+=
+m_\nu
+-
+g_\nu\,\zeta
+}
+
+m_{\nu,\mathrm{eff}}=m_\nu-g_\nu\zeta
+
+where:
+
+m_\nu is the bare neutrino mass from particle physics
+g_\nu is the neutrino coherence coupling constant
+This relation represents mass screening through direct coupling to the coherence field and is not a propagation attenuation effect.
+
+It allows the gravitationally inferred effective mass to be smaller than the bare particle-physics mass.
+
+
+Redshift Relation (First-Order Torsional Correction)
+
+\boxed{
+1 + z_{\mathrm{obs}}
+=
+(1 + z_{\mathrm{metric}})
+\,
+(1 + \delta z_{\mathrm{torsion}})
+}
+
+1+z_{\mathrm{obs}}=(1+z_{\mathrm{metric}})(1+\delta z_{\mathrm{torsion}})
+
+valid to first order in torsional corrections.
+
+This preserves the correct multiplicative composition of frequency shifts.
+
+
+AI.14.7 Relation to Appendix AK
+
+Appendix AK provides one explicit dynamical realization of this projection principle:
+
+Hopf sector structure generates discrete vacuum contributions
+sector dynamics source coherence relaxation \zeta
+coherence relaxation couples into the neutrino sector
+cosmological backreaction modifies inferred observables
+Thus:
+
+AI.14 defines the general observational structure
+AK provides one explicit dynamical realization of that structure
+The appendices are complementary: AI.14 establishes the principle, while AK provides a concrete physical mechanism.
+
+
+AI.14.8 Operational Testability
+
+The framework is empirically testable because different observational channels probe different effective propagation histories.
+
+Compare:
+
+electromagnetic redshift
+gravitational-wave propagation
+relic neutrino background
+CMB transfer functions
+birefringence constraints
+Prediction:
+
+If \zeta \neq 0, different channels will reconstruct slightly different effective cosmological parameters from the same underlying cosmological background.
+
+If all channels agree exactly:
+
+\zeta \rightarrow 0
+\quad\Rightarrow\quad
+\mathcal{B}(t)\rightarrow 1
+
+and SCARLET reduces continuously to standard cosmology.
+
+
+Final Statement
+
+\boxed{
+\mathcal{O}
+=
+\mathcal{P}
+\left[
+\mathcal{R}, \zeta
+\right]
+}
+
+\mathcal{O}=\mathcal{P}[\mathcal{R},\zeta]
+
+General Relativity describes how geometry governs propagation.
+
+SCARLET extends this by including coherence relaxation as a physical modulation of signal transmission through spacetime:
+
+\boxed{
+\text{geometry}
++
+\text{torsional coherence}
++
+\text{observational projection}
+}
+
+This is the Observation–Reality Separation Principle:
+
+reality exists first as a physical state, while observation is its dynamically filtered projection through spacetime structure
+
+
+
 \boxed{
 T^\lambda_{\ \mu\nu}
 =
