@@ -222,4 +222,7 @@ def run_scarlet_v2_full_alignment():
 if __name__ == "__main__":
     run_scarlet_v2_full_alignment() 
 
+
+<img width="1457" height="511" alt="image" src="https://github.com/user-attachments/assets/120804f1-57e8-44cc-b187-61c4b113d2e5" />
+
     
