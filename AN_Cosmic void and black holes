@@ -1,0 +1,180 @@
+Appendix AN — Anisotropic Fracture of SCARLET Black Holes in Void Environments (EFT Extension)
+
+(Coupled to Appendix R — Mechanical Fracture, Appendix AM — Coherence Field Dynamics, Appendix W — Torsional Dissipation, Appendix AJ — Spectral Constraints, Appendix AI — Tetrad/Torsion EFT)
+
+
+AN.1 Overview
+
+In non-uniform cosmological environments, the coherence field \Phi_P(x,t) varies across macroscopic scales. When a SCARLET black hole is embedded in a void–filament system, this spatial variation breaks spherical symmetry.
+
+This appendix generalizes the fracture condition of Appendix R to a direction-dependent (anisotropic) form, producing environment-coupled black hole structure and evolution.
+
+
+AN.2 External Coherence Field Decomposition
+
+We decompose the coherence field near the black hole as:
+
+\Phi_P(r,\theta,\phi) = \Phi_0(r) + \delta \Phi_{\text{ext}}(\theta,\phi)
+
+Where:
+
+\Phi_0(r): spherically symmetric core contribution (local sourcing; Appendix AM)
+\delta \Phi_{\text{ext}}(\theta,\phi): large-scale environmental field (void–filament structure)
+Assumption:
+|\delta \Phi_{\text{ext}}| \ll \Phi_0 \quad \text{near the core, but dominates asymptotically}
+
+
+AN.3 Direction-Dependent Fracture Condition
+
+The isotropic condition (Appendix R):
+
+\sigma(r_f) = \sigma_f
+
+is generalized to:
+
+\sigma\big(r_f(\theta,\phi)\big) = \sigma_f\!\left(\Phi_P(\theta,\phi)\right)
+
+
+AN.4 Coherence-Dependent Failure Threshold
+
+We define:
+
+\sigma_f(\Phi_P) = \sigma_0 \left(1 + \lambda\,\Phi_P\right)
+
+Where:
+
+\sigma_0: intrinsic lattice fracture stress
+\lambda: coherence–stiffening coefficient
+Properties:
+
+\Phi_P \uparrow \Rightarrow \sigma_f \uparrow (stronger fabric)
+\Phi_P \downarrow \Rightarrow \sigma_f \downarrow (weaker fabric)
+
+AN.5 Angular Dependence of the Fracture Radius
+
+Define:
+
+r_f(\theta,\phi) = r_0 + \delta r(\theta,\phi)
+
+with r_0 the isotropic solution.
+
+Linearizing:
+
+\delta r(\theta,\phi) \propto -\lambda\,\delta \Phi_{\text{ext}}(\theta,\phi)
+
+
+Interpretation
+
+Void-facing direction (low \Phi_P)
+→ reduced \sigma_f
+→ earlier failure
+→ larger r_f
+Filament-facing direction (high \Phi_P)
+→ increased \sigma_f
+→ deeper compression
+→ smaller r_f
+
+AN.6 Coupling to Torsional Dissipation (Appendix W)
+
+Torsional decay:
+
+\frac{\partial E_t}{\partial t} = -\gamma \frac{E_t}{1+\Phi_P(\theta,\phi)}
+
+
+Directional Effects
+
+Void side:
+lower \Phi_P
+faster dissipation
+reduced structural support
+Filament side:
+higher \Phi_P
+slower dissipation
+enhanced stability
+
+AN.7 Anisotropic Surface Energy Release
+
+Fracture energy density:
+
+G_c(\theta,\phi) = \frac{dU}{dA}(\theta,\phi)
+
+Total power:
+
+P = \int_{A_f} G_c(\theta,\phi)\, dA
+
+
+Result
+
+Energy emission becomes:
+
+directionally modulated
+environment-dependent
+
+AN.8 Stability Criterion
+
+Global stability requires:
+
+\sigma(r_f,\theta,\phi) \le \sigma_f(\Phi_P(\theta,\phi)) \quad \forall (\theta,\phi)
+
+Failure initiates at:
+
+(\theta,\phi)_{\text{min}} = \arg\min \Phi_P(\theta,\phi)
+
+
+AN.9 Coupling to Tetrad–Torsion Sector (Appendix AI)
+
+From Appendix AI:
+
+\mathcal{I}_T \sim \frac{\beta^2}{L^2}
+
+Near fracture:
+
+curvature increases
+torsion invariant increases
+Environmental anisotropy modifies effective scale L:
+
+L \rightarrow L(\theta,\phi)
+
+
+Implication
+
+\mathcal{I}_T(\theta,\phi) \sim \frac{\beta^2}{L(\theta,\phi)^2}
+
+Thus:
+
+torsion concentrates anisotropically
+fracture geometry and torsion structure are coupled
+
+AN.10 Observable Consequences
+
+AN.10.1 Horizon Geometry
+
+deviation from spherical symmetry
+environment-aligned distortion axis
+
+AN.10.2 Directional Emission
+
+non-isotropic Hawking-like radiation
+angular modulation tied to large-scale structure
+
+AN.10.3 Asymmetric Accretion
+
+suppressed inflow from void-facing side
+enhanced inflow from filament-facing side
+
+AN.10.4 Ringdown Deviations
+
+mode splitting due to geometric anisotropy
+deviation from standard Kerr spectrum
+
+AN.11 Physical Interpretation
+
+A SCARLET black hole in a void is:
+
+a directionally deformed fracture defect, whose geometry and dynamics are governed by the competition between local coherence generation and large-scale decoherence imposed by the surrounding void.
+
+
+AN.12 Final Statement
+
+In SCARLET 2.0, black holes are not isolated geometric objects but environment-coupled structures. When embedded in a void, the coherence field modulates the local fracture threshold, producing anisotropic horizons, directional dissipation, and evolution that reflects the surrounding large-scale structure.
+
