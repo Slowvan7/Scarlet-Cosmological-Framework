@@ -177,4 +177,54 @@ a directionally deformed fracture defect, whose geometry and dynamics are govern
 AN.12 Final Statement
 
 In SCARLET 2.0, black holes are not isolated geometric objects but environment-coupled structures. When embedded in a void, the coherence field modulates the local fracture threshold, producing anisotropic horizons, directional dissipation, and evolution that reflects the surrounding large-scale structure.
+---------------------------------------------------------
+# AN.5.2 — Gradient-Aligned Angular Deformation
+# ---------------------------------------------------------
+
+def radius_at_angle(
+   self,
+   r0,
+   grad_phi,
+   theta
+):
+   """
+   Computes the anisotropic fracture radius along
+   an angular direction relative to the coherence
+   gradient vector.
+
+   Parameters
+   ----------
+   r0 : float
+       Baseline isotropic fracture radius
+
+   grad_phi : ndarray
+       Spatial coherence gradient vector:
+           grad(Phi_P)
+
+   theta : float or ndarray
+       Angle relative to the gradient axis
+
+   Returns
+   -------
+   rf_theta : float or ndarray
+       Direction-dependent fracture radius
+   """
+
+   # Magnitude of coherence gradient
+   gradient_strength = np.linalg.norm(grad_phi)
+
+   # Projection along angular direction
+   projection = gradient_strength * np.cos(theta)
+
+   # Directional EFT deformation
+   rf_theta = (
+       r0
+       - self.alpha
+       * self.lambda_coeff
+       * projection
+   )
+
+   return rf_theta
+
+
 
