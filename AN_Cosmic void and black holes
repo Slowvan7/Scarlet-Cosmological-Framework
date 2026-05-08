@@ -228,3 +228,40 @@ def radius_at_angle(
 
 
 
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# --- Appendix AN Configuration ---
+lambda_coeff = 0.21
+alpha = 2.0
+r0 = 10.0
+grad_mag = 0.1  # Strength of gradient toward filament
+
+# --- AN.5.2 Logic ---
+theta = np.linspace(0, 2*np.pi, 1000)
+# Filament is at 0 degrees, Void is at 180 degrees (pi)
+radii = r0 - (alpha * lambda_coeff * grad_mag * np.cos(theta))
+
+# --- Plotting ---
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'}, figsize=(8, 8))
+ax.plot(theta, radii, color='#e74c3c', linewidth=2.5, label='Fracture Surface ($R_f$)')
+ax.plot(theta, [r0]*len(theta), color='#3498db', linestyle='--', alpha=0.6, label='Baseline ($R_0$)')
+
+# Styling to match SCARLET 2.0 aesthetics
+ax.fill_between(theta, 0, radii, color='#e74c3c', alpha=0.1)
+ax.set_theta_zero_location("E") # Filament to the right
+ax.set_title("SCARLET 2.0 | Appendix AN\nAnisotropic Fracture Profile", pad=20, fontsize=14)
+
+# Legend and annotations
+ax.legend(loc='lower right')
+plt.tight_layout()
+
+# Save the file
+plt.savefig("Appendix_AN_Figure.png", dpi=300)
+print("Graph saved as Appendix_AN_Figure.png")
+plt.show()
+
+
+
