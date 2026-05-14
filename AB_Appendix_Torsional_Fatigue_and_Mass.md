@@ -1,3 +1,5 @@
+
+
 Appendix AB — Proton Torsional Fatigue, Spin Stability, and Mass Potential
 
 Framework: Scarlet–VanAcker Cosmological Framework (v2.0)
