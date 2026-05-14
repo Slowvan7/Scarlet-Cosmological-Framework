@@ -1,4 +1,4 @@
-Appendix AK — Neutrino-Sector Exhaust
+AK — Neutrino-Sector Exhaust.md
 
 Hopf-Current–Driven Coherence Relaxation in Einstein–Cartan Effective Field Theory
 
