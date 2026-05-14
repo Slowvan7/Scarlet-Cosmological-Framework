@@ -1,3 +1,5 @@
+
+
 Appendix AA: Torsional Feedback Loops — Mechanical Estimate of Nucleon Pressure
 
 Framework: Scarlet–VanAcker Cosmological Framework (v2.0)
