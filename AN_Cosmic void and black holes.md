@@ -1,3 +1,4 @@
+
 Appendix AN — Anisotropic Fracture of SCARLET Black Holes in Void Environments (EFT Extension)
 
 (Coupled to Appendix R — Mechanical Fracture, Appendix AM — Coherence Field Dynamics, Appendix W — Torsional Dissipation, Appendix AJ — Spectral Constraints, Appendix AI — Tetrad/Torsion EFT)
