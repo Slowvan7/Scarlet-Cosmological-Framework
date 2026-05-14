@@ -1,4 +1,5 @@
 
+
 Appendix AM — Disassembly of Matter via Prime Field Weakening (SCARLET 2.0, EFT Formulation)
 
 (Coupled to Appendix W — Proton Fatigue & Appendix AJ — Spectral Lattice Constraints)
