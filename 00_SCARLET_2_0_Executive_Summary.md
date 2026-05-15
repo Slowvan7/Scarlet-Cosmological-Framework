@@ -4,8 +4,12 @@ Scarlet 2.0 — Scarlet–VanAcker Cosmological Framework
 
 Formalism: Thomas VanAcker
 Date: January 2026
+email.  n63gt@icloud.com
 
 ⸻
+
+SCARLET is formulated as the infrared scalar-projected effective field theory of the vector–trace sector of torsion defined in Appendix AI, obtained by integrating out higher torsion irreducible modes at the cutoff scale \Lambda_0.
+
 
 1. VanAcker Bedrock & Signature Constants
 	•	Master Clock (t_V): 10^{-41}\,\mathrm{s} — the fundamental temporal scale of the universe
