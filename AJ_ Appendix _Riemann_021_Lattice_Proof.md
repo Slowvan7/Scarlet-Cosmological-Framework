@@ -166,63 +166,123 @@ full spectral operator test aligned with Appendix AJ
 
 ⸻
 
-UPGRADED SCARLET CODE
-
 import numpy as np
 
-def run_scarlet_v2_full_alignment():
-    N = 349
-    ell_star = 1e-35
-    t_V = 1e-41
-    L_scale = N
-    beta = ell_star / L_scale
+# ============================================================
+# SCARLET 2.0 — Fully Saturated Subspace Phase Sweep
+# ============================================================
 
-    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]
+np.random.seed(42)
 
-    omega = np.zeros((N, N), dtype=complex)
+# Strictly locked lattice dimension
+N = 349
+beta_values = [0.0, 1e-3, 1e-2, 1e-1, 5e-1, 2.0]
 
-    for p in primes:
-        logp = np.log(p)
-        weight = logp / (p ** 0.5)
-        shift = int(round(logp)) % N
+# 1. FIX: Automatically generate enough primes to saturate the 349 grid space
+def generate_primes(limit):
+    sieve = np.ones(limit, dtype=bool)
+    sieve[0:2] = False
+    for i in range(2, int(np.sqrt(limit)) + 1):
+        if sieve[i]:
+            sieve[i*i::i] = False
+    return np.where(sieve)[0].tolist()
 
-        omega[shift, shift] += weight
-        omega[(shift+1)%N, shift] += weight * 0.5
-        omega[(shift-1)%N, shift] += weight * 0.5
-        omega[shift, (shift+1)%N] += weight * 0.5
-        omega[shift, (shift-1)%N] += weight * 0.5
+# Pulling a larger prime field (up to p=800) to populate the N=349 system matrix
+primes = generate_primes(800)
 
-    I = np.eye(N)
-    tetrad = I + beta * omega
-    tetrad = (tetrad + tetrad.conj().T) / 2
+omega = np.zeros((N, N), dtype=complex)
 
-    metric_operator = tetrad @ tetrad.conj().T
+# ------------------------------------------------------------
+# Prime-induced operator construction
+# ------------------------------------------------------------
+for p in primes:
+    logp = np.log(p)
+    weight = logp / np.sqrt(p)
+    phase = (logp * np.pi) % (2 * np.pi)
 
-    eigvals = np.linalg.eigvalsh(metric_operator)
-    eigvals.sort()
+    # Prime coordinate hash mapping
+    i = int((p * logp) % N)
+    j = int((p**2 + 3) % N)
 
-    C_eps = sum(np.log(p) / (p ** 0.5) for p in primes)
+    omega[i, i] += weight
 
-    metric_renormalized = metric_operator - C_eps * np.eye(N)
+    if i != j:
+        coupling = weight * np.exp(1j * phase)
+        omega[i, j] += coupling
+        omega[j, i] += np.conj(coupling)
 
-    eigvals_ren = np.linalg.eigvalsh(metric_renormalized)
+# ------------------------------------------------------------
+# Subspace Localization Extraction
+# ------------------------------------------------------------
+active_idx = np.where(np.any(omega != 0, axis=1) | np.any(omega != 0, axis=0))[0]
+N_active = len(active_idx)
+sub_omega = omega[np.ix_(active_idx, active_idx)]
 
-    lhs = np.sum(eigvals_ren)
-    rhs = N + beta * C_eps
+# ------------------------------------------------------------
+# Dimension-Normalized Integrable Background System
+# ------------------------------------------------------------
+H_0 = np.diag(np.linspace(1.0, float(N_active), N_active))
 
-    print("\n--- SCARLET 2.0 FULL ALIGNMENT ---")
-    print(f"N: {N}")
-    print(f"beta: {beta:.3e}")
-    print(f"t_V: {t_V:.1e}")
-    print(f"LHS: {lhs:.6f}")
-    print(f"RHS: {rhs:.6f}")
-    print(f"Δ: {abs(lhs - rhs):.3e}")
-    print(eigvals_ren[:10])
+# ------------------------------------------------------------
+# Native GUE Subspace Control Base Matrix
+# ------------------------------------------------------------
+random_real = np.random.normal(size=(N_active, N_active))
+random_imag = np.random.normal(size=(N_active, N_active))
+random_complex = random_real + 1j * random_imag
+random_H_base = (random_complex + random_complex.conj().T) / 2
+random_H_base = random_H_base * (np.linalg.norm(sub_omega) / np.linalg.norm(random_H_base))
 
-if __name__ == "__main__":
-    run_scarlet_v2_full_alignment() 
+# ------------------------------------------------------------
+# Scale-Invariant Spacing Ratio Unfolding Tool
+# ------------------------------------------------------------
+def compute_local_spacing_ratios(sorted_eigs):
+    gaps = np.diff(sorted_eigs)
+    gaps = gaps[gaps > 1e-12] 
+    
+    r_n = []
+    for i in range(1, len(gaps)):
+        g1 = gaps[i-1]
+        g2 = gaps[i]
+        if g1 > 0 and g2 > 0:
+            r_n.append(min(g1, g2) / max(g1, g2))
+        
+    return np.array(r_n)
 
+# RMT constants
+RMT_POISSON_THEORY = 0.3863
+RMT_GUE_THEORY     = 0.5996
 
-<img width="1457" height="511" alt="image" src="https://github.com/user-attachments/assets/120804f1-57e8-44cc-b187-61c4b113d2e5" />
+print("\n=== SCARLET 2.0 Saturated Space Phase Sweep ===")
+print(f"Total Base Lattice Size N : {N}")
+print(f"Interacting Subspace Size : {N_active} out of {N} states\n")
+
+print(f"{'Beta':<10} | {'Prime <r>':<12} | {'GUE <r>':<12} | {'Spectral Regime'}")
+print("-" * 65)
+
+# Execute scale evolution over normalized fields
+for beta in beta_values:
+    T_subspace = H_0 + beta * sub_omega
+    T_random = H_0 + beta * random_H_base
+    
+    # Calculate sorted spectra
+    eigvals = np.linalg.eigvalsh(T_subspace)
+    random_eigs = np.linalg.eigvalsh(T_random)
+    
+    # Extract spacing ratio markers
+    prime_ratios = compute_local_spacing_ratios(eigvals)
+    random_ratios = compute_local_spacing_ratios(random_eigs)
+    
+    mean_r_prime = np.mean(prime_ratios) if len(prime_ratios) > 0 else 0.0
+    mean_r_random = np.mean(random_ratios) if len(random_ratios) > 0 else 0.0
+    
+    # Classify dynamic profile
+    if abs(mean_r_prime - RMT_GUE_THEORY) < 0.05:
+        regime = "Quantum Chaotic (GUE)"
+    elif abs(mean_r_prime - RMT_POISSON_THEORY) < 0.05:
+        regime = "Integrable (Poisson)"
+    else:
+        regime = "Transition State"
+        
+    print(f"{beta:<10.1e} | {mean_r_prime:<12.4f} | {mean_r_random:<12.4f} | {regime}")
 
     
