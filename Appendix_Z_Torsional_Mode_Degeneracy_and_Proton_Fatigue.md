@@ -81,3 +81,4 @@ The framework is fully specified by:
 	•	Geometric baryon generation via \eta_{\text{geom}} and normalization \mathcal{C}
 
 These relations collectively define a closed numerical system connecting geometric phase-space structure to cosmological observables.
+\(\mathbf{M}_{\text{filter},ii}=\left(s_{i}+\epsilon \right)^{0.5T_{\text{env}}}\cdot \exp \left(\left[1-\frac{4}{\pi }\right]T_{\text{env}}\cdot s_{i}^{1.5}\right)\)Z.8.4 Complete System IntegrationBy introducing this streaming filter, the numerical loop is fully closed. The complete SCARLET pipeline can now process incoming data, strip away environmental noise, and map the underlying structural parameters back to the core geometric roots (\(N_{\text{roots}} = 240\)) and active
