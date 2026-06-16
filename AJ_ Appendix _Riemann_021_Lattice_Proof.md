@@ -391,4 +391,122 @@ if __name__ == "__main__":
 Twin Prime Operator             | 0.8205 (Fastest drop toward GUE)
 Non-Prime Formulaic Operator    | 0.9245 (Slower drop, higher rigidity)
 Pure Random Control (Previous)  | 0.9419 (Mostly stalled)
+import numpy as np
+
+def run_scarlet_v2_twin_prime_sweep():
+    # Set seed for reproducible GUE baseline comparisons
+    np.random.seed(42)
+
+    # Strictly locked SCARLET lattice dimensions
+    N = 349
+    beta_values = [0.0, 1e-3, 1e-2, 1e-1, 5e-1, 2.0]
+
+    # 1. Sieve to isolate Twin Primes
+    def generate_twin_primes(limit):
+        sieve = np.ones(limit, dtype=bool)
+        sieve[0:2] = False
+        for i in range(2, int(np.sqrt(limit)) + 1):
+            if sieve[i]:
+                sieve[i*i::i] = False
+        primes = np.where(sieve)[0]
+        
+        # Filter for pairs where both p and p+2 are prime
+        twin_pairs = []
+        for p in primes:
+            if (p + 2) in primes:
+                twin_pairs.append((p, p + 2))
+        return twin_pairs
+
+    # Generate twin fields up to p=2000 to populate the 349 matrix
+    twin_primes = generate_twin_primes(2000)
+
+    omega_twin = np.zeros((N, N), dtype=complex)
+
+    # 2. Twin-Prime-Induced Operator Construction
+    for p1, p2 in twin_primes:
+        # Combined arithmetic weight for the paired deformation
+        log_twin = np.log(p1) * np.log(p2)
+        weight = log_twin / np.sqrt(p1 * p2)
+        
+        # Shared geometric phase field encoding the twin boundary
+        phase = ((np.log(p1) + np.log(p2)) * np.pi) % (2 * np.pi)
+        
+        # Coordinate hash mapping adapted for paired states
+        i = int((p1 * np.log(p1)) % N)
+        j = int((p2 * np.log(p2)) % N)
+        
+        omega_twin[i, i] += weight
+        if i != j:
+            coupling = weight * np.exp(1j * phase)
+            omega_twin[i, j] += coupling
+            omega_twin[j, i] += np.conj(coupling)
+
+    # 3. Subspace Localization Extraction
+    active_idx = np.where(np.any(omega_twin != 0, axis=1) | np.any(omega_twin != 0, axis=0))[0]
+    N_active = len(active_idx)
+    sub_omega = omega_twin[np.ix_(active_idx, active_idx)]
+
+    # 4. Dimension-Normalized Integrable Background System
+    H_0 = np.diag(np.linspace(1.0, float(N_active), N_active))
+
+    # 5. Native GUE Subspace Control Base Matrix
+    random_real = np.random.normal(size=(N_active, N_active))
+    random_imag = np.random.normal(size=(N_active, N_active))
+    random_complex = random_real + 1j * random_imag
+    random_H_base = (random_complex + random_complex.conj().T) / 2
+    
+    # Scale normalization to match the prime matrix intensity
+    if np.linalg.norm(random_H_base) > 0:
+        random_H_base = random_H_base * (np.linalg.norm(sub_omega) / np.linalg.norm(random_H_base))
+
+    # 6. Scale-Invariant Spacing Ratio Unfolding Tool
+    def compute_local_spacing_ratios(sorted_eigs):
+        gaps = np.diff(sorted_eigs)
+        gaps = gaps[gaps > 1e-12]
+        r_n = []
+        for i in range(1, len(gaps)):
+            g1 = gaps[i-1]
+            g2 = gaps[i]
+            if g1 > 0 and g2 > 0:
+                r_n.append(min(g1, g2) / max(g1, g2))
+        return np.array(r_n)
+
+    RMT_POISSON_THEORY = 0.3863
+    RMT_GUE_THEORY = 0.5996
+
+    print("=== SCARLET 2.0 Twin Prime Sweep ===")
+    print(f"Total Base Lattice Size N : {N}")
+    print(f"Interacting Subspace Size : {N_active} out of {N} states\n")
+
+    print(f"{'Beta':<10} | {'Twin Prime':<12} | {'GUE ':<12} | {'Spectral Regime'}")
+    print("-" * 65)
+
+    # 7. Execute scale evolution over normalized fields
+    for beta in beta_values:
+        T_subspace = H_0 + beta * sub_omega
+        T_random = H_0 + beta * random_H_base
+
+        # Compute sorted spectra (guaranteed real due to Hermitian structure)
+        eigvals = np.linalg.eigvalsh(T_subspace)
+        random_eigs = np.linalg.eigvalsh(T_random)
+
+        # Extract spacing ratio markers
+        prime_ratios = compute_local_spacing_ratios(eigvals)
+        random_ratios = compute_local_spacing_ratios(random_eigs)
+
+        mean_r_prime = np.mean(prime_ratios) if len(prime_ratios) > 0 else 0.0
+        mean_r_random = np.mean(random_ratios) if len(random_ratios) > 0 else 0.0
+
+        # Classify dynamic profile
+        if abs(mean_r_prime - RMT_GUE_THEORY) < 0.05:
+            regime = "Quantum Chaotic (GUE)"
+        elif abs(mean_r_prime - RMT_POISSON_THEORY) < 0.05:
+            regime = "Integrable (Poisson)"
+        else:
+            regime = "Transition State"
+            
+        print(f"{beta:<10.1e} | {mean_r_prime:<12.4f} | {mean_r_random:<12.4f} | {regime}")
+
+if __name__ == "__main__":
+    run_scarlet_v2_twin_prime_sweep()
 
