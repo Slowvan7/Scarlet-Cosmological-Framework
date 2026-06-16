@@ -510,3 +510,4 @@ def run_scarlet_v2_twin_prime_sweep():
 if __name__ == "__main__":
     run_scarlet_v2_twin_prime_sweep()
 
+To test the topological robustness of the SCARLET 2.0 lattice framework, we introduce a structured spatial perturbation using twin prime pairs (p₁, p₂) where p₂ = p₁ + 2. Unlike the standard single-prime operator \(\^{T}_{\epsilon }\), which maps strictly to the singular poles of \(-\frac{\zeta'}{\zeta}(s)\), the twin-prime variant enforces a rigid, pairwise spatial correlation across the manifold. We define a highly non-linear deformation operator \(\^{T}_{\text{twin}}\) by weighting paired coordinate hashes by their joint arithmetic density \(\frac{\log p_{1}\log p_{2}}{\sqrt{p_{1}p_{2}}}\). Evaluating this system under an evolving scale parameter β allows us to observe whether highly correlated number-theoretic noise destroys the underlying Quantum Chaotic (GUE) spectral signature or if the underlying discrete lattice geometry structurally preserves it.
