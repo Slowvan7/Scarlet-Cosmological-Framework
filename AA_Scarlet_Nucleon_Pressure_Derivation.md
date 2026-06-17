@@ -1,4 +1,7 @@
 
+errors have been made AA, in my math, ill address them in the near future
+
+
 
 Appendix AA: Torsional Feedback Loops — Mechanical Estimate of Nucleon Pressure
 
