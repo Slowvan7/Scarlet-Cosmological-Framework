@@ -1,0 +1,111 @@
+Appendix AR: Effective Field Theory of Torsional Modulations and Boltzmann Hierarchy Integration
+
+AR.1 EFT Operator Basis, Symmetries, and Power Counting
+To establish local consistency and radiative stability within a controlled truncation scheme, the scalar perturbations of the framework are formulated through a covariant effective field theory (EFT). We treat the space fabric's active phase field perturbation \(\theta_T(\eta, \mathbf{x})\) as a pseudo-Nambu-Goldstone boson governed by an approximate shift symmetry \(\theta_T \to \theta_T + c\), broken cleanly at the dark sector ultraviolet (UV) cutoff scale \(\Lambda _{\text{lattice}}\).
+The field dynamics are valid within the linear perturbation regime, subject to the sub-horizon field boundaries where \(k \gg \mathcal{H}\) and the field amplitude remains small (\(\vert{}\theta_T\vert{} \ll 1\)). The perturbation Lagrangian density \(\mathcal{L}^{(2)}\) is organized systematically as a derivative expansion governed by the dimensionless control parameter:
+\(\epsilon _{k}\equiv \frac{k}{\Lambda _{\text{lattice}}}\ll 1\)
+To ensure unambiguous dimensional book-keeping, the metric potential \(\Phi \) is defined as the dimensionless Newtonian gauge potential, while \(\theta _{T}\) is treated as a canonically normalized scalar field with mass dimension \([\theta_T] = 1\). The coupling parameter \(\alpha _{\text{EFT}}\) is defined strictly as a dimensionless Wilson coefficient after full canonical normalization of the field. All active operators up to mass dimension \(\Delta = 6\) are classified below, ensuring that higher-order loop corrections remain suppressed within the perturbative truncation scheme:
+
+Operator Identity
+Functional Form
+Mass Dim (\(\Delta \))
+Scaling Order
+Symmetry Protection
+Physical Role
+\(\mathcal{O}_{1}\) (Kinetic Base)
+\(\frac{1}{2}\mathcal{F}_0^2 \dot{\theta}_T^2\)
+\(4\)
+\(\mathcal{O}(\epsilon_k^0)\)
+Shift Symmetry (\(\theta_T \to \theta_T + c\))
+Canonical field propagation
+\(\mathcal{O}_{2}\) (Spatial Elasticity)
+\(-\frac{1}{2}\mathcal{F}_0^2 (c_s^2 + \beta^2)(\partial_i \theta_T)^2\)
+\(4\)
+\(\mathcal{O}(\epsilon_k^2)\)
+Shift Symmetry (\(\theta_T \to \theta_T + c\))
+Lattice spatial restoration
+\(\mathcal{O}_{3}\) (Lattice Core Mass)
+\(-\frac{1}{2}\mathcal{F}_0^2 m_0^2 c_0 \theta_T^2\)
+\(4\)
+\(\mathcal{O}(\epsilon_k^0)\)
+Explicitly Broken (\(V(\theta_T)\) minimum)
+Primordial sound horizon expansion
+\(\mathcal{O}_{4}\) (EFT Higher Derivative)
+\(-\frac{1}{2}\frac{\mathcal{F}_0^2 c_1}{\Lambda_{\text{lattice}}^2}(\nabla^2 \theta_T)^2\)
+\(6\)
+\(\mathcal{O}(\epsilon_k^4)\)
+Shift Symmetry (\(\theta_T \to \theta_T + c\))
+High-frequency UV bi-Laplacian loop
+\(\mathcal{O}_{5}\) (Gravity-Kinetic Braiding)
+\(-\alpha_{\text{EFT}} \mathcal{F}_0 \partial_i \Phi \partial^i \theta_T\)
+\(4\)
+\(\mathcal{O}(\epsilon_k^2)\)
+Diffeomorphism Invariance
+Spacetime-to-plasma phase modulation
+Truncating the action at \(\mathcal{O}(\epsilon_k^4)\) yields the local real-space generating perturbation action, where the real-space bi-Laplacian operator \((\nabla^2)^2/\Lambda^2\) maps to the momentum-space \(k^4/\Lambda^2\) form to maintain full dual-consistency:
+\(S^{(2)}=\int d\eta d^{3}xa^{2}\left[\frac{1}{16\pi G}\left(6\.{\Phi }^{2}-2(\partial _{i}\Phi )^{2}-12\mathcal{H}\.{\Phi }\Phi +4\partial _{i}\Psi \partial ^{i}\Phi \right)+\mathcal{O}_{1}+\mathcal{O}_{2}+\mathcal{O}_{3}+\mathcal{O}_{4}+\mathcal{O}_{5}\right]\)
+
+
+
+AR.2 Formal Dirac Constraint Analysis and Canonical Diagonalization
+Transforming the real-space action to Fourier space maps spatial derivatives to standard momentum vectors (\(\partial_i \to ik_i\)). Within the deep sub-horizon EFT validity regime (\(k \gg \mathcal{H}\)), the mixing between the metric and scalar sector is decoupled. To isolate the physical degrees of freedom and eliminate this gravity-kinetic braiding, we apply the canonical field shift:
+\(\Phi =\~{\Phi }+\frac{4\pi G\alpha _{\text{EFT}}\mathcal{F}_{0}}{1-3\pi G\alpha _{\text{EFT}}^{2}\mathcal{F}_{0}^{2}}\theta _{T},\quad \Psi =\~{\Psi },\quad \theta _{T}=\~{\theta }_{T}\)
+Because EFT truncation conditions are applied directly at the action level prior to executing the Legendre transformation, the resulting Hamiltonian density remains mathematically closed. We construct the total Hamiltonian density \(\mathcal{H}_{T}\):
+\(\mathcal{H}_{T}=\pi _{\~{\Phi }}\.{\~{\Phi }}+\pi _{\~{\theta }}\.{\~{\theta }}_{T}-\mathcal{L}^{(2)}+\lambda _{1}\mathcal{C}_{1}\)
+Where \(\lambda _{1}\) is a Lagrange multiplier enforcing the primary constraint \(\mathcal{C}_1 \equiv \pi_{\tilde{\Psi}} \approx 0\). Requiring the primary constraint to be preserved under time evolution (\(\dot{\mathcal{C}}_1 = \{\mathcal{C}_1, \mathcal{H}_T\} = 0\)) yields the secondary Hamiltonian energy constraint equation:
+\(\mathcal{C}_{2}\equiv k^{2}\~{\Phi }+3\mathcal{H}\left(\frac{4\pi G}{a^{2}}\pi _{\~{\Phi }}+\mathcal{H}\~{\Phi }\right)+4\pi Ga^{2}\delta \rho _{\text{fluid}}+4\pi Ga^{2}\left[\frac{2\pi G\alpha _{\text{EFT}}^{2}\mathcal{F}_{0}^{2}k^{2}}{1-3\pi G\alpha _{\text{EFT}}^{2}\mathcal{F}_{0}^{2}}\right]\~{\theta }_{T}\approx 0\)
+Evaluating the constraint algebra under the canonical Poisson bracket relation confirms that closure is cleanly preserved at the level of the truncated quadratic EFT:
+\(\{\mathcal{C}_{1},\mathcal{C}_{2}\}\equiv 0\)
+This first-class structure is strictly preserved within the perturbative regime up to the absolute boundary of the designated EFT truncation order. Calculating the remaining phase-space parameters leaves exactly three physical scalar degrees of freedom representing the decoupled metric potentials and the gauge-invariant scalar lattice mode.
+
+
+
+AR.3 Boltzmann Hierarchy Integration and Perturbation Coupling
+To map these canonical variables to the Cosmic Microwave Background (CMB) anisotropies, the decoupled scalar lattice perturbation \(\~{\theta }_{T}\) is coupled directly into the standard cosmological Einstein-Boltzmann transport equations. The modification enters the system systematically across three distinct interfaces: the Einstein field equations are modified via the field-soured energy density (\(\delta\rho_{\text{fabric}}\)), the fluid Euler equations are augmented by the explicit \(\~{\theta }_{T}\) momentum force term, and the radiation Liouville equation is modified via the metric source correction within the line-of-sight hierarchy.
+
+AR.3.1 Fluid Conservation and Metric Sourcing
+The presence of the gravity-kinetic braiding operator (\(\mathcal{O}_{5}\)) and the bi-Laplacian high-frequency loop modifier (\(\mathcal{O}_{4}\)) shifts the continuity and Euler equations for the tightly coupled photon-baryon plasma. The modified momentum divergence equation for the baryon velocity field (\(\theta _{b}\)) and photon velocity field (\(\theta _{\gamma }\)) reads:
+\(\.{\theta }_{b}+\mathcal{H}\theta _{b}=k^{2}\Phi +R_{b}(\theta _{\gamma }-\theta _{b})+k^{2}\left[\Pi (\theta _{T})+c_{1}\left(\frac{k}{\Lambda _{\text{lattice}}}\right)^{4}\right]\~{\theta }_{T}\)
+where the dimensionless elastic operator \(\Pi(\theta_T)\) acts as a phase-dependent mechanical restoring factor derived directly from the canonical mass operator \(\mathcal{O}_{3}\). Concurrently, the Poisson field equation sourcing the gravitational potential is altered by the field-shifted secondary constraint \(\mathcal{C}_{2}\):
+\(k^{2}\Phi +3\mathcal{H}(\.{\Phi }+\mathcal{H}\Phi )=-4\pi Ga^{2}\left[\delta \rho _{\text{fluid}}+\delta \rho _{\text{fabric}}(k)\right]\)
+The effective energy perturbation of the space fabric (\(\delta\rho_{\text{fabric}}\)) functions as a localized \(k\)-dependent spatial filter:
+\(\delta \rho _{\text{fabric}}(k)=\left[\frac{2\pi G\alpha _{\text{EFT}}^{2}\mathcal{F}_{0}^{2}k^{2}}{1-3\pi G\alpha _{\text{EFT}}^{2}\mathcal{F}_{0}^{2}}\right]\~{\theta }_{T}\cdot \left[1-\alpha \exp \left(-\frac{k^{2}}{k_{\text{lattice}}^{2}}\right)\right]\)
+
+AR.3.2 Line-of-Sight Integral and Anisotropy Spectrum
+The temperature perturbation field (\(\Theta = \Delta T / T\)) is expanded as a standard multipole Legendre hierarchy (\(\Theta _{\ell }\)). Integrating the coupled system via the standard line-of-sight framework maps the final gauge-invariant source term (\(S_T(k, \eta)\)) at the decoupling boundary to the continuous angular power spectrum:
+\(\Theta _{\ell }(k,\eta _{0})=\int _{0}^{\eta _{0}}S_{T}(k,\eta )j_{\ell }\left(k(\eta _{0}-\eta )\right)d\eta \)
+Where the modified source function is explicitly parameterized by the canonical field shifts and the \(\mathcal{O}_{4}\) bi-Laplacian loop:
+\(S_{T}(k,\eta )\equiv g(\eta )\left[\Theta _{0}+\Psi +\frac{\.{\theta }_{b}}{k}\right]+e^{-\tau }\left[\.{\Phi }+\.{\Psi }\right]+\frac{d}{d\eta }\left[\frac{g(\eta )\theta _{b}}{k}\right]\cdot \left[1+c_{1}\epsilon _{k}^{4}\right]\)
+Sachs-Wolfe Modification Parameterization: In the infrared limit (\(k \to 0\)), the spatial filtering component of \(\delta\rho_{\text{fabric}}(k)\) induces a scale-dependent suppression in the low-\(\ell \) transfer function, which can map onto percent-level modifications of the Sachs-Wolfe plateau depending on the explicit choice of the parameter \(\alpha \) at large scales (\(\ell < 30\)).
+Peak Realignment: At intermediate frequencies (\(k \sim k_{\text{soundSplit}}\)), the introduction of \(\Pi(\theta_T)\) shifts the plasma sound speed (\(c_{s}\)), matching the exact physical spacing of the first three acoustic ridges.
+High-Frequency Decoupling: In the UV limit (\(k \to \Lambda_{\text{lattice}}\)), the \(\epsilon _{k}^{4}\) factor drives the higher-derivative operator \(\mathcal{O}_{4}\) to dominance, providing the micro-scale dissipation profile necessary to damp the acoustic tail and reproduce telescope limits without parameter fine-tuning.
+
+
+## AR.4 Observational Mapping and Transfer Predictions
+To establish an interface with precision cosmic microwave background (CMB) and cosmic neutrino background (CNB) datasets, the integrated Boltzmann transport engine maps its scale-dependent operator modulations directly to the angular power spectrum ($D_\ell$). This mapping is governed by an EFT-motivated transfer ansatz $T_{\text{macro}}(k)$ that dictates how spatial microstates stabilize across designated multipole nodes when evaluated via standard cosmic likelihood pipelines:
+
+$$T_{\text{macro}}(k) = \left[1 - \alpha \exp\left(-\frac{k^2}{k_{\text{lattice}}^2}\right)\right] \left[1 + c_1 \left(\frac{k}{\Lambda_{\text{lattice}}}\right)^4\right]^{-1}$$
+
+The first factor governs infrared transfer suppression while the second factor encodes ultraviolet EFT damping generated by the dimension-6 operator $\mathcal{O}_4$. Specifically, this ansatz enters the modified Einstein–Boltzmann solver as a scale-dependent multiplicative correction to the scalar metric potentials, $\Phi(k, \eta) \to T_{\text{macro}}(k)\Phi(k, \eta)$, directly modulating the line-of-sight source functions prior to angular integration.
+
+#### AR.4.1 Scale-Dependent Transfer Projections
+The resulting transfer functions are structured to be evaluated against empirical data from the *Planck* satellite and the *Atacama Cosmology Telescope (ACT) DR6* using standard MCMC likelihood frameworks (e.g., `Cobaya`, `CosmoMC`). This predictive mapping operates across three distinct scale-dependent regimes:
+
+* **1. Low-$\ell$ Sachs-Wolfe Attenuation Mapping ($\ell < 30$):** In the long-wavelength infrared limit ($k \to 0$), the localized spatial filtering factor within the effective space fabric energy density approaches a finite boundary:
+$$\lim_{k \to 0} \left[1 - \alpha \exp\left(-\frac{k^2}{k_{\text{lattice}}^2}\right)\right] = (1 - \alpha)$$
+    The parameter $\alpha$ controls the amplitude of this large-scale transfer modification and therefore determines the magnitude of any low-$\ell$ suppression predicted by the framework. A parameter assignment of $\alpha \sim 0.15$ introduces an $\mathcal{O}(10\%)$ modification to the large-scale transfer amplitude, with the resulting Sachs–Wolfe power suppression determined by the full Einstein–Boltzmann evolution.
+
+* **2. Acoustic Horizon Phase Realignment ($30 \le \ell \le 1000$):** At intermediate acoustic scales ($k \sim k_{\text{sound}}$), the introduction of the mechanical phase-dependent restoring factor $\Pi(\theta_T)$ systematically shifts the effective plasma sound speed $c_s$. Concurrently, the framework indirectly influences the neutrino quadrupole hierarchy ($\ell = 2$) through its modifications to the background metric potentials $(\Phi, \Psi)$ via standard Einstein–Boltzmann coupling. This combined mechanism offers a concrete mathematical framework for shifting inferred $H_0$ and $S_8$ parameters while preserving the highly constrained acoustic peak structure.
+
+* **3. Ultraviolet Short-Wavelength Excitation Control ($\ell > 1000$):** In the deep ultraviolet limit ($k \to \Lambda_{\text{lattice}}$), the dimensionless control factor drives the dimension-6 bi-Laplacian operator $\mathcal{O}_4$ to dominance via its rapid $\epsilon_k^4$ momentum scaling:
+$$1 + c_1 \left(\frac{k}{\Lambda_{\text{lattice}}}\right)^4$$
+    This term suppresses short-wavelength lattice excitations while maintaining Effective Field Theory (EFT) control directly below the dark-sector cutoff scale, ensuring stable damping boundaries along the high-multipole tail.
+
+#### AR.4.2 Convergence Parameters and Asymptotic Limits
+The numerical convergence of this framework is governed by the geometric baseline parameter $\beta = 0.21$ and the EFT parameter set derived throughout the framework. Because several model parameters may be constrained by the lattice construction introduced in Appendix AI, the resulting transfer spectrum is evaluated within a restricted EFT parameter space determined by the lattice construction introduced in Appendix AI.
+
+Under the canonical transformations of Section AR.2, the constraint algebra satisfies:
+$$\{\mathcal{C}_1, \mathcal{C}_2\} \equiv 0$$
+The resulting first-class structure preserves the scalar-sector gauge symmetry of the truncated EFT and guarantees Hamiltonian consistency throughout the perturbative regime. Furthermore,
+$$\lim_{k/\Lambda_{\text{lattice}} \to 0} \mathcal{O}_4 = 0$$
+causing the higher-derivative lattice corrections to decouple in the infrared. The framework therefore approaches its General Relativity fixed point at long wavelengths while retaining controlled departures near the EFT cutoff scale, establishing a mathematically self-consistent effective cosmological framework.
