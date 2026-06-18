@@ -46,7 +46,6 @@ The baryon-to-photon ratio tracks as:
 The baryonic energy density evolves over space-time as:
 \(\rho _{b}(z)=n_{b}\cdot m_{p,\text{eff}}(z)\cdot (1+z)^{3}\)
 ⸻
-
 Z.7 Closure Conditions
 The framework is fully specified by the following core boundary criteria:
 UV Cutoff: \(\omega_{\max} = \frac{1}{t_V}\)
@@ -56,6 +55,7 @@ Redshift Mapping: Established via the direct Jacobian relation between proper ti
 Geometric Baryon Generation: Governed by the cosmic asymmetry parameter \(\eta _{\text{geom}}\) and its associated normalization scalar \(\mathcal{C}\).
 These relations collectively define a closed numerical system connecting the microscopic, geometric phase-space structure directly to macroscopic cosmological observables.
 ⸻
+
 
 Z.8 Telemetry Inversion and Spectral Closure via Appendix AO
 To map geometric phase-space parameters to observable data streams, the framework must account for real-time environmental interactions and noise. The deterministic evolution calculated across redshift (z) and proper time (τ) experiences phase-decoherence when interacting with an open cosmic environment. This shifts the spacing profile of the system's states away from its pure, uncorrupted layout toward a chaotic continuum. This open-system degradation is closed by introducing an adaptive linear operator matrix, derived directly from the thermalization trajectory established in Appendix AO.
