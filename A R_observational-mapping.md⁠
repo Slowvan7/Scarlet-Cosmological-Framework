@@ -109,3 +109,12 @@ $$\{\mathcal{C}_1, \mathcal{C}_2\} \equiv 0$$
 The resulting first-class structure preserves the scalar-sector gauge symmetry of the truncated EFT and guarantees Hamiltonian consistency throughout the perturbative regime. Furthermore,
 $$\lim_{k/\Lambda_{\text{lattice}} \to 0} \mathcal{O}_4 = 0$$
 causing the higher-derivative lattice corrections to decouple in the infrared. The framework therefore approaches its General Relativity fixed point at long wavelengths while retaining controlled departures near the EFT cutoff scale, establishing a mathematically self-consistent effective cosmological framework.
+
+Appendix AR.4.3: Operational Classification and Phenomenological Bounds
+
+The macro-transfer operator T_{\text{macro}}(k) defined in Eq. (AR.4.1) is classified as a phenomenological effective field theory (EFT) kernel, rather than a closed-form ab initio model of cosmic evolution. Its role is to provide a numerically stable ansatz for parameterizing scale-dependent torsional modulations within the linear Einstein–Boltzmann perturbation regime.
+
+By construction, the kernel separates infrared (IR) and ultraviolet (UV) modifications in a controlled manner, avoiding discontinuities or instabilities in standard Boltzmann integration frameworks. The parameters \alpha and c_1 should therefore be interpreted as effective, scale-dependent coupling coefficients defining a restricted phenomenological parameter space rather than fundamental constants.
+
+Within this interpretation, observational mappings derived from T_{\text{macro}}(k) represent structural sensitivity probes for cosmological tensions (e.g., H_0, S_8), rather than unique or complete resolutions. Any definitive claims require full nonlinear sampling against CMB likelihoods using a calibrated MCMC pipeline with high-redshift data constraints.
+
