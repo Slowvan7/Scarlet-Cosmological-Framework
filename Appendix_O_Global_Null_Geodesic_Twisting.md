@@ -433,3 +433,6 @@ Birefringence is strictly zero at all redshifts.
 
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b61778f1-e9c5-4282-ab45-12e44be5ba6f" />
+
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/c629efb5-480e-4920-93fc-728227e672a1" />
