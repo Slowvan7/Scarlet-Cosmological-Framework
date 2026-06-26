@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Appendix AI — First-Rule Framework
@@ -73,14 +72,12 @@ $$R(\Gamma^{(W)}) = 0$$
 
 #### AI.5.3 Riemann–Cartan Decomposition
 
-$$\Gamma^\lambda{}_{\mu\nu} = \left\{{}^{\lambda}{}_{\mu\nu}\right\} + K^\lambda{}_{\mu\nu}$$
+$$\Gamma^\lambda{}_{\mu\nu} = \left\{ \begin{matrix} \lambda \\ \mu \nu \end{matrix} \right\} + K^\lambda{}_{\mu\nu}$$
 
 Torsion:
-
 $$T^\lambda{}_{\mu\nu} = \Gamma^\lambda{}_{\mu\nu} - \Gamma^\lambda{}_{\nu\mu}$$
 
 Contortion:
-
 $$K^\lambda{}_{\mu\nu} = \frac{1}{2}\left(T^\lambda{}_{\mu\nu} - T_\mu{}^\lambda{}_\nu - T_\nu{}^\lambda{}_\mu\right)$$
 
 ---
@@ -174,3 +171,4 @@ The First Rule defines a relaxation hierarchy:
 
 The “mutual center” refers to a configuration-space attractor governing the relaxation of torsion and tetrad fields, and does not correspond to a spacetime point or preferred inertial frame.
 {% endraw %}
+
