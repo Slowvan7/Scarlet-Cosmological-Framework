@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: Appendix AI — First-Rule Framework
@@ -72,7 +73,7 @@ $$R(\Gamma^{(W)}) = 0$$
 
 #### AI.5.3 Riemann–Cartan Decomposition
 
-$$\Gamma^\lambda{}_{\mu\nu} = \left\{ \begin{matrix} \lambda \\ \mu \nu \end{matrix} \right\} + K^\lambda{}_{\mu\nu}$$
+$$\Gamma^\lambda{}_{\mu\nu} = \left\{{}^{\lambda}{}_{\mu\nu}\right\} + K^\lambda{}_{\mu\nu}$$
 
 Torsion:
 
