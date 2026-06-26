@@ -1,0 +1,273 @@
+# Appendix AS — Temporal Inversion and the Configuration Zero-Baseline
+
+### AS.1 — The Superluminal Phase Transition
+
+Within the Scarlet framework, the invariant speed \(c\) characterizes the causal structure of the coarse-grained infrared (IR) manifold and emerges from the collective behavior of the microscopic space fabric. This causal structure remains valid only while the low-energy effective field theory (EFT) description remains applicable.
+
+The EFT expansion parameter is defined by the ratio of the fundamental microscopic scale to the characteristic macroscopic curvature scale,
+
+\[
+\beta \equiv \frac{\ell_*}{L},
+\]
+
+where \(\ell_*\) denotes the ultraviolet (UV) cutoff length of the fabric and \(L\) represents the characteristic infrared scale of the system.
+
+As the macroscopic scale approaches the microscopic resolution threshold, the system approaches the ultraviolet limit,
+
+\[
+\lim_{L\rightarrow\ell_*}\beta = 1.
+\]
+
+In this regime, the separation between ultraviolet and infrared degrees of freedom collapses. The coarse-grained metric description \(g_{\mu\nu}\) progressively loses completeness as a descriptor of geometric transport, while ultraviolet tetrad degrees of freedom become dynamically significant.
+
+In this critical regime, the Levi-Civita sector,
+
+\[
+\left\{{}^{\lambda}{}_{\mu\nu}\right\},
+\]
+
+which ordinarily enforces smooth pseudo-Riemannian causality, becomes subordinate to the underlying Weitzenböck connection determined by the ultraviolet tetrad fields \(e^a{}_\mu\),
+
+\[
+\Gamma^{(W)\lambda}{}_{\mu\nu}
+=
+e^\lambda{}_a\,\partial_\nu e^a{}_\mu.
+\]
+
+The fabric therefore transitions into a highly local phase dominated by ultraviolet tetrad fields and strongly non-linear torsional dynamics. Geometric information is carried primarily through microscopic fabric alignment rather than through smooth metric propagation. Consequently, the emergent causal structure associated with \(c\) no longer constitutes the appropriate macroscopic descriptor. Within Scarlet, the term *superluminal* refers to propagation that exceeds the validity domain of the emergent infrared velocity bound and should not be interpreted as transport relative to an intact pseudo-Riemannian light cone.
+
+---
+
+### AS.2 — Visual and Phase Inversion Mechanics
+
+Within this phase-shifted regime, the relationship between an observer and an emitted signal may be represented by the effective reconstruction mapping,
+
+\[
+\nu_{\rm observed}
+=
+\nu_{\rm source}
+\left(
+1-\frac{v}{c}
+\right).
+\]
+
+This relation is introduced as an effective reconstruction rule applicable within the phase-inverted ultraviolet regime and is not intended to represent the standard relativistic Doppler formula.
+
+For trajectories satisfying \(v>c\), the mapping yields a negative frequency parameter. Within Scarlet, a negative frequency does not represent negative-energy quanta, nor does it automatically imply a physical reversal of microscopic chronology. Rather, the sign reversal is interpreted strictly as an inversion of relational phase reconstruction and wavefront sequencing. Successive wavefronts are encountered by the observer in an order opposite to that assumed by ordinary infrared metric tracking.
+
+This phase-inversion interpretation produces several geometric consequences for the local observer:
+
+**Receding Signatures (\(v>c\) away from the source):**
+
+Wavefronts are intercepted in reverse sequence relative to their emission ordering, and the intervals between successive fronts are stretched. For example,
+
+\[
+\nu_{\rm observed}
+=
+\nu_{\rm source}
+(1-1.5)
+=
+-0.5\,\nu_{\rm source},
+\]
+
+so that
+
+\[
+\left|
+\nu_{\rm observed}
+\right|
+=
+0.5\,\nu_{\rm source}.
+\]
+
+The intercepted wavelength therefore becomes
+
+\[
+\lambda_{\rm observed}
+=
+\frac{c}
+{\left|
+\nu_{\rm observed}
+\right|}
+=
+2\lambda_{\rm source},
+\]
+
+and the reconstructed signal shifts toward lower-energy infrared and radio frequencies.
+
+**Approaching Signatures (\(v>c\) toward a source):**
+
+The observer overtakes incoming phase fronts and encounters an extreme compression of wavefront spacing. Within the infrared reconstruction map, this manifests as a formally divergent blueshift, translating the intercepted signal toward high-energy spectral regimes.
+
+---
+
+### AS.3 — The Master Clock and the Configuration Zero-Baseline
+
+The macroscopic arrow of time is interpreted in Scarlet as a relational property of local metric slices and the coarse-grained ordering of wavefront information. Beneath this observer-dependent manifestation lies an invariant temporal resolution scale,
+
+\[
+t_*
+=
+10^{-41}\,\mathrm{s}.
+\]
+
+This interval is not an ordinary coordinate time defined on a smooth four-dimensional manifold. Instead, it represents the characteristic relaxation interval governing the microscopic torsional fabric and defines the minimum meaningful temporal resolution of the underlying geometry.
+
+The interval \(t_*\) is interpreted as an invariant ordering scale of the microscopic fabric rather than as a globally synchronized coordinate clock.
+
+The Master Clock is identified with the directional relaxation of ultraviolet tetrad fluctuations toward a common configuration-space attractor, referred to as the **mutual center**. This process establishes a structural measuring point of zero—a configuration-space baseline against which all emergent temporal relations are defined.
+
+At this zero-baseline, macroscopic temporal ordering, metric distance, and the infrared notion of causality emerge through coarse-graining and renormalization-group flow from the underlying microscopic dynamics.
+
+Although an observer may alter their state of motion and invert local wavefront reconstruction relations, they remain embedded within the microscopic relaxation process of the fabric itself. The ultraviolet tetrad degrees of freedom continue to evolve according to the invariant interval \(t_*\), which persists as the fundamental ordering scale underlying all emergent relativistic phenomena.
+
+---
+
+### AS.4 — Configuration-Space Relocalization
+
+Within the unzipped ultraviolet regime,
+
+\[
+\beta \rightarrow 1,
+\]
+
+spatial coordinates lose their interpretation as invariant, passive labels on a smooth metric manifold. Geometric reconstruction becomes explicitly dependent upon the ordering of incoming phase fronts and the orientation of the local tetrad lattice.
+
+For states exhibiting negative-frequency reconstruction,
+
+\[
+\nu_{\rm observed}<0,
+\]
+
+the directional ordering of the incoming wave vector undergoes inversion,
+
+\[
+k^\mu_{\rm observed}
+=
+-
+k^\mu_{\rm source}.
+\]
+
+Because source tracking is performed through local tetrad orientation, the reversed phase ordering induces a corresponding modification of the reconstructed position vector. This mapping is governed by a phase-induced reconstruction operator,
+
+\[
+x^\mu_{\rm reconstructed}
+=
+\mathcal P^\mu{}_\nu
+x^\nu_{\rm metric},
+\]
+
+where
+
+\[
+\mathcal P^\mu{}_\nu
+\]
+
+preserves local information content while reversing the inferred ordering of wavefront intersections.
+
+The emitter is therefore projected onto configuration space at an orientation opposite to its infrared metric trajectory. Within the observer's local reconstruction, the source may appear behind the direction of motion despite its physical location remaining unchanged within the macroscopic manifold.
+
+---
+
+### AS.5 — Breakdown of Infrared Causality
+
+As the characteristic scale of the system approaches the ultraviolet cutoff,
+
+\[
+L\rightarrow\ell_*,
+\]
+
+the low-energy effective field description ceases to be sufficient and the dynamics must be described by the complete Riemann-Cartan action.
+
+Within Scarlet it is assumed that the quadratic torsional contribution scales more rapidly than the infrared curvature sector as
+
+\[
+\beta\rightarrow1.
+\]
+
+Accordingly, the Einstein tensor \(G_{\mu\nu}\), which governs smooth infrared geometry, becomes subordinate to the quadratic torsional sector \(\Theta_{\mu\nu}\), such that
+
+\[
+\lim_{\beta\rightarrow1}
+\left(
+G_{\mu\nu}
++
+\frac{\alpha}{\ell_*^2}
+\Theta_{\mu\nu}
+\right)
+\propto
+\Theta_{\mu\nu},
+\]
+
+where \(\alpha\) is a dimensionless coupling parameter.
+
+The ordinary light-cone structure defined by the metric tensor \(g_{\mu\nu}\) therefore loses its role as the primary mediator of causal transport. Propagation no longer proceeds through continuous null geodesics of a smooth four-dimensional manifold. Instead, interactions become governed by non-local geometric transport encoded by the absolute parallelism of the Weitzenböck connection,
+
+\[
+\Gamma^{(W)\lambda}{}_{\mu\nu}
+=
+e^\lambda{}_a
+\partial_\nu e^a{}_\mu.
+\]
+
+Causal ordering is therefore transferred from metric propagation to the sequential relaxation of the microscopic fabric itself.
+
+---
+
+### AS.6 — Emergent Chronology from the Master Clock
+
+The transition from the discrete microscopic interval,
+
+\[
+t_*
+=
+10^{-41}\,\mathrm{s},
+\]
+
+to the continuous coordinate time of general relativity is interpreted as an emergent, coarse-grained process.
+
+Let the microscopic state of the ultraviolet tetrad fabric be represented by a statistical distribution function,
+
+\[
+f(\omega^a{}_\mu).
+\]
+
+Over a configuration volume satisfying
+
+\[
+V \gg \ell_*^3,
+\]
+
+the distribution function obeys the normalization condition,
+
+\[
+\int_V
+f(\omega^a{}_\mu)\,
+d\Omega
+=
+1.
+\]
+
+The macroscopic temporal increment is obtained through an ensemble average over the normalized microscopic states,
+
+\[
+\langle \Delta t \rangle
+=
+\int_V
+f(\omega^a{}_\mu)
+\left(
+\frac{\ell_*}
+{\mathcal c_{\rm eff}}
+\right)
+d\Omega.
+\]
+
+As the system flows toward the infrared fixed point,
+
+\[
+\beta\rightarrow0,
+\]
+
+the chaotic microscopic fluctuations of the tetrad field increasingly cancel through relaxation toward the configuration-space attractor, or mutual center.
+
+The discrete relaxation steps therefore smooth into a continuous, differentiable temporal parameter. The macroscopic arrow of time emerges as an effective statistical ordering generated by the coherent relaxation of an enormous ensemble of microscopic torsional states toward the mutual center.
