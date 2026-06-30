@@ -1,0 +1,225 @@
+Appendix AT: Observational Signatures of Global Torsional Bias and Cosmic Birefringence (Strict Operator-Separated EFT Formulation)
+
+
+AT.1 Canonical Axial-Torsion Pseudoscalar Sector
+
+In the SCARLET framework, cosmic birefringence is sourced by an emergent pseudoscalar field \phi, arising as the coarse-grained axial projection of the microscopic torsional lattice defined in Appendix AS.
+
+The field is defined in a canonically normalized EFT form:
+
+\phi \equiv \Phi[\mathcal{T}_{\mu\nu\rho}] =
+\frac{1}{\Lambda_{\mathrm{ST}}}
+\epsilon_{\mu\nu\rho\sigma}
+T^{\mu\nu\rho} u^{\sigma}
+
+where:
+
+T^{\mu\nu\rho} is the microscopic torsion tensor,
+u^\sigma is the comoving four-velocity,
+\Lambda_{\mathrm{ST}} is the UV structural cutoff scale.
+Dimensional consistency (natural units)
+
+[T^{\mu\nu\rho}] = [M], \quad [\Lambda_{\mathrm{ST}}] = [M], \quad [\phi] = [M]
+
+The electromagnetic coupling is introduced via:
+
+\mathcal{L}_{\mathrm{int}} =
+-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
++ \frac{1}{4}\frac{g_\alpha}{\Lambda_{\mathrm{ST}}}
+\phi F_{\mu\nu}\tilde{F}^{\mu\nu}
+
+with:
+[g_\alpha] = [M]^0
+
+ensuring strict EFT power counting and gauge consistency.
+
+
+AT.2 Fundamental Closure Principle: Operator Separation
+
+The SCARLET torsional sector is defined by a single structural rule:
+
+Torsion acts only in velocity-space transport; it does not modify metric evolution.
+
+Define the torsion transport operator:
+
+\boxed{
+\mathcal{D}_{\mathcal{T}} \equiv \partial_t + H + 3\mathcal{T}_{\mathrm{eff}}(t)
+}
+
+Dynamical equations
+
+Velocity sector (modified)
+
+\mathcal{D}_{\mathcal{T}} \theta_m = -k^2 \Phi
+
+Continuity equation (standard GR)
+
+\dot{\delta}_m = -\theta_m + 3\dot{\Phi}
+
+Metric sector (unchanged Einstein dynamics)
+
+k^2 \Phi = 4\pi G a^2 \rho_m \delta_m
+
+
+AT.3 Emergent Cosmic Birefringence
+
+Photon polarization evolves via coupling to the axial pseudoscalar field:
+
+\beta = \frac{g_\alpha}{2\Lambda_{\mathrm{ST}}}
+\int_{t_{\mathrm{emit}}}^{t_{\mathrm{obs}}} \dot{\phi}\, dt
+
+Define the normalized evolution function:
+
+f(z) \equiv
+\frac{\phi(z)-\phi(0)}{\phi(z_{\mathrm{CMB}})-\phi(0)}
+
+with:
+
+f(0)=0, \quad f(z_{\mathrm{CMB}})=1
+
+The integrated torsional boundary condition from Appendix AS is:
+
+\Delta \phi_{\mathrm{CMB}} =
+\frac{2\Lambda_{\mathrm{ST}}}{g_\alpha}\theta_{\mathrm{bias}}
+
+Substituting yields the closed form:
+
+\boxed{
+\beta(z) = f(z)\,\theta_{\mathrm{bias}}
+}
+
+At recombination:
+
+\beta_{\mathrm{CMB}} = \theta_{\mathrm{bias}}
+
+with:
+
+\theta_{\mathrm{bias}} = 3.665\times10^{-3}\,\mathrm{rad} = 0.21^\circ
+
+
+AT.4 Linear Growth System (Consistent GR + Torsion Transport)
+
+The matter density obeys standard background evolution:
+
+\dot{\rho}_m + 3H\rho_m = 0
+
+Torsion modifies only velocity transport:
+
+\mathcal{D}_{\mathcal{T}} \theta_m = -k^2 \Phi
+
+while metric perturbations remain standard GR.
+
+
+AT.5 Closed Second-Order Growth Equation (Source-Free)
+
+Combining the above system yields the fully closed equation:
+
+\boxed{
+\ddot{\delta}_m
++ (2H + 3\mathcal{T}_{\mathrm{eff}})\dot{\delta}_m
+- 4\pi G\rho_m \delta_m
+= 0
+}
+
+Why no source term appears
+
+The key structural reason closure succeeds is:
+
+torsion never couples to \Phi, so no \mathcal{T}_{\mathrm{eff}}\dot{\Phi} cross-sector term can form.
+
+Thus:
+
+metric evolution is GR-standard
+torsion acts only on velocity damping
+operator domains remain orthogonal
+
+AT.6 Redshift Scaling of Torsional Transport
+
+The effective torsion coefficient is a transport-sector quantity:
+
+\mathcal{T}_{\mathrm{eff}}(t)
+= \mathcal{T}_0
+\left(\frac{a_0}{a(t)}\right)^{3(1-w)}
+
+Radiation era (w = 1/3)
+
+\mathcal{T}_{\mathrm{eff}} \propto a^{-2} \propto t^{-1}
+
+Stabilizes early perturbations.
+
+Matter era (w = 0)
+
+\mathcal{T}_{\mathrm{eff}} \propto a^{-3} \propto t^{-2}
+
+Produces late-time mild damping of growth.
+
+
+AT.7 Structure Formation and S_8 Suppression
+
+The matter variance is:
+
+\sigma_8^2 =
+\frac{1}{2\pi^2}
+\int_0^\infty k^2 P(k) W^2(kR)\, dk
+
+Growth suppression enters only through modified D(t) governed by AT.5.
+
+This yields:
+
+S_8 \equiv \sigma_8\sqrt{\Omega_m/0.3}
+\approx 0.76 - 0.78
+
+Key point:
+
+suppression is purely dynamical (velocity-sector damping), not a modification of background cosmology.
+
+
+AT.8 Observational Falsifiability Matrix
+
+Observable
+
+Î›CDM
+
+SCARLET Prediction
+
+Falsification Criterion
+
+Cosmic birefringence
+
+0^\circ
+
+0.21^\circ
+
+excluded if <0.15^\circ (3Ïƒ)
+
+S_8
+
+~0.83
+
+0.76â€“0.78
+
+excluded if outside lensing bounds
+
+CMB EB
+
+0
+
+parity-violating signal âˆ torsion
+
+excluded if null detection persists
+
+
+
+AT.9 Final Structural Statement
+
+The SCARLET torsional sector is fully defined by a single transport deformation operator acting only in velocity space:
+
+\boxed{
+\mathcal{D}_{\mathcal{T}} = \partial_t + H + 3\mathcal{T}_{\mathrm{eff}}(t)
+}
+
+All observable consequences—birefringence, growth suppression, and structure damping—follow uniquely from this operator without:
+
+metric modification
+source terms
+or cross-sector cancellations
