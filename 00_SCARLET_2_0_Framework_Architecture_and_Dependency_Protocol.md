@@ -271,3 +271,11 @@ Because the framework is interconnected, a contradiction in one sector propagate
 
 The modular structure of SCARLET therefore serves two purposes: organizing the mathematics and exposing every prediction to independent observational testing.
 
+Contact and Research Inquiries
+
+Questions, comments, technical discussions, and requests for clarification regarding the Scarlet–VanAcker Cosmological Framework (SCARLET 2.0) may be directed to:
+
+Thomas VanAcker
+Email: n63gt@icloud.com
+
+Researchers and readers are encouraged to provide feedback regarding mathematical consistency, interpretation of the framework, observational implications, and potential areas for further development.
