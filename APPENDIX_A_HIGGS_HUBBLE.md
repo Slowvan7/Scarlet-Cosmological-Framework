@@ -1,8 +1,6 @@
 
 
-Appendix A — Experimental Alignments and Benchmark Relations
-
-
+Appendix A — Experimental Alignments and Benchmark Within the Standard Model, the Higgs mass is an experimentally measured parameter whose numerical value is not predicted by the theory itself. SCARLET investigates whether this benchmark value can instead be interpreted as the stabilization response of a localized scalar resonance embedded in a torsion-biased geometric substrate.
 
 
 
