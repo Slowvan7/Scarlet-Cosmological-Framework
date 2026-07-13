@@ -2,7 +2,9 @@
 
 Appendix A — Experimental Alignments and Benchmark Within the Standard Model, the Higgs mass is an experimentally measured parameter whose numerical value is not predicted by the theory itself. SCARLET investigates whether this benchmark value can instead be interpreted as the stabilization response of a localized scalar resonance embedded in a torsion-biased geometric substrate.
 
-Architectural Role. Following the framework definitions established in Section 0 and the effective field theory developed in Appendix AI, this appendix provides the first observational benchmark layer of SCARLET. Rather than deriving the underlying dynamics, it evaluates whether the Bedrock parameters project consistently into experimentally measured quantities across particle physics, cosmology, and polarization observations. This forms the first stage of the framework’s cross-scale validation protocol.
+Architectural Role. Following the framework definitions established in Section 0 and the effective field theory developed in Appendix AI, this appendix provides the first observational benchmark layer of SCARLET. Rather than deriving the underlying dynamics, it evaluates whether the Bedrock parameters project consistently into experimentally measured quantities across particle physics, cosmology, and polarization observations. This forms the first stage of the framework’s cross-scale validation protocol. Accordingly, every benchmark presented in this appendix must remain traceable to the common Bedrock parameters introduced in Section 0, ensuring that no observational sector is treated as an independent phenomenological fit.
+
+
 
 Framework: Scarlet–VanAcker (v2.0)
 
