@@ -312,3 +312,5 @@ Cosmic birefringence is predicted to remain global and achromatic, distinguishin
 
 For the unified scalar–vector benchmark derivation using the same universal seed together with the 133.3 spectral packing factor, see Appendix T — Geometric Correspondence of Scalar and Vector Masses.
 
+Accordingly, Appendix A should be interpreted as the first observational checkpoint of the SCARLET framework. Subsequent appendices test whether the same Bedrock parameters continue to project consistently into increasingly independent physical sectors without introducing additional free benchmark constants.
+
