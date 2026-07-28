@@ -1,0 +1,402 @@
+# Appendix AU — Primordial Torsional Chirality and the Geometric Origin of Antimatter
+
+## AU.1 Motivation
+
+Within the SCARLET 2.0 framework, spacetime is modeled as a metric-affine manifold whose geometric structure is determined not only by curvature but also by torsion. Unlike torsion-free formulations, SCARLET assumes that the primordial universe emerged from a pre-geometric Bedrock state in which the contortion field underwent a spontaneous symmetry-breaking transition.
+
+The central hypothesis of this appendix is that the distinction between matter and antimatter is not solely an internal quantum label, but may arise from the orientation structure of localized excitations within a globally selected torsional vacuum.
+
+In this interpretation, charge conjugation is represented geometrically as an orientation reversal of torsional degrees of freedom rather than as an entirely independent transformation imposed upon otherwise unrelated particle states.
+
+The fundamental proposal is:
+
+$$\boxed{\text{Matter and antimatter represent conjugate orientations of localized torsional excitations within one geometric vacuum.}}$$
+
+The framework does not require a separate antimatter universe, a time-reversed cosmological branch, or spatially segregated antimatter domains. Instead, both sectors exist as possible excitations of a single connected metric-affine manifold.
+
+The purpose of this appendix is to formulate this hypothesis mathematically, identify its required assumptions, and provide experimentally testable consequences.
+
+---
+
+## AU.2 Primordial Torsional Vacuum
+
+The SCARLET connection is written as
+
+$$\Gamma^\lambda{}_{\mu\nu} = \{^\lambda_{\mu\nu}\} + K^\lambda{}_{\mu\nu},$$
+
+where $K^\lambda{}_{\mu\nu}$ is the contortion tensor.
+
+The torsion tensor is defined as
+
+$$T^\lambda{}_{\mu\nu} \equiv \Gamma^\lambda{}_{\mu\nu} - \Gamma^\lambda{}_{\nu\mu}.$$
+
+The contortion and torsion tensors are related by
+
+$$K^\lambda{}_{\mu\nu} = \frac{1}{2} \left( T^\lambda{}_{\mu\nu} - T_\mu{}^\lambda{}_\nu - T_\nu{}^\lambda{}_\mu \right).$$
+
+The axial torsion component is defined by
+
+$$S_\mu \equiv \frac{1}{6} \epsilon_{\mu\nu\rho\sigma} T^{\nu\rho\sigma}.$$
+
+SCARLET assumes that the primordial VanAcker Bedrock transition generated a non-zero background torsional configuration:
+
+$$\boxed{S_\mu^{(0)} \neq 0}$$
+
+This background field represents the vacuum orientation from which localized excitations emerge.
+
+The primordial state is therefore not interpreted as a torsion-free vacuum, but as a spontaneously ordered torsional phase.
+
+---
+
+## AU.3 Global Torsional Chirality
+
+A torsional pseudoscalar invariant is introduced:
+
+$$\mathcal{I}_T \equiv \epsilon^{\mu\nu\rho\sigma} S_\mu T_{\nu\rho\sigma}.$$
+
+The global torsional orientation is defined as
+
+$$\chi \equiv \operatorname{sgn}(\mathcal{I}_T).$$
+
+The two mathematically allowed vacuum sectors are therefore:
+
+$$\chi = +1 \quad \text{and} \quad \chi = -1.$$
+
+SCARLET proposes that the physical universe occupies a single selected topological sector:
+
+$$\boxed{\chi = +1}$$
+
+chosen during the primordial torsional symmetry-breaking transition.
+
+The conjugate sector remains a valid mathematical solution but is not realized as the global vacuum configuration.
+
+This provides a geometric mechanism for selecting a preferred parity orientation without requiring an external symmetry-breaking field.
+
+---
+
+## AU.4 Localized Torsional Excitations and Geometric Charge Conjugation
+
+Particles are interpreted as localized perturbations of the primordial torsional background:
+
+$$K^\lambda{}_{\mu\nu} = K^{(0)\lambda}{}_{\mu\nu} + \delta K^\lambda{}_{\mu\nu}.$$
+
+However, a purely quadratic torsional description would produce a degeneracy: $\delta K \rightarrow -\delta K$, because both states would satisfy identical second-order propagation equations.
+
+To distinguish matter and antimatter dynamically, SCARLET introduces the first-order Dirac-Cartan coupling. The fermionic operator on a Riemann-Cartan manifold is:
+
+$$\left( i\gamma^\mu \nabla_\mu - m \right)\psi = 0,$$
+
+where the spin connection covariant derivative is:
+
+$$\nabla_\mu \equiv \stackrel{\circ}{\nabla}_\mu + \frac{1}{4} K_{\mu ab} \gamma^a \gamma^b.$$
+
+For a minimally coupled Dirac field, the vector and tensor contortion components decouple, reducing the interaction explicitly to the axial torsion vector:
+
+$$\boxed{\mathcal{L}_T = \frac{3}{4} S_\mu \bar{\psi} \gamma^\mu \gamma^5 \psi}$$
+
+The axial torsional contribution enters linearly, allowing opposite torsional orientations to define distinct physical eigenspaces.
+
+To avoid overclaiming, geometric charge conjugation is defined specifically through the orientation-sensitive axial sector rather than an unconstrained global tensor flip:
+
+$$\boxed{\mathcal{C}_T: S_\mu \longrightarrow -S_\mu}$$
+
+Under $\mathcal{C}_T$, the full contortion transforms as:
+
+$$K^\lambda{}_{\mu\nu} \longrightarrow K^{(0)\lambda}{}_{\mu\nu} + \Delta K^\lambda{}_{\mu\nu}$$
+
+where $\Delta K^\lambda{}_{\mu\nu}$ isolates the orientation-sensitive axial sector.
+
+Matter ($S^{(0)} + \delta S$) and Antimatter ($S^{(0)} - \delta S$) are therefore not negative-energy states, but conjugate geometric orientations relative to the selected torsional vacuum.
+
+---
+
+## AU.5 Geometric Relaxation and Annihilation
+
+Matter-antimatter annihilation is interpreted as the relaxation of opposite localized torsional distortions.
+
+The idealized cancellation is:
+
+$$\delta S_\mu + (-\delta S_\mu) \longrightarrow 0.$$
+
+The process removes localized torsional strain and transfers the stored geometric energy into propagating field excitations.
+
+The torsional excitation energy satisfies:
+
+$$E_T = m c^2.$$
+
+For electron-positron annihilation:
+
+$$2 m_e c^2 \approx 1.022\text{ MeV}.$$
+
+The observed photon production ($511\text{ keV} + 511\text{ keV}$) is therefore interpreted as conservation of the released geometric energy.
+
+The annihilation process preserves energy ($E$), four-momentum ($p_\mu$), angular momentum ($J$), and topological orientation.
+
+Within SCARLET, annihilation is not interpreted as the destruction of fundamental objects, but as the restoration of the local torsional field toward the background vacuum configuration.
+
+---
+
+## AU.6 Neutrinos as Axial Torsional Modes
+
+Within SCARLET 2.0, neutrinos are interpreted as weakly coupled axial excitations of the primordial torsional field.
+
+The axial torsion vector is:
+
+$$S_\mu \equiv \frac{1}{6} \epsilon_{\mu\nu\rho\sigma} T^{\nu\rho\sigma}.$$
+
+Fermionic fields couple naturally to axial torsion through the explicit Dirac-Cartan normalization:
+
+$$\mathcal{L}_T = \frac{3}{4} S_\mu \bar{\psi} \gamma^\mu \gamma^5 \psi.$$
+
+The interaction distinguishes the orientation of fermionic states relative to the primordial torsional vacuum.
+
+For the selected vacuum sector ($\chi = +1$), the neutrino excitation is represented by:
+
+$$S_\mu^{(\nu)} \parallel S_\mu^{(0)}.$$
+
+The conjugate excitation satisfies:
+
+$$S_\mu^{(\bar{\nu})} = -S_\mu^{(\nu)}.$$
+
+Therefore, the observed distinction between neutrino and antineutrino states is interpreted as a geometric orientation reversal of the axial torsional mode.
+
+SCARLET does not assume that neutrino chirality is imposed externally. Instead, chirality emerges from the coupling between fermionic degrees of freedom and the globally selected torsional vacuum.
+
+The neutrino sector therefore provides a direct probe of whether primordial torsional orientation has physical consequences.
+
+Potential observables include oscillation phase corrections ($\Delta\phi_\nu(E)$), energy-dependent propagation effects ($\Delta v_\nu(E)$), and possible helicity-dependent interactions with large-scale torsional backgrounds.
+
+---
+
+## AU.7 Cosmological Implications
+
+The primordial selection of a unique torsional vacuum sector provides a geometric interpretation of matter-antimatter asymmetry.
+
+Conventional baryogenesis mechanisms require independent ingredients such as particle-number violating processes, CP violation, and departure from thermal equilibrium.
+
+SCARLET instead proposes that the initial torsional vacuum selection provides the fundamental asymmetry ($\chi = +1$).
+
+The matter sector corresponds to excitations aligned with the selected vacuum orientation ($\delta S_m \parallel S^{(0)}$), while antimatter corresponds to locally realizable conjugate excitations ($\delta S_{\bar{m}} = -\delta S_m$).
+
+The asymmetry does not arise because antimatter is forbidden. Rather, the globally selected vacuum provides a preferred background orientation that determines which excitations become dynamically stable.
+
+To model this as an effective field theory anomaly rather than an arbitrary source term, the effective baryon-current conservation equation is coupled directly to the topological Nieh-Yan invariant:
+
+$$\boxed{\nabla_\mu J_B^\mu = \frac{c_T}{384\pi^2} N}$$
+
+where $N = d(e^a \wedge T_a)$ is the Nieh-Yan 4-form, and $c_T$ is an effective topological coupling coefficient. This provides a formal geometric channel through which torsional topology directly drives fermionic number currents.
+
+The SCARLET hypothesis is therefore:
+
+$$\boxed{\text{Baryon asymmetry originates from primordial torsional vacuum selection.}}$$
+
+---
+
+## AU.8 Discussion
+
+The central objective of this appendix is to replace an unexplained internal distinction between particle and antiparticle states with a geometric mechanism based on orientation.
+
+The proposal consists of four connected principles:
+1. The primordial universe underwent torsional symmetry breaking.
+2. A single vacuum chirality was selected ($\chi = +1$).
+3. Matter and antimatter correspond to opposite localized torsional orientations.
+4. Fermionic propagation distinguishes these orientations through the first-order Dirac-Cartan operator.
+
+This framework does not claim that conventional quantum field theory is replaced automatically. Rather, it proposes that the geometric structure underlying the quantum fields may originate from torsional degrees of freedom.
+
+The central mathematical requirement is that the axial torsional transformation $S_\mu \rightarrow -S_\mu$ must reproduce the observed properties of charge conjugation, fermion chirality, antimatter interactions, annihilation processes, and conservation laws.
+
+These requirements provide direct opportunities for falsification.
+
+---
+
+## AU.9 Falsifiability and Experimental Predictions
+
+A geometric interpretation of charge conjugation is physically meaningful only if it produces measurable consequences.
+
+The following predictions distinguish SCARLET from a purely conventional torsion-free description.
+
+### Prediction 1 — Primordial Torsional Chirality
+If the universe occupies a single torsional vacuum sector ($\chi = +1$), then parity-sensitive processes should contain a residual imprint of the primordial torsional orientation.
+* **Possible tests:** Precision neutrino helicity measurements, ultra-high-energy fermion interactions, parity-sensitive cosmological observations.
+* **Falsification:** A complete absence of any torsional parity sector after increasingly sensitive searches would constrain the hypothesis.
+
+### Prediction 2 — Spin-Dependent Antimatter Torsional Coupling
+SCARLET does not predict antigravity. The gravitational response of bulk antimatter remains $T_{00} > 0$, therefore $m_g(\bar{m}) \approx m_g(m)$. Unpolarized antihydrogen (e.g., in ALPHA-g, AEgIS, or GBAR) should fall normally under the equivalence principle.
+
+The predicted effect arises exclusively from the coupling between spin polarization $s^{\mu\nu}$ and external torsion gradients $\nabla_\mu S_\nu$:
+
+$$F_T \propto \nabla_\mu S_\nu s^{\mu\nu}.$$
+
+Therefore, the relevant observable is a hyper-fine spin-dependent differential acceleration:
+
+$$\boxed{\Delta a_T = \Delta a_T(s, \nabla S)}$$
+
+* **Possible tests:** Spin-polarized antihydrogen interferometry, polarized positronium trap dynamics.
+* **Falsification:** Observation that spin-polarized antimatter remains completely insensitive to all torsional-gradient effects at the predicted sensitivity would constrain this sector.
+
+### Prediction 3 — Neutrino Torsional Corrections
+The axial torsional interaction predicts possible deviations from standard neutrino propagation via:
+
+$$\mathcal{L}_T = \frac{3}{4} S_\mu \bar{\psi} \gamma^\mu \gamma^5 \psi.$$
+
+* **Observable effects:** Oscillation phase shifts, helicity-dependent propagation, energy-dependent corrections.
+* **Experiments:** DUNE, Hyper-Kamiokande, JUNO.
+* **Falsification:** If precision measurements exclude all torsional corrections allowed by the SCARLET parameter space, the neutrino interpretation must be revised.
+
+### Prediction 4 — Cosmic Polarization Rotation
+A coherent primordial torsional background may generate parity-violating propagation effects. The polarization rotation angle is modeled as:
+
+$$\Delta\alpha \sim \frac{1}{2} \int S_\mu dx^\mu.$$
+
+SCARLET associates this effect with the primordial torsional orientation.
+* **Possible observations:** Cosmic microwave background polarization, large-scale galaxy polarization, radio polarization surveys.
+* **Predicted signal:** $\Delta\alpha \approx 0.21^\circ$ would provide a direct observational benchmark.
+* **Falsification:** A confirmed null result excluding the required torsional parameter range would weaken the model.
+
+### Prediction 5 — Geometric Structure of Annihilation
+Annihilation corresponds to local torsional relaxation: $\delta S_\mu + (-\delta S_\mu) \rightarrow 0$. The emitted radiation must satisfy conservation of energy ($E$), four-momentum ($p_\mu$), and angular momentum ($J$).
+* **Possible tests:** Photon polarization correlations, angular momentum measurements, precision annihilation spectroscopy.
+* **Falsification:** If annihilation requires dynamics incompatible with torsional relaxation, this interpretation fails.
+
+---
+
+## AU.M — Rigorous Mathematical Foundation
+
+### AU.M.1 Dirac-Cartan Operator and Axial Reduction
+The fermionic equation on a torsional manifold is:
+
+$$(i\gamma^\mu \nabla_\mu - m)\psi = 0.$$
+
+Expanding the spin connection covariant derivative $\nabla_\mu \equiv \stackrel{\circ}{\nabla}_\mu + \frac{1}{4} K_{\mu ab} \gamma^a \gamma^b$ and projecting onto the irreducible axial vector $S_\mu = \frac{1}{6}\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}$ yields:
+
+$$\boxed{\left( i\gamma^\mu \stackrel{\circ}{\nabla}_\mu + \frac{3}{4} S_\mu \gamma^\mu \gamma^5 - m \right)\psi = 0}$$
+
+This first-order operator removes the degeneracy of a purely quadratic torsion theory. The matter state ($S^{(0)} + \delta S$) and antimatter state ($S^{(0)} - \delta S$) represent distinct, orientation-sensitive torsional eigenstates.
+
+### AU.M.2 Clifford Pseudoscalar and Complex Structure
+The spacetime Clifford algebra $C\ell_{1,3}$ contains the unit volume pseudoscalar:
+
+$$I = \gamma_0 \gamma_1 \gamma_2 \gamma_3, \quad \text{satisfying} \quad \boxed{I^2 = -1}$$
+
+The Clifford pseudoscalar provides a geometric realization of the complex phase structure, embedding the algebraic role of $i$ within spacetime orientation. Quantum phase evolution $e^{-i(Et - px)}$ is mapped onto the oriented spacetime algebra as $e^{-I(Et - px)}$.
+
+### AU.M.3 Geometric Charge Conjugation
+Charge conjugation corresponds to reversal of the axial torsional orientation:
+
+$$\mathcal{C}_T: S_\mu \longrightarrow -S_\mu.$$
+
+Under $\mathcal{C}_T$, the Clifford pseudoscalar orientation flips ($I \longrightarrow -I$), yielding the standard quantum phase transformation:
+
+$$e^{-I\theta} \longrightarrow e^{+I\theta}.$$
+
+The particle-antiparticle distinction is thereby formally represented as a reversal of geometric phase orientation.
+
+### AU.M.4 Conservation Under Torsional Conjugation
+To verify physical consistency under charge conjugation $\mathcal{C}_T: (S_\mu, \psi) \longrightarrow (-S_\mu, \psi^c)$, the action must satisfy stress-energy conservation and energy positivity.
+
+1. **Positivity of Energy ($T_{00} > 0$):**
+  The metric variation of the quadratic torsional Lagrangian yields an energy-momentum tensor $T_{\mu\nu}^{(S)} \propto S_\mu S_\nu - \frac{1}{2} g_{\mu\nu} S_\alpha S^\alpha$. Evaluating $T_{00}$ for matter ($+S_\mu$) and antimatter ($-S_\mu$):
+  $$T_{00}(-S_\mu) = T_{00}(+S_\mu) = E_{\text{rest}} > 0$$
+  Thus, $E_{\text{matter}} = E_{\text{antimatter}} = m c^2 > 0$.
+
+2. **Covariant Conservation ($\stackrel{\circ}{\nabla}_\mu T^{\mu\nu} = 0$):**
+  When matter and antimatter excitations overlap ($\delta S_\mu + (-\delta S_\mu) = 0$), the local contortion relaxes to the baseline background state $S_\mu^{(0)}$. The total stress-energy tensor satisfies $\stackrel{\circ}{\nabla}_\mu T^{\mu\nu} = 0$, guaranteeing that the $1.022\text{ MeV}$ of unwound topological strain energy converts strictly into gauge radiation ($2 \times 511\text{ keV}$ photons).
+
+---
+
+## AU.11 Cosmological Resolution — The Absence of an Anti-Universe
+
+A major cosmological question is whether the absence of large antimatter regions requires a separate antimatter universe, a time-reversed branch, or disconnected anti-domains.
+
+SCARLET resolves this within a single connected manifold through three principles:
+
+1. **Global Vacuum Selection:** The primordial torsional transition selected:
+$$\boxed{\chi = +1}$$
+The conjugate state ($\chi = -1$) remains mathematically possible but was not realized as the global vacuum.
+
+2. **Localized Conjugate Excitations:** Antimatter is not an external domain. It is represented as a localized axial counter-orientation:
+$$\delta S_{\bar{m}} = -\delta S_m.$$
+Both sectors exist within the same spacetime manifold.
+
+3. **Geometric Relaxation:** When opposite excitations interact, $\delta S_\mu + (-\delta S_\mu) \rightarrow 0$, the localized torsional configuration relaxes and releases stored energy.
+
+Therefore:
+
+$$\boxed{\text{One universe, one torsional vacuum, localized conjugate excitations.}}$$
+
+The SCARLET interpretation replaces cosmic matter-antimatter separation with a geometric selection mechanism occurring at the origin of cosmic time.
+
+---
+
+## AU.12 Final Summary
+
+SCARLET 2.0 proposes that matter and antimatter are not fundamentally separate substances but conjugate orientations of excitations within a primordial torsional geometry.
+
+The framework predicts:
+* A globally selected torsional chirality ($\chi = +1$),
+* Geometric charge conjugation through axial contortion reversal ($\mathcal{C}_T: S_\mu \to -S_\mu$),
+* Spin-dependent torsion interactions without anti-gravity,
+* An effective Nieh-Yan topological anomaly current ($\nabla_\mu J_B^\mu \propto N$),
+* Possible neutrino torsional signatures and parity-sensitive cosmological polarization effects.
+
+The decisive test is whether the torsional geometry can reproduce the full structure of observed particle physics while generating measurable deviations from torsion-free descriptions.
+
+The hypothesis is therefore falsifiable through laboratory, astrophysical, and cosmological measurements.
+
+---
+
+## AU.13 Quantitative EFT Parameterization and Numerical Structure
+
+To make the geometric mechanisms of Appendix AU directly testable and methodologically transparent, the low-energy effective field theory (EFT) parameterization explicitly distinguishes among three foundational operational categories:
+
+1. **Free Parameters:** Fundamental inputs not yet derived from first-principles Bedrock geometry.
+2. **Derived Predictions:** Strict functional equations emerging directly from the Dirac-Cartan and Nieh-Yan operators.
+3. **Empirical Benchmarks:** Observational bounds and constraints used to fit or test the free parameters.
+
+### AU.13.1 Parameter Taxonomy and Free Parameter Set
+
+The minimal set of quantitative EFT parameters governing the Appendix AU torsional sector is defined as:
+
+$$\boxed{\Theta_{\text{AU}} \equiv \left\{ g_T, S_0, \nabla S, c_T, t_*, \ell_* \right\}}$$
+
+* **Free Coupling Parameters:**
+ * $g_T$: Dimensionless axial-torsion coupling constant to fermionic fields ($g_T = 3/4$ under canonical Dirac-Cartan minimal coupling; treated as a variable under non-minimal extensions).
+ * $c_T$: Dimensionless topological coupling coefficient governing the Nieh-Yan anomaly current.
+* **Free Vacuum & Field Values:**
+ * $S_0$: Expectation value of the ambient cosmological axial torsional background field ($[S_0] = \text{eV}$ or $\text{m}^{-1}$).
+ * $\nabla S$: Spatial/temporal gradient tensor of local torsional fields ($\text{eV}^2$).
+* **Free Geometric & Temporal Scales:**
+ * $t_*: \text{Phase transition duration for primordial torsional symmetry breaking near the Bedrock scale}$.
+ * $\ell_*: \text{Characteristic spatial cutoff scale for localized contortion strain excitations } (\ell_* \sim \hbar / m_e c)$.
+
+### AU.13.2 Derived Operator Equations
+
+The following mathematical predictions are derived analytically from the core action and covariant derivatives prior to fixing any numerical values:
+
+* **Neutrino Phase Shift Function:**
+ $$\Delta\phi_\nu(L) = g_T \int_0^L S_\mu dx^\mu = g_T S_0 L$$
+* **Spin-Dependent Antimatter Acceleration Fraction:**
+ $$\eta_T(\mathbf{s}) \equiv \frac{\Delta a_T}{g} = \frac{g_T (\mathbf{s} \cdot \nabla \mathbf{S})}{m_g g}$$
+* **Cosmic Polarization Rotation Angle:**
+ $$\Delta\alpha = \frac{1}{2} \int S_\mu dx^\mu$$
+* **Nieh-Yan Topological Baryon Current:**
+ $$\eta_B \equiv \frac{n_B}{n_\gamma} = \frac{c_T}{384\pi^2 n_\gamma} \int_0^{t_*} d(e^a \wedge T_a)$$
+
+### AU.13.3 Empirical Constraints and Benchmark Inversion
+
+Inserting empirical observations allows the inversion of constraints back onto the free parameter space $\Theta_{\text{AU}}$:
+
+| Physical Sector | Empirical Benchmark (Data) | Derived Inferred Bound on $\Theta_{\text{AU}}$ |
+| :--- | :--- | :--- |
+| **Cosmic Birefringence** | $\Delta\alpha \approx 0.21^\circ \pm 0.08^\circ$ (Planck/ACT) | Line integral constraint: $\int S_\mu dx^\mu \approx 7.3 \times 10^{-3}\text{ rad}$ |
+| **Baryogenesis** | $\eta_B \approx 6.1 \times 10^{-10}$ (Planck 2018) | Coupling scale product: $c_T \cdot \int N dt \approx 2.3 \times 10^{-6} n_\gamma$ |
+| **Neutrino Oscillations** | $|\Delta\phi_\nu| < 10^{-2}\text{ rad}$ ($L = 1300\text{ km}$) | Vacuum background limit: $g_T S_0 \le 10^{-21}\text{ eV}$ |
+| **Antimatter Equivalence** | $\eta_{\text{unpolarized}} = 0 \pm 10^{-1}$ (ALPHA-g) | Gravitational mass invariant: $m_g(\bar{H}) = m_g(H)$ confirmed |
+| **Polarized Equivalence** | Target: $|\eta_T| \le 10^{-7}$ (Future interferometry) | Local gradient limit: $g_T (\mathbf{s} \cdot \nabla \mathbf{S}) \le 10^{-7} m_g g$ |
+
+### AU.13.4 Theoretical Closure Path
+
+To fully close AU.13 mathematically without relying on empirical inversion, SCARLET 2.0 requires two future micro-state derivations:
+1. Derivation of $g_T$ directly from the underlying Bedrock connection algebra (fixing $g_T = 3/4$ uniquely).
+2. Evaluation of the integral $\int_0^{t_*} N dt$ from the primordial bounce metric, which will determine $c_T$ purely from cosmological boundary conditions.
