@@ -188,18 +188,17 @@ Thus torsion enters as a controlled second-order EFT correction.
 
 ### AI.9 Effective Action
 
-\[
-S = \int d^4x\,\sqrt{-g}
-\left[
-\frac{1}{2\kappa}R
-+
-\alpha \ell_*^2 I_T
-\right]
-\]
+The total effective action governing both microscopic torsional dynamics and macroscopic order parameter relaxation is:
 
-\[
-\kappa \sim \ell_*^2
-\]
+$$S = \int d^4x \sqrt{-g} \left[ \frac{1}{2\kappa}\left(1 + \kappa\xi\zeta^2\right) R + \frac{1}{2}g^{\mu\nu}\nabla_\mu\zeta\nabla_\nu\zeta - V(\zeta) + \alpha \ell_*^2 I_T + \mathcal{L}_{\rm matter} \right]$$
+
+where:
+* $\kappa = 8\pi G_N \sim \ell_*^2$.
+* $\zeta$ is the dimensionless scalar order parameter governing the macroscopic spatial dimensionality transition ($d_s: 2 \to 4$).
+* $\xi = 2/11$ is the non-minimal conformal coupling parameter derived from the hypergraph spectral flow.
+* $V(\zeta)$ is the crystallization vacuum potential.
+* $I_T$ is the quadratic torsion invariant scaled by $\beta^2$ (AI.7).
+
 
 ---
 
