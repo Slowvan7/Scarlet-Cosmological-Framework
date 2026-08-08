@@ -1,6 +1,4 @@
 
-# Appendix AI — First-Rule Framework (EFT-Consistent Formulation)
-
 ### AI.1 Fundamental Postulate (First Rule)
 
 The microscopic structure of spacetime is governed by ultraviolet cutoff scales:
@@ -22,6 +20,7 @@ The “mutual center” of the First Rule is defined as a dynamical attractor in
 Natural units are used in the infrared:
 
 $$c = \hbar = 1$$
+
 
 ---
 
