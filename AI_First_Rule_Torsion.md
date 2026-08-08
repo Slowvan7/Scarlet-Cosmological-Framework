@@ -2,13 +2,13 @@
 
 The microscopic structure of spacetime is governed by ultraviolet cutoff scales:
 
-$$t_* = 10^{-41}\text{ s}, \qquad \ell_* = 10^{-35}\text{ m}$$
+$$t_{\ast} = 10^{-41}\text{ s}, \qquad \ell_{\ast} = 10^{-35}\text{ m}$$
 
 These define the fundamental UV resolution of torsional and tetrad degrees of freedom.
 
 A derived microscopic scale is defined:
 
-$$c_{\mathrm{eff}} = \frac{\ell_*}{t_*}$$
+$$c_{\mathrm{eff}} = \frac{\ell_{\ast}}{t_{\ast}}$$
 
 which represents the characteristic relaxation scale of microscopic torsional alignment dynamics, and not the propagation speed of light or any macroscopic causal signal.
 
@@ -19,6 +19,7 @@ The “mutual center” of the First Rule is defined as a dynamical attractor in
 Natural units are used in the infrared:
 
 $$c = \hbar = 1$$
+
 
 
 
