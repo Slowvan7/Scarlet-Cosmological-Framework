@@ -1,186 +1,97 @@
-### AI.1 Fundamental Postulate (First Rule)
+### Appendix AI: Effective Field Theory Formulation of Space Fabric Dynamics
 
-The microscopic structure of spacetime is governed by ultraviolet cutoff scales:
+#### AI.9 Action, Scales, and Mass Dimensions
+We work in natural units ($\hbar = c = k_B = 1$) under the mostly-plus metric signature $(-,+,+,+)$. The macroscopic spacetime manifold is governed by an Effective Field Theory (EFT) coupling metric-affine geometry to a dimensionless scalar order parameter $\zeta$ representing the internal state of the spatial fabric.
 
-$$t_{\ast} = 10^{-41}\text{ s}, \qquad \ell_{\ast} = 10^{-35}\text{ m}$$
+The total action for the system is:
+$$S = \int d^4x \sqrt{-g} \left[ \frac{1}{2\kappa} F(\zeta) R + \mathcal{L}_{\text{kin}}(\zeta) - V(\zeta) + \frac{\alpha_T \ell_*^2}{2\kappa} I_T \right] + S_{\text{matter}}[g_{\mu\nu}, \psi]$$
 
-These define the fundamental UV resolution of torsional and tetrad degrees of freedom.
+where $\kappa \equiv 8\pi G = M_{\text{Pl}}^{-2}$ is Einstein's gravitational constant ($[\kappa] = E^{-2}$), and $R$ is the Ricci scalar constructed from the Levi-Civita connection ($[R] = E^2$).
 
-A derived microscopic scale is defined:
-
-$$c_{\mathrm{eff}} = \frac{\ell_{\ast}}{t_{\ast}}$$
-
-which represents the characteristic relaxation scale of microscopic torsional alignment dynamics, and not the propagation speed of light or any macroscopic causal signal.
-
-The observed invariant speed ($c$) is not imposed at the UV level. Instead, it emerges in the infrared as the causal structure of the coarse-grained effective metric after renormalization of torsional degrees of freedom.
-
-The “mutual center” of the First Rule is defined as a dynamical attractor in configuration space, not a spacetime point, and therefore does not introduce a preferred inertial frame.
-
-Natural units are used in the infrared:
-
-$$c = \hbar = 1$$
-
-
-
+##### Parameter Definitions & Power Counting
+* **Microscopic Length and Time Scales:** The fundamental UV lattice parameters are $\ell_*$ ($[\ell_*] = E^{-1}$) and $t_*$ ($[t_*] = E^{-1}$). The ratio $c_{\text{eff}} \equiv \ell_*/t_*$ defines the microscopic torsional relaxation velocity.
+* **Effective Hierarchy Parameter:** The dimensionless power-counting parameter is defined as $\beta \equiv \ell_*/L$, where $L$ is the characteristic macro-coarse-graining scale ($L \gg \ell_*$). In the infrared limit $L \to \infty$, $\beta \to 0$.
+* **Torsion Tensor & Invariants:** Torsion scales as $T^\lambda_{\phantom{\lambda}\mu\nu} \sim \beta / L = \ell_*/L^2$, giving $[T] = E^2$. The quadratic torsion invariant $I_T \equiv T_{\alpha\beta\gamma} T^{\alpha\beta\gamma}$ carries mass dimension $[I_T] = E^4$ and scales as $I_T \sim \ell_*^2 / L^4$. The dimensionless factor $\alpha_T$ regulates the higher-derivative torsional corrections.
+* **Order Parameter Scale:** The order parameter $\zeta$ is dimensionless ($[\zeta] = 1$). Consequently, $M_\zeta$ ($[M_\zeta] = E^1$) represents the characteristic energy/relaxation scale (symmetry-breaking parameter) of the space fabric substrate, maintaining the correct overall Lagrangian density dimension $[\mathcal{L}] = E^4$.
 
 ---
 
-### AI.2 EFT Expansion Parameter
+#### AI.9.2 Kinetic, Potential, and Coupling Definitions
+The coupling function $F(\zeta)$ introduces a non-minimal coupling between the order parameter and curvature:
+$$F(\zeta) = 1 + \xi_{\text{SF}} \zeta^2$$
+where $\xi_{\text{SF}}$ is a dimensionless non-minimal coupling parameter. Within this effective action, $\xi_{\text{SF}} \approx 2/11$ is adopted as a phenomenological ansatz chosen to match the $d_s: 2 \to 4$ spectral dimension transition of the underlying substrate flow, pending an explicit Functional Renormalization Group (FRG) fixed-point derivation.
 
-$$\beta = \frac{\ell_*}{L} \ll 1$$
+The kinetic Lagrangian density for the order parameter is:
+$$\mathcal{L}_{\text{kin}}(\zeta) = -\frac{1}{2} M_\zeta^2 g^{\mu\nu} \nabla_\mu \zeta \nabla_\nu \zeta$$
 
-where $L$ is a macroscopic curvature scale. All fields admit a perturbative expansion in $\beta$.
-
----
-
-### AI.3 Fundamental Field: Tetrad
-
-$$e^a{}_\mu = \delta^a{}_\mu + \beta \omega^a{}_\mu$$
-
-with:
-
-$$|\beta \omega^a{}_\mu| \ll 1, \qquad \det(e^a{}_\mu) \neq 0$$
-
-The metric is:
-
-$$g_{\mu\nu} = \eta_{ab} e^a{}_\mu e^b{}_\nu$$
+The background potential $V(\zeta)$ ($[V] = E^4$) satisfies the physical vacuum ground-state conditions:
+$$V(0) = 0, \quad \left.\frac{\partial V}{\partial \zeta}\right|_{\zeta=0} = 0, \quad \left.\frac{\partial^2 V}{\partial \zeta^2}\right|_{\zeta=0} > 0$$
+ensuring that $\zeta_0 = 0$ corresponds to a stable dynamical infrared minimum.
 
 ---
 
-### AI.4 Metric Expansion
+#### AI.9.3 Scalar Order Parameter Field Equation
+Varying the total action with respect to the dimensionless scalar field $\zeta$ via $\frac{\delta S}{\delta \zeta} = 0$ yields:
+$$M_\zeta^2 \Box \zeta - V_{,\zeta} + \frac{1}{2\kappa} \left(\frac{\partial F}{\partial \zeta}\right) R = 0$$
 
-$$g_{\mu\nu} = \eta_{\mu\nu} + \beta(\omega_{\mu\nu} + \omega_{\nu\mu}) + \mathcal{O}(\beta^2)$$
+Substituting $F_{,\zeta} = 2\xi_{\text{SF}}\zeta$, the scalar field equation takes the explicit form:
+$$M_\zeta^2 \Box \zeta - V_{,\zeta} + \frac{\xi_{\text{SF}} \zeta}{\kappa} R = 0$$
 
----
+##### Cosmological Reduction in FLRW Geometry
+In a flat FLRW background with metric signature $(-,+,+,+)$, the d'Alembertian operator acting on a homogeneous field $\zeta(t)$ is:
+$$\Box \zeta \equiv g^{\mu\nu} \nabla_\mu \nabla_\nu \zeta = -\ddot{\zeta} - 3H\dot{\zeta}$$
 
-### AI.5 Geometric Structure
+Substituting this operator identity directly into the field equation yields:
+$$-M_\zeta^2 \left(\ddot{\zeta} + 3H\dot{\zeta}\right) - V_{,\zeta} + \frac{\xi_{\text{SF}} \zeta}{\kappa} R = 0$$
 
-#### AI.5.1 Levi–Civita Sector
-
-$$\nabla_\lambda g_{\mu\nu} = 0, \qquad R_{\mu\nu} \sim \mathcal{O}\left(\frac{1}{L^2}\right)$$
-
-#### AI.5.2 Weitzenböck Sector
-
-$$\Gamma^{(W)\lambda}{}_{\mu\nu} = e^\lambda{}_a \partial_\nu e^a{}_\mu$$
-
-$$R(\Gamma^{(W)}) = 0$$
-
-#### AI.5.3 Riemann–Cartan Decomposition
-
-$$\Gamma^\lambda{}_{\mu\nu} = \left\{ \begin{matrix} \lambda \\ \mu\nu \end{matrix} \right\} + K^\lambda{}_{\mu\nu}$$
-
-Torsion:
-
-$$T^\lambda{}_{\mu\nu} = \Gamma^\lambda{}_{\mu\nu} - \Gamma^\lambda{}_{\nu\mu}$$
-
-Contortion:
-
-$$K^\lambda{}_{\mu\nu} = \frac{1}{2} \left( T^\lambda{}_{\mu\nu} - T_\mu{}^\lambda{}_\nu + T_\nu{}^\lambda{}_\mu \right)$$
+Multiplying by $-1$ gives the final cosmological evolution equation for the order parameter:
+$$M_\zeta^2 \left(\ddot{\zeta} + 3H\dot{\zeta}\right) + V_{,\zeta} - \frac{\xi_{\text{SF}} \zeta}{\kappa} R = 0$$
 
 ---
 
-### AI.6 Torsion Scaling
+#### AI.10 Metric Field Equations & Tetrad Variation
+Varying the action with respect to the metric tensor $g^{\mu\nu}$ yields the modified gravitational field equations:
+$$F(\zeta) G_{\mu\nu} + \left( g_{\mu\nu} \Box - \nabla_\mu \nabla_\nu \right) F(\zeta) + \alpha_T \ell_*^2 \Theta_{\mu\nu}^{(T)} = \kappa \left[ T_{\mu\nu}^{(\zeta)} + T_{\mu\nu}^{(\text{matter})} \right]$$
 
-$$T^\lambda{}_{\mu\nu} \sim \frac{\beta}{L}$$
-
----
-
-### AI.7 Quadratic Torsion Invariant
-
-$$I_T = a_1 T^\rho{}_{\mu\nu} T_\rho{}^{\mu\nu} + a_2 T^\rho{}_{\mu\nu} T^{\nu\mu}{}_\rho + a_3 T_\mu T^\mu$$
-
-where:
-
-$$T_\mu = T^\lambda{}_{\mu\lambda}$$
-
-Scaling:
-
-$$I_T \sim \beta^2 R$$
+where $G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R$ is the standard Einstein tensor of the Levi-Civita connection, and $\Theta_{\mu\nu}^{(T)}$ is the metric stress-energy response of the quadratic torsion term:
+$$\Theta_{\mu\nu}^{(T)} \equiv -\frac{2}{\sqrt{-g}} \frac{\delta \left( \frac{1}{2} \sqrt{-g} I_T \right)}{\delta g^{\mu\nu}}$$
 
 ---
 
-### AI.8 Curvature–Torsion Hierarchy
+#### AI.11 Stress-Energy Tensor of the Order Parameter
+The canonical stress-energy tensor $T_{\mu\nu}^{(\zeta)} \equiv -\frac{2}{\sqrt{-g}} \frac{\delta (\sqrt{-g} \mathcal{L}_\zeta)}{\delta g^{\mu\nu}}$ derived from the scalar Lagrangian density $\mathcal{L}_\zeta = \mathcal{L}_{\text{kin}} - V$ is given by:
+$$T_{\mu\nu}^{(\zeta)} = M_\zeta^2 \nabla_\mu \zeta \nabla_\nu \zeta - g_{\mu\nu} \left[ \frac{1}{2} M_\zeta^2 g^{\alpha\beta} \nabla_\alpha \zeta \nabla_\beta \zeta + V(\zeta) \right]$$
 
-$$R \sim \frac{1}{L^2}, \qquad I_T \sim \beta^2 R$$
-
-Thus torsion enters as a controlled second-order EFT correction.
-
----
-
-### AI.9 Effective Action
-
-The total effective action governing both microscopic torsional dynamics and macroscopic order parameter relaxation is:
-
-$$S = \int d^4x \sqrt{-g} \left[ \frac{1}{2\kappa}\left(1 + \xi\zeta^2\right) R - \frac{1}{2\kappa}g^{\mu\nu}\nabla_\mu\zeta\nabla_\nu\zeta - V(\zeta) + \frac{\alpha}{\ell_*^2} I_T + \mathcal{L}_{\mathrm{matter}} \right]$$
-
-where:
-* $\kappa = 8\pi G_N \sim \ell_*^2$.
-* $\zeta$ is the dimensionless scalar order parameter governing the macroscopic spatial dimensionality transition ($d_s: 2 \to 4$).
-* $\xi = 2/11$ is the non-minimal conformal coupling parameter derived from hypergraph spectral flow.
-* $V(\zeta)$ is the crystallization vacuum potential ($[V] = [\text{Length}]^{-4}$).
-* $I_T$ is the quadratic torsion invariant scaled by $\beta^2$ (AI.7).
+For a homogeneous spatial background field $\zeta(t)$, $g^{\alpha\beta} \nabla_\alpha \zeta \nabla_\beta \zeta = g^{00} (\dot{\zeta})^2 = -(\dot{\zeta})^2$. The component energy density $\rho_\zeta \equiv T_{00}^{(\zeta)}$ and isotropic pressure $p_\zeta \equiv T_{ii}^{(\zeta)} / a^2$ resolve to:
+$$\rho_\zeta = \frac{1}{2} M_\zeta^2 \dot{\zeta}^2 + V(\zeta)$$
+$$p_\zeta = \frac{1}{2} M_\zeta^2 \dot{\zeta}^2 - V(\zeta)$$
 
 ---
 
-### AI.10 Field Equations
+#### AI.12 Infrared General Relativity Limit ($\beta \to 0$)
+In the macroscopic infrared limit ($L \gg \ell_* \implies \beta \to 0$):
+1. The quadratic torsion terms decay as $\alpha_T \ell_*^2 \Theta_{\mu\nu}^{(T)} \sim \mathcal{O}(\beta^2) \to 0$.
+2. The order parameter relaxes to its stable potential minimum $\zeta \to 0$.
+3. The non-minimal coupling function reduces to $F(0) = 1$.
+4. The scalar stress-energy tensor vanishes $T_{\mu\nu}^{(\zeta)} \to 0$.
 
-$$\left(1 + \xi\zeta^2\right) G_{\mu\nu} + \tilde{\alpha}\Theta_{\mu\nu} = \kappa T_{\mu\nu}^{(\mathrm{eff})} \qquad \left( \tilde{\alpha} \equiv \frac{\kappa\alpha}{\ell_*^2} \right)$$
-
-$$\Theta_{\mu\nu} = \sum_{i=1}^3 a_i \Theta^{(i)}_{\mu\nu}$$
-
-#### AI.10.1 Tensor Basis
-
-**(1) Direct sector**
-
-$$\Theta^{(1)}_{\mu\nu} = -2T_{\mu\rho\sigma}T_\nu{}^{\rho\sigma} + 4T^{\rho\sigma}{}_\mu T_{\rho\sigma\nu} - \frac{1}{2}g_{\mu\nu}T_{\alpha\rho\sigma}T^{\alpha\rho\sigma}$$
-
-**(2) Exchange sector**
-
-$$\Theta^{(2)}_{\mu\nu} = -4T_{\mu\rho\sigma}T^{\rho\sigma}{}_\nu - \frac{1}{2}g_{\mu\nu}T_{\alpha\rho\sigma}T^{\rho\sigma\alpha}$$
-
-**(3) Trace sector**
-
-$$\Theta^{(3)}_{\mu\nu} = 2T_\mu T_\nu - \frac{1}{2}g_{\mu\nu}T_\alpha T^\alpha$$
+Under these conditions, the modified field equation reduces identically to standard General Relativity:
+$$G_{\mu\nu} = \kappa T_{\mu\nu}^{(\text{matter})}$$
+recovering standard Einsteinian gravity as an exact infrared fixed point.
 
 ---
 
-### AI.11 Stress–Energy Tensors
+#### AI.13 Structural Limitations and Open Physical Specifications
+While the field equations, power-counting scheme, and infrared GR limit of this scalar-torsion EFT are mathematically self-consistent, Appendix AI represents a minimal kinematic scaffold rather than a fully specified physical theory. Closing the framework requires three distinct next steps:
 
-$$T^{(i)}_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta(\sqrt{-g}\mathcal{L}_i)}{\delta g^{\mu\nu}}$$
+1. **Explicit Specification of the Potential $V(\zeta)$:**
+  While the vacuum conditions $V(0) = V'(0) = 0$ and $V''(0) > 0$ are fixed to enforce the IR ground state, the full non-linear structure of $V(\zeta)$ (e.g., polynomial quartic vs. non-perturbative exponential/axionic forms) remains open. The explicit functional form dictates early-universe inflationary dynamics, order parameter phase transitions, and late-time dark energy behavior.
 
-Full effective scalar stress-energy tensor (including non-minimal conformal response):
+2. **Dynamical Constraint on the Torsional Coupling $\alpha_T$:**
+  The dimensionless coefficient $\alpha_T$ regulates higher-derivative quadratic torsion terms ($\Theta_{\mu\nu}^{(T)}$). Currently treated as an $\mathcal{O}(1)$ EFT coupling, its precise numerical bounds must be constrained either through microscopic lattice matching or phenomenological bounds from precision solar-system tests and frame-dragging measurements.
 
-$$T^{(\zeta)}_{\mu\nu} = \frac{1}{\kappa}\nabla_\mu \zeta \nabla_\nu \zeta - g_{\mu\nu} \left[ \frac{1}{2\kappa}(\nabla \zeta)^2 + V(\zeta) \right] + \frac{\xi}{\kappa}\left( g_{\mu\nu}\Box - \nabla_\mu \nabla_\nu \right)\zeta^2$$
-
-Torsion sector:
-
-$$\mathcal{L}_{\text{torsion}} = \frac{\alpha}{\ell_*^2} I_T$$
-
----
-
-### AI.12 Conservation Laws
-
-$$\nabla_\mu^{(\Gamma)} T^{\mu\nu}_{\text{total}} = 0$$
-
-$$\nabla_\mu^{(\text{LC})} T^{\mu\nu}_{\text{total}} = \mathcal{O}(\beta^2)$$
-
----
-
-### AI.13 Infrared Limit
-
-$$\beta \to 0, \quad \zeta \to \zeta_0 \quad \Rightarrow \quad G_{\mu\nu} = \kappa_{\mathrm{eff}} T_{\mu\nu}$$
-
-General Relativity emerges as the infrared fixed point.
-
----
-
-### AI.14 Physical Structure (Aligned Formulation)
-
-The First Rule defines a structured relaxation hierarchy across scales:
-
-1. **Microscopic Tetrad Fluctuations ($\omega^a{}_\mu$):** Operates at the Planck UV resolution ($\ell_* = 10^{-35}\text{ m}$).
-2. **Torsional Lattice Contortion ($T^\lambda{}_{\mu\nu}$):** Exists as non-perturbative topological features at microscopic scales ($L \sim \ell_*$).
-3. **Scalar Order Parameter Relaxation ($\zeta(t)$):** Drives macroscopic dimensional crystallization ($d_s: 2 \to 4$) and early thermal evolution.
-4. **Macroscopic Curvature Emergence:** Smoothly converges to General Relativity ($G_{\mu\nu} = \kappa T_{\mu\nu}$) in the infrared limit ($\beta \to 0$).
-
-The “mutual center” refers strictly to a configuration-space attractor governing the dynamical relaxation of torsion and tetrad fields, and does not correspond to a physical spacetime point or preferred inertial frame.
+3. **Extraction of Observational and Testable Predictions:**
+  To elevate the scaffold to a testable physical theory, the field equations yield clear targets for experimental falsification, prioritized by immediate availability of existing data:
+  * **Sub-Millimeter Fifth-Force Bounds (Primary Immediate Constraint):** Expanding $V(\zeta)$ around $\zeta = 0$ yields an effective scalar mass $m_\zeta^2 = V''(0)/M_\zeta^2$. Precision Eöt-Wash torsion-balance experiments bound residual Yukawa forces at short ranges ($\lambda \lesssim 50\ \mu\text{m}$), establishing an immediate experimental ceiling on $M_\zeta$ and $V''(0)$ prior to full FLRW cosmological modeling.
+  * **B-Mode Polarization & Torsional Waves:** Propagation signatures and dispersion relations for microscopic contortion modes in primordial gravitational wave backgrounds via higher-derivative $\alpha_T \Theta_{\mu\nu}^{(T)}$ terms.
+  * **Cosmological Perturbations:** Scale-dependent modification of the scalar/tensor power spectrum during spectral dimension flow ($d_s: 2 \to 4$).
