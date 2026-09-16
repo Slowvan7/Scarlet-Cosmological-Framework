@@ -272,3 +272,61 @@ datasets supporting this research are openly archived and publicly accessible vi
 and Zenodo (Record 18224710).
 Author Contributions: T.V. conceived the theoretical framework, performed the algebraic proofs,
 and developed the numerical validation architecture.
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def analyze_level_spacings(eigenvalues):
+   """
+   Computes and normalizes nearest-neighbor level spacings from raw eigenvalues.
+   """
+   # 1. Clean and sort eigenvalues
+   evals = np.sort(np.array(eigenvalues))
+   evals = evals[evals > 0] # Remove zero modes if present
+
+   if len(evals) < 20:
+       print("Warning: Small sample size. Results may be noisy.")
+       return None
+
+   # 2. Spectral Unfolding (fitting a smooth cumulative density function)
+   # Using a polynomial fit to map the empirical staircase function to a uniform density
+   indices = np.arange(len(evals))
+   deg = min(6, max(2, len(evals) // 50))
+   poly_coeff = np.polyfit(evals, indices, deg=deg)
+   unfolded = np.polyval(poly_coeff, evals)
+
+   # 3. Calculate nearest-neighbor spacings of the unfolded spectrum
+   spacings = np.diff(unfolded)
+
+   # Normalize by the mean spacing (should be ~1.0)
+   spacings = spacings / np.mean(spacings)
+   return spacings
+
+def wigner_gue(s):
+   """Theoretical Wigner surmise for GUE (Gaussian Unitary Ensemble) - Level Repulsion s^2"""
+   return (32 / (np.pi**2)) * (s**2) * np.exp(- (4 / np.pi) * (s**2))
+
+def wigner_goe(s):
+   """Theoretical Wigner surmise for GOE (Gaussian Orthogonal Ensemble) - Level Repulsion s"""
+   return (np.pi / 2) * s * np.exp(- (np.pi / 4) * (s**2))
+
+# --- Execution Example ---
+# Replace 'raw_eigenvalues' with your actual output array from the M=3 Laplacian run
+# raw_eigenvalues = np.linalg.eigvalsh(delta_k_matrix)
+
+# spacings = analyze_level_spacings(raw_eigenvalues)
+# if spacings is not None:
+#     # Plotting the histogram vs theoretical curves
+#     plt.figure(figsize=(8, 5))
+#     count, bins, ignored = plt.hist(spacings, bins=30, density=True, alpha=0.6, color='b', label='M=3 Unfolded Spacings')
+#     
+#     s_grid = np.linspace(0, 3, 200)
+#     plt.plot(s_grid, wigner_gue(s_grid), 'r-', linewidth=2, label='GUE (Quantum Chaos)')
+#     plt.plot(s_grid, wigner_goe(s_grid), 'g--', linewidth=2, label='GOE')
+#     
+#     plt.xlabel('Normalized Spacing ($s$)')
+#     plt.ylabel('$P(s)$')
+#     plt.title('Nearest-Neighbor Level Spacing Distribution ($M=3$)')
+#     plt.legend()
+#     plt.show(
