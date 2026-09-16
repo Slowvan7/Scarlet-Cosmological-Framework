@@ -1,513 +1,274 @@
-Appendix AJ — The Renormalized Torsional Trace and Prime Mapping
-
-AJ.1 Overview
-
-In the SCARLET 2.0 framework, the Riemann zeta function \zeta(s) is treated as a physical field over a discrete, self-adjoint lattice manifold. The VanAcker Bedrock provides a fundamental timescale t_V \sim 10^{-41}\mathrm{s} that regularizes divergences in the torsional operator.
-
-The goal of this appendix is to construct a renormalized torsional operator, derive a trace formula, and demonstrate a prime-to-zero mapping analogous to the Riemann explicit formula—all in a nonsingular, fully controlled SCARLET setting.
-
-⸻
-
-AJ.2 The Torsional Operator
-
-Definition AJ.2.1 (SCARLET Torsional Operator):
-
-\hat{T}_\epsilon =
-\frac{1}{2} \sum_{p,n} \frac{\log p}{p^{n(1/2 + \epsilon)}} \big(T_{n\log p} + T_{-n\log p}\big)
-
-T_{\pm n \log p} are lattice translation operators along the Bedrock lattice of size N=349
-Active projection scales are N_{\rm active} = 332
-\epsilon > 0 provides a regulator ensuring boundedness
-
-⸻
-
-Definition AJ.2.2 (Renormalization Constant):
-
-C(\epsilon) = \sum_{p,n} \frac{\log p}{p^{n(1/2 + \epsilon)}}
-
-⸻
-
-Definition AJ.2.3 (Renormalized Operator):
-
-\hat{T}_\epsilon^{\rm ren} = \hat{T}_\epsilon - C(\epsilon) I
-
-⸻
-
-AJ.3 Quadratic Form and Spectral Measure
-
-Q_\epsilon^{\rm ren}[f]
-= \langle f, \hat{T}_\epsilon^{\rm ren} f \rangle
-
-d\mu_0(\lambda) = \lim_{\epsilon \to 0^+} d\mu_\epsilon^{\rm ren}(\lambda)
-
-with eigenvalues \{\gamma_n^{(0)}\}.
-
-⸻
-
-AJ.4 Trace Formula and Prime Mapping
-
-\sum_n F(\gamma_n^{(0)}) =
-\sum_{p,n} \frac{\log p}{p^{n/2}} F(n\log p)
-
-⸻
-
-AJ.5 Fourier-Space Representation
-
-\tilde{\mu}_0(t)
-\sim
--\frac{\zeta'}{\zeta}\Big(\frac12 - it\Big)
-
-⸻
-
-AJ.6 SCARLET Lattice Parameters
-
-* N = 349
-* N_active = 332
-* t_V = 10^{-41} s
-
-⸻
-
-AJ.7 Interpretation and RH Mapping
-
-\text{Primes } p \;\longleftrightarrow\; \gamma_n^{(0)}
-
-RH equivalent:
-\gamma_n^{(0)} \subset \Re(s)=\frac12
-
-⸻
-
-AJ.8 Numerical Implementation
-
-* build \hat{T}_\epsilon
-* subtract C(\epsilon)
-* compute eigenvalues
-* compare with primes
-* optionally test Fourier correspondence
-
-⸻
-
-AJ.9 Conclusion
-
-This establishes a renormalized torsional spectral system mapping primes to eigenvalues under a self-adjoint lattice structure.
-
-⸻
-
-SCARLET Prime-to-Zero Mapping (Truncated Example)
-
-
-
-⸻
-
-PYTHON IMPLEMENTATION — ORIGINAL SCARLET EFT ALIGNMENT
-
-import numpy as np
-
-def run_scarlet_v2_eft_alignment():
-    N = 349
-    ell_star = 1e-35
-    L_scale = N
-    beta = ell_star / L_scale
-
-    omega = np.zeros((N, N), dtype=complex)
-    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]
-
-    for p in primes:
-        logp = np.log(p)
-        weight = logp / (p**0.5)
-        shift = int(round(logp)) % N
-
-        omega[shift, shift] += weight
-        omega[(shift+1)%N, shift] += weight * 0.5
-        omega[(shift-1)%N, shift] += weight * 0.5
-
-    tetrad_e = np.eye(N) + beta * omega
-    T_matrix = (tetrad_e + tetrad_e.conj().T) / 2
-
-    eigvals = np.linalg.eigvalsh(T_matrix)
-
-    lhs_trace = np.sum(eigvals)
-    rhs_arithmetic = N + beta * sum(np.log(p)/(p**0.5) for p in primes)
-
-    print("--- SCARLET 2.0 EFT Alignment ---")
-    print(f"beta: {beta:.2e}")
-    print(f"det(e): {np.linalg.det(tetrad_e) != 0}")
-    print(f"LHS: {lhs_trace:.6f}")
-    print(f"RHS: {rhs_arithmetic:.6f}")
-    print(f"Δ: {abs(lhs_trace - rhs_arithmetic):.2e}")
-
-if __name__ == "__main__":
-    run_scarlet_v2_eft_alignment() 
-
-
-    PYTHON IMPLEMENTATION — SECOND (UPGRADED SCARLET IMPLEMENTATION)
-
-Upgraded Description
-
-This upgraded implementation extends the original SCARLET EFT alignment into a full spectral–geometric operator framework.
-
-Instead of treating torsional contributions as a linear correction to a tetrad field, it constructs a self-adjoint metric operator via a Hermitian product:
-
-g = e e^\dagger
-
-Key upgrades:
-
-* Full operator geometry (metric-based, not linear tetrad trace)
-* Strict Hermitian enforcement → real spectrum guarantee
-* Explicit renormalization via C_\epsilon
-* Sorted eigenvalue spectrum for structural visibility
-* Improved trace consistency test (spectral vs prime baseline)
-* Bedrock scale retained as stability regulator
-
-This version upgrades SCARLET from:
-
-EFT consistency check
-to
-full spectral operator test aligned with Appendix AJ
-
-⸻
-
-import numpy as np
-
-# ============================================================
-# SCARLET 2.0 — Fully Saturated Subspace Phase Sweep
-# ============================================================
-
-np.random.seed(42)
-
-# Strictly locked lattice dimension
-N = 349
-beta_values = [0.0, 1e-3, 1e-2, 1e-1, 5e-1, 2.0]
-
-# 1. FIX: Automatically generate enough primes to saturate the 349 grid space
-def generate_primes(limit):
-    sieve = np.ones(limit, dtype=bool)
-    sieve[0:2] = False
-    for i in range(2, int(np.sqrt(limit)) + 1):
-        if sieve[i]:
-            sieve[i*i::i] = False
-    return np.where(sieve)[0].tolist()
-
-# Pulling a larger prime field (up to p=800) to populate the N=349 system matrix
-primes = generate_primes(800)
-
-omega = np.zeros((N, N), dtype=complex)
-
-# ------------------------------------------------------------
-# Prime-induced operator construction
-# ------------------------------------------------------------
-for p in primes:
-    logp = np.log(p)
-    weight = logp / np.sqrt(p)
-    phase = (logp * np.pi) % (2 * np.pi)
-
-    # Prime coordinate hash mapping
-    i = int((p * logp) % N)
-    j = int((p**2 + 3) % N)
-
-    omega[i, i] += weight
-
-    if i != j:
-        coupling = weight * np.exp(1j * phase)
-        omega[i, j] += coupling
-        omega[j, i] += np.conj(coupling)
-
-# ------------------------------------------------------------
-# Subspace Localization Extraction
-# ------------------------------------------------------------
-active_idx = np.where(np.any(omega != 0, axis=1) | np.any(omega != 0, axis=0))[0]
-N_active = len(active_idx)
-sub_omega = omega[np.ix_(active_idx, active_idx)]
-
-# ------------------------------------------------------------
-# Dimension-Normalized Integrable Background System
-# ------------------------------------------------------------
-H_0 = np.diag(np.linspace(1.0, float(N_active), N_active))
-
-# ------------------------------------------------------------
-# Native GUE Subspace Control Base Matrix
-# ------------------------------------------------------------
-random_real = np.random.normal(size=(N_active, N_active))
-random_imag = np.random.normal(size=(N_active, N_active))
-random_complex = random_real + 1j * random_imag
-random_H_base = (random_complex + random_complex.conj().T) / 2
-random_H_base = random_H_base * (np.linalg.norm(sub_omega) / np.linalg.norm(random_H_base))
-
-# ------------------------------------------------------------
-# Scale-Invariant Spacing Ratio Unfolding Tool
-# ------------------------------------------------------------
-def compute_local_spacing_ratios(sorted_eigs):
-    gaps = np.diff(sorted_eigs)
-    gaps = gaps[gaps > 1e-12] 
-    
-    r_n = []
-    for i in range(1, len(gaps)):
-        g1 = gaps[i-1]
-        g2 = gaps[i]
-        if g1 > 0 and g2 > 0:
-            r_n.append(min(g1, g2) / max(g1, g2))
-        
-    return np.array(r_n)
-
-# RMT constants
-RMT_POISSON_THEORY = 0.3863
-RMT_GUE_THEORY     = 0.5996
-
-print("\n=== SCARLET 2.0 Saturated Space Phase Sweep ===")
-print(f"Total Base Lattice Size N : {N}")
-print(f"Interacting Subspace Size : {N_active} out of {N} states\n")
-
-print(f"{'Beta':<10} | {'Prime <r>':<12} | {'GUE <r>':<12} | {'Spectral Regime'}")
-print("-" * 65)
-
-# Execute scale evolution over normalized fields
-for beta in beta_values:
-    T_subspace = H_0 + beta * sub_omega
-    T_random = H_0 + beta * random_H_base
-    
-    # Calculate sorted spectra
-    eigvals = np.linalg.eigvalsh(T_subspace)
-    random_eigs = np.linalg.eigvalsh(T_random)
-    
-    # Extract spacing ratio markers
-    prime_ratios = compute_local_spacing_ratios(eigvals)
-    random_ratios = compute_local_spacing_ratios(random_eigs)
-    
-    mean_r_prime = np.mean(prime_ratios) if len(prime_ratios) > 0 else 0.0
-    mean_r_random = np.mean(random_ratios) if len(random_ratios) > 0 else 0.0
-    
-    # Classify dynamic profile
-    if abs(mean_r_prime - RMT_GUE_THEORY) < 0.05:
-        regime = "Quantum Chaotic (GUE)"
-    elif abs(mean_r_prime - RMT_POISSON_THEORY) < 0.05:
-        regime = "Integrable (Poisson)"
-    else:
-        regime = "Transition State"
-        
-    print(f"{beta:<10.1e} | {mean_r_prime:<12.4f} | {mean_r_random:<12.4f} | {regime}")
-
-  
-    import numpy as np
-
-def run_scarlet_v2_twin_prime_sweep():
-    np.random.seed(42)
-    
-    # Strictly locked SCARLET lattice dimensions
-    N = 349
-    beta_values = [0.0, 1e-3, 1e-2, 1e-1, 5e-1, 2.0]
-    
-    # 1. Sieve to isolate Twin Primes
-    def generate_twin_primes(limit):
-        sieve = np.ones(limit, dtype=bool)
-        sieve[0:2] = False
-        for i in range(2, int(np.sqrt(limit)) + 1):
-            if sieve[i]:
-                sieve[i*i::i] = False
-        primes = np.where(sieve)[0]
-        
-        # Filter for pairs where both p and p+2 are prime
-        twin_pairs = []
-        for p in primes:
-            if (p + 2) in primes:
-                twin_pairs.append((p, p + 2))
-        return twin_pairs
-
-    # Generate twin fields up to p=2000 to populate the 349 matrix
-    twin_primes = generate_twin_primes(2000)
-    
-    omega_twin = np.zeros((N, N), dtype=complex)
-    
-    # 2. Twin-Prime-Induced Operator Construction
-    for p1, p2 in twin_primes:
-        # Combined arithmetic weight for the paired deformation
-        log_twin = np.log(p1) * np.log(p2)
-        weight = log_twin / np.sqrt(p1 * p2)
-        
-        # Shared geometric phase field encoding the twin boundary
-        phase = ((np.log(p1) + np.log(p2)) * np.pi) % (2 * np.pi)
-        
-        # Coordinate hash mapping adapted for paired states
-        i = int((p1 * np.log(p1)) % N)
-        j = int((p2 * np.log(p2)) % N)
-        
-        omega_twin[i, i] += weight
-        omega_twin[j, j] += weight
-        
-        if i != j:
-            coupling = weight * np.exp(1j * phase)
-            omega_twin[i, j] += coupling
-            omega_twin[j, i] += np.conj(coupling)
-
-    # 3. Subspace Localization Extraction
-    active_idx = np.where(np.any(omega_twin != 0, axis=1) | np.any(omega_twin != 0, axis=0))[0]
-    N_active = len(active_idx)
-    sub_omega = omega_twin[np.ix_(active_idx, active_idx)]
-    
-    # Dimension-Normalized Background Matrix
-    H_0 = np.diag(np.linspace(1.0, float(N_active), N_active))
-    
-    # 4. Spacing Ratio Unfolding Tool
-    def compute_local_spacing_ratios(sorted_eigs):
-        gaps = np.diff(sorted_eigs)
-        gaps = gaps[gaps > 1e-12]
-        r_n = []
-        for i in range(1, len(gaps)):
-            g1 = gaps[i-1]
-            g2 = gaps[i]
-            if g1 > 0 and g2 > 0:
-                r_n.append(min(g1, g2) / max(g1, g2))
-        return np.array(r_n)
-
-    RMT_POISSON_THEORY = 0.3863
-    RMT_GUE_THEORY = 0.5996
-    
-    print("\n=== SCARLET 2.0 Twin Prime Saturated Sweep ===")
-    print(f"Total Base Lattice Size N : {N}")
-    print(f"Twin Interacting Subspace : {N_active} out of {N} states\n")
-    print(f"{'Beta':<10} | {'Twin R_Mean':<12} | {'Spectral Regime'}")
-    print("-" * 50)
-    
-    # Execute scale evolution
-    for beta in beta_values:
-        T_subspace = H_0 + beta * sub_omega
-        eigvals = np.linalg.eigvalsh(T_subspace)
-        twin_ratios = compute_local_spacing_ratios(eigvals)
-        mean_r_twin = np.mean(twin_ratios) if len(twin_ratios) > 0 else 0.0
-        
-        if abs(mean_r_twin - RMT_GUE_THEORY) < 0.05:
-            regime = "Quantum Chaotic (GUE)"
-        elif abs(mean_r_twin - RMT_POISSON_THEORY) < 0.05:
-            regime = "Integrable (Poisson)"
-        else:
-            regime = "Transition State"
-            
-        print(f"{beta:<10.1e} | {mean_r_twin:<12.4f} | {regime}")
-
-if __name__ == "__main__":
-    run_scarlet_v2_twin_prime_sweep()
-
-    
-    System Subspace (\beta = 2.0)  | Spacing Ratio Mean (R_Mean)
--------------------------------------------------------------
-Twin Prime Operator             | 0.8205 (Fastest drop toward GUE)
-Non-Prime Formulaic Operator    | 0.9245 (Slower drop, higher rigidity)
-Pure Random Control (Previous)  | 0.9419 (Mostly stalled)
-import numpy as np
-
-def run_scarlet_v2_twin_prime_sweep():
-    # Set seed for reproducible GUE baseline comparisons
-    np.random.seed(42)
-
-    # Strictly locked SCARLET lattice dimensions
-    N = 349
-    beta_values = [0.0, 1e-3, 1e-2, 1e-1, 5e-1, 2.0]
-
-    # 1. Sieve to isolate Twin Primes
-    def generate_twin_primes(limit):
-        sieve = np.ones(limit, dtype=bool)
-        sieve[0:2] = False
-        for i in range(2, int(np.sqrt(limit)) + 1):
-            if sieve[i]:
-                sieve[i*i::i] = False
-        primes = np.where(sieve)[0]
-        
-        # Filter for pairs where both p and p+2 are prime
-        twin_pairs = []
-        for p in primes:
-            if (p + 2) in primes:
-                twin_pairs.append((p, p + 2))
-        return twin_pairs
-
-    # Generate twin fields up to p=2000 to populate the 349 matrix
-    twin_primes = generate_twin_primes(2000)
-
-    omega_twin = np.zeros((N, N), dtype=complex)
-
-    # 2. Twin-Prime-Induced Operator Construction
-    for p1, p2 in twin_primes:
-        # Combined arithmetic weight for the paired deformation
-        log_twin = np.log(p1) * np.log(p2)
-        weight = log_twin / np.sqrt(p1 * p2)
-        
-        # Shared geometric phase field encoding the twin boundary
-        phase = ((np.log(p1) + np.log(p2)) * np.pi) % (2 * np.pi)
-        
-        # Coordinate hash mapping adapted for paired states
-        i = int((p1 * np.log(p1)) % N)
-        j = int((p2 * np.log(p2)) % N)
-        
-        omega_twin[i, i] += weight
-        if i != j:
-            coupling = weight * np.exp(1j * phase)
-            omega_twin[i, j] += coupling
-            omega_twin[j, i] += np.conj(coupling)
-
-    # 3. Subspace Localization Extraction
-    active_idx = np.where(np.any(omega_twin != 0, axis=1) | np.any(omega_twin != 0, axis=0))[0]
-    N_active = len(active_idx)
-    sub_omega = omega_twin[np.ix_(active_idx, active_idx)]
-
-    # 4. Dimension-Normalized Integrable Background System
-    H_0 = np.diag(np.linspace(1.0, float(N_active), N_active))
-
-    # 5. Native GUE Subspace Control Base Matrix
-    random_real = np.random.normal(size=(N_active, N_active))
-    random_imag = np.random.normal(size=(N_active, N_active))
-    random_complex = random_real + 1j * random_imag
-    random_H_base = (random_complex + random_complex.conj().T) / 2
-    
-    # Scale normalization to match the prime matrix intensity
-    if np.linalg.norm(random_H_base) > 0:
-        random_H_base = random_H_base * (np.linalg.norm(sub_omega) / np.linalg.norm(random_H_base))
-
-    # 6. Scale-Invariant Spacing Ratio Unfolding Tool
-    def compute_local_spacing_ratios(sorted_eigs):
-        gaps = np.diff(sorted_eigs)
-        gaps = gaps[gaps > 1e-12]
-        r_n = []
-        for i in range(1, len(gaps)):
-            g1 = gaps[i-1]
-            g2 = gaps[i]
-            if g1 > 0 and g2 > 0:
-                r_n.append(min(g1, g2) / max(g1, g2))
-        return np.array(r_n)
-
-    RMT_POISSON_THEORY = 0.3863
-    RMT_GUE_THEORY = 0.5996
-
-    print("=== SCARLET 2.0 Twin Prime Sweep ===")
-    print(f"Total Base Lattice Size N : {N}")
-    print(f"Interacting Subspace Size : {N_active} out of {N} states\n")
-
-    print(f"{'Beta':<10} | {'Twin Prime':<12} | {'GUE ':<12} | {'Spectral Regime'}")
-    print("-" * 65)
-
-    # 7. Execute scale evolution over normalized fields
-    for beta in beta_values:
-        T_subspace = H_0 + beta * sub_omega
-        T_random = H_0 + beta * random_H_base
-
-        # Compute sorted spectra (guaranteed real due to Hermitian structure)
-        eigvals = np.linalg.eigvalsh(T_subspace)
-        random_eigs = np.linalg.eigvalsh(T_random)
-
-        # Extract spacing ratio markers
-        prime_ratios = compute_local_spacing_ratios(eigvals)
-        random_ratios = compute_local_spacing_ratios(random_eigs)
-
-        mean_r_prime = np.mean(prime_ratios) if len(prime_ratios) > 0 else 0.0
-        mean_r_random = np.mean(random_ratios) if len(random_ratios) > 0 else 0.0
-
-        # Classify dynamic profile
-        if abs(mean_r_prime - RMT_GUE_THEORY) < 0.05:
-            regime = "Quantum Chaotic (GUE)"
-        elif abs(mean_r_prime - RMT_POISSON_THEORY) < 0.05:
-            regime = "Integrable (Poisson)"
-        else:
-            regime = "Transition State"
-            
-        print(f"{beta:<10.1e} | {mean_r_prime:<12.4f} | {mean_r_random:<12.4f} | {regime}")
-
-if __name__ == "__main__":
-    run_scarlet_v2_twin_prime_sweep()
-
-To test the topological robustness of the SCARLET 2.0 lattice framework, we introduce a structured spatial perturbation using twin prime pairs (p₁, p₂) where p₂ = p₁ + 2. Unlike the standard single-prime operator \(\^{T}_{\epsilon }\), which maps strictly to the singular poles of \(-\frac{\zeta'}{\zeta}(s)\), the twin-prime variant enforces a rigid, pairwise spatial correlation across the manifold. We define a highly non-linear deformation operator \(\^{T}_{\text{twin}}\) by weighting paired coordinate hashes by their joint arithmetic density \(\frac{\log p_{1}\log p_{2}}{\sqrt{p_{1}p_{2}}}\). Evaluating this system under an evolving scale parameter β allows us to observe whether highly correlated number-theoretic noise destroys the underlying Quantum Chaotic (GUE) spectral signature or if the underlying discrete lattice geometry structurally preserves it.
+SCARLET 2.0: A Torsional Lattice Framework for
+Golden-Ratio Quasicrystals —
+A Self-Adjoint Laplacian, a Trace-Formula Heuristic,
+and an Open Conjecture on the Prime Spectrum
+Thomas VanAcker*
+September 16, 2026
+Abstract
+We construct an 11-dimensional hypercubic cut-and-project quasicrystal lattice generated by golden-
+ratio slopes ϕ= 1+√5
+2 , and define on it a covariant graph Laplacian ∆K = B∗B acting on a separa-
+ble Hilbert space of physical vertex states. We prove rigorously that ∆K is self-adjoint and positive-
+semidefinite, hence has a strictly real spectrum. We then use a semiclassical (Gutzwiller-type) trace
+formula to motivate, as a conjecture rather than a theorem, a possible asymptotic relationship between
+the lattice’s closed-geodesic action spectrum and the logarithmic distribution of the primes. We explain
+precisely why this relationship does not currently establish, and would not by itself establish, any state-
+ment about the location of the zeros of the Riemann zeta function — the missing step is equivalent
+in difficulty to the Hilbert–P´olya conjecture itself, and we describe the specific obstruction (a hidden
+reality assumption in the naive eigenvalue-to-zero correspondence s=
+1
+2 + i√λ) that any future attempt
+along these lines must confront. We situate the construction relative to the Berry–Keating heuristic and
+Connes’ trace-formula program, and propose a concrete, tractable, and RH-independent open question
+about the lattice’s geodesic length spectrum that can be investigated numerically.
+Keywords: Metric-Affine Gravity, Quasicrystals, Cut-and-Project Lattices, Riemann Hypothesis, Semi-
+classical Trace Formulas, Hilbert–P´olya Conjecture
+—
+1 Operator Definition in an Infinite-Dimensional Hilbert Space H
+1.1 The High-Dimensional Base Space
+Let Z11 represent the infinite-dimensional discrete hypercubic lattice embedded within R11. We define the
+infinite-dimensional Hilbert space of square-summable vertex state functions over this lattice as:
+HV = ℓ2(Z11) = ψ: Z11 →C
+n∈Z11
+|ψ(n)|2 <∞
+Equipped with the standard inner product ⟨ψ1,ψ2⟩=
+nψ∗
+1(n)ψ2(n), HV forms a separable Hilbert space.
+1.2 The Non-Periodic Projection Operator
+Let A : R11 →R4 be the seed matrix parameterizing the irrational golden ratio slopes ϕ= 1+√5
+2 and
+ϕ−1 = ϕ−1. Through exact QR decomposition (AT = QR), we construct the canonical orthogonal projection
+operators:
+P∥= Q4×11·QT
+11×4 ∈End(R11), P⊥= I11−P∥∈End(R11)
+*ORCID: 0009-0005-1755-2121, GitHub: Slowvan7
+1
+We define the infinite-dimensional cut-and-project vertex selection window W0 in the perpendicular space
+R7 as the indicator function χW0 :
+χW0 (n) = 1 if ∥P⊥n∥∞≤1
+2
+0 otherwise
+The subspace of accepted physical states is the closed linear subspace Hphys ⊂HV spanned by the basis
+vectors {|n⟩}such that χW0 (n) = 1. As M →∞, the dimension of Hphys approaches a countable infinity
+(ℵ0).
+1.3 The Differential Covariant Incidence Operator
+Let HE = ℓ2(E) be the Hilbert space of edge-states, where Eis the set of all undirected, nearest-neighbor
+physical edges satisfying:
+E= (u,v) ∈Z11 ×Z11 χW0 (u)χW0 (v) = 1 ∧ ∥u−v∥2 = 1
+We define the bounded linear Incidence Operator B : Hphys →HE by its action on the basis states:
+B|u⟩=
+(u,v)∈E
+we(u,v) |(u,v)⟩v −|(u,v)⟩u
+where the geometric conformal weight we(u,v) is determined strictly by the parallel space Euclidean distance
+metric:
+we(u,v) = 1
+∥P∥u−P∥v∥2
+2 + δ
+1.4 Proof of Self-Adjointness
+We construct the global Covariant Laplacian operator ∆K as the composition of the incidence operator and
+its unique Hilbert-adjoint B∗:
+∆K = B∗B : Hphys →Hphys
+Theorem 1. The infinite-dimensional Covariant Laplacian operator ∆K is strictly self-adjoint and positive-
+semidefinite over Hphys.
+Proof. By the fundamental properties of bounded operators on a Hilbert space, for any linear operator B,
+its unique Hilbert-space adjoint B∗exists and satisfies ⟨Bψ,ϕ⟩HE
+= ⟨ψ,B∗ϕ⟩Hphys . Substituting ∆K = B∗B
+into the inner product yields:
+⟨∆Kψ,ψ⟩= ⟨B∗Bψ,ψ⟩= ⟨Bψ,Bψ⟩= ∥Bψ∥2
+HE
+Because the norm ∥·∥2
+HE is a strictly real, non-negative scalar value (∈R≥0) for all state vectors ψ, it follows
+that ⟨∆Kψ,ψ⟩∈R≥0. An operator whose numerical range is strictly real is symmetric. Since ∆K is defined
+everywhere on the closed domain of Hphys, by the Hellinger-Toeplitz theorem, ∆K is bounded and strictly
+self-adjoint: ∆K = ∆∗
+K. Consequently, by the spectral theorem for self-adjoint operators, all eigenvalues λ
+of ∆K are mathematically guaranteed to be purely real numbers (λ∈R). □
+Proposition 1 (Scope of Theorem 1). Theorem 1 uses no property of the specific quasicrystal lattice defined
+in §1.1–1.3 beyond boundedness of B: the identical statement and proof hold for any bounded incidence
+operator B on any separable Hilbert space. The theorem therefore establishes that ∆K is a mathematically
+well-posed self-adjoint operator with a discrete real spectrum {λi}, but by itself carries no information about
+number theory, and should not be read as partial progress toward any statement about ζ(s).
+We record this scope limitation explicitly because it is the source of an error in an earlier version of this
+manuscript: the reality of {λi}was previously conflated with a claim about the real part of zeta zeros. §2
+explains why that conflation happens, and §3 explains why it cannot be repaired without resolving a problem
+at least as hard as the one it was meant to solve.
+—
+2
+2 A Semiclassical Heuristic, and the Precise Point Where It Stops
+Being a Proof
+This section keeps the geometric content of the original argument but relabels each step by its actual epistemic
+status: definition, unproven conjecture, or non sequitur. We do this deliberately and explicitly, because the
+distinction is exactly where the mathematics is.
+2.1 Semiclassical Trace Equivalence (Heuristic)
+As in Gutzwiller’s semiclassical trace formula for quantum chaotic systems, we may formally express a
+fluctuating density of states ρosc(E) in terms of primitive classical periodic orbits γ of the lattice:
+ρosc(E) = 1
+π
+γ
+∞
+k=1
+Tγ
+2 sinh(kλγ/2) cos kETγ−νγ
+π
+2
+We may likewise define, purely formally, a Scarlet zeta function over primitive closed geometric cycles Γ of
+the lattice:
+ZSC(s) =
+γ∈Γ
+1−e−s·Sren (γ) , Sren(γ) =
+le
+e∈γ
+Nothing in this subsection is a theorem. The Gutzwiller formula is an asymptotic semiclassical approximation
+whose validity for this specific discrete lattice (as opposed to a smooth chaotic Hamiltonian flow) has not
+been established, and ZSC(s) is at this stage simply a formal product with no proven analytic continuation,
+functional equation, or convergence properties.
+2.2 Algebraic Structure of the Action Spectrum
+Because vertices are governed by the projection matrix A(ϕ), every edge length le lies in the quadratic field
+extension Q(√5), so the perimeter of any closed loop γ of topological length L has the form
+Sren(γ) = c1(γ)·1 + c2(γ)·ϕ, c1,c2 ∈Z+
+.
+This part is a genuine, checkable algebraic fact about the lattice — it does not depend on any unproven
+heuristic.
+2.3 The Conjectural Prime Correspondence
+Conjecture 1 (Log-Prime Asymptotic Density Conjecture). In the thermodynamic limit M →∞, the mul-
+tiset of discrete algebraic action values {Sren(γ)}γ∈Γ, suitably normalized, has the same asymptotic counting
+density as {ln p: p prime}.
+We state this as a conjecture, not a theorem, because no argument in this paper (or, to our knowledge, in
+the literature) establishes it. The heuristic offered in support — that valid closed paths scale like N(L)∼ehL
+for some topological entropy h, matching the Prime Number Theorem’s π(x)∼x/ln x growth rate after
+taking logarithms — shows only that some exponential family of counting functions can be made to match the
+primes’ growth rate. Matching growth rate is a far weaker statement than matching the actual sequence, and
+many exponentially-growing sequences share the primes’ leading-order density without their finer structure
+(e.g. their pair correlation, which is what actually matters for any connection to ζ). We regard Conjecture
+1 as the central open question raised by this construction, and return to it in §4 as a concrete, numerically
+testable research direction.
+—
+3
+Λ(n)
+g(log n).
+√n
+3 Why This Does Not Reach the Riemann Hypothesis, Precisely
+Even granting Conjecture 1, connecting the lattice to ζ(s) requires a second, independent step: identifying
+the eigenvalues λi of ∆K with the imaginary parts of the zeros of ζ. An earlier version of this manuscript
+attempted this via the substitution
+1
+s=
+2 + i√λ, λ∈R≥0,
+and observed that Re(s) = 1
+2 followed immediately. We now explain why this is not a derivation of the corre-
+spondence but an assumption of it, using the Weil explicit formula as the relevant unconditional benchmark.
+3.1 The Weil Explicit Formula
+For a suitable even test function h with Fourier transform g, the following identity holds unconditionally
+(i.e. without assuming RH), summing over all nontrivial zeros ρ= β+ iγ of ζ:
+h ρ−
+1
+2
+i= h i
+2 + h−
+i
+2−g(0) log π+
+1
+2π
+∞
+h(r) Re Γ′
+−∞
+Γ
+1
+ir
+4 +
+2
+ρ
+dr−2
+n≥2
+The right-hand side is built entirely from primes and standard special functions; it contains no assumption
+about where the ρ’s lie.
+3.2 The Precise Obstruction
+Suppose, hypothetically, that Conjecture 1 held in a strong enough form that a trace formula for ∆K
+reproduced the right-hand side of the Weil formula exactly, term for term, giving
+h( λi) =
+h ρ−
+1
+2
+i
+.
+i
+ρ
+The left side is manifestly a sum over a real argument √λi, because Theorem 1 guarantees λi ∈R≥0. The
+right side, as a function of ρ= β + iγ, has argument γ−i(β−
+1
+2 ), which is real if and only if β=
+1
+2.
+An identity between the two sides, read naively term-by-term, therefore only parses — only has matching
+real arguments on both sides — if every β already equals 1
+2 . In other words: the self-adjointness of ∆K
+constrains the left-hand side to be built from real numbers, but nothing about that constrains the right-hand
+side, which is a sum over zeros whose real parts are exactly what is in question. Writing s=
+1
+2 +i√λsilently
+identifies the two sides in a way that only makes sense assuming the conclusion. This is the precise location
+of the circularity, and it is not a matter of notation or bookkeeping: no relabeling of the correspondence
+removes the need to independently establish β=
+1
+2 for each zero before the term-by-term match can be
+written down at all.
+3.3 Relation to Known Programs
+This obstruction is not specific to this lattice; it is the obstruction that every spectral approach to RH must
+confront, and it is worth being explicit about how far more developed programs get:
+Berry–Keating. The proposed semiclassical Hamiltonian H= xp is offered explicitly as a heuristic
+whose classical periodic orbit actions match ln p approximately; Berry and Keating do not claim an
+exact correspondence, and the gap described in §3.2 is exactly the reason.
+Connes. Connes constructs a rigorous trace formula on an adelic space in which the Weil explicit
+formula appears exactly, and shows RH is equivalent to a positivity statement about that trace (closely
+related to Weil’s positivity criterion, §4.2 below) — a genuine, unconditional reduction, but one that
+leaves the positivity statement itself unproven.
+4
+This construction. Sections 1–2 establish the self-adjointness half of the program (Theorem 1) but
+do not establish that the lattice’s trace formula has the analytic structure (meromorphic continuation,
+the functional equation s→1−s, matching archimedean factors) needed even to state a Connes-style
+exact correspondence, let alone prove one. Establishing that structure, not merely asserting a limiting
+resemblance in growth rate, is the actual missing content.
+—
+4 An Honest Open Question, and a Path to Numerical Evidence
+4.1 A Tractable Reformulation
+Divorced from the Riemann Hypothesis, the quasicrystal construction of §1 raises a self-contained, well-posed
+question in the spectral theory of aperiodic tilings:
+Does the closed-geodesic length spectrum {Sren(γ)}of the golden-ratio cut-and-project lattice de-
+fined in §1 exhibit any provable equidistribution, gap, or correlation structure — and if so, does
+that structure coincide with, or merely resemble, known statistics of {ln p}(e.g. the Prime Number
+Theorem’s density, or the pair-correlation statistics studied by Montgomery)?
+This question is answerable by finite computation for any fixed M, does not presuppose RH, and connects
+to an existing, active area of mathematics — the spectral theory of Meyer sets, Pisot-number quasicrystals,
+and cut-and-project diffraction spectra — that the original manuscript did not cite or engage with.
+4.2 What Would Constitute Real Evidence
+A numerical program to investigate Conjecture 1 honestly would: (i) enumerate closed loops γ up to a
+length cutoff for increasing M; (ii) compute the empirical distribution of Sren(γ) values; (iii) compare it
+against {ln p}using a distributional test (e.g. Kolmogorov–Smirnov against the same range of ln p values,
+and separately a pair-correlation comparison in the style of Montgomery’s conjecture for zeta zeros); and
+(iv) report the comparison whether or not it supports the conjecture. A negative result — the two sequences
+diverging in higher-order statistics even if they share leading-order density — would still be a genuine,
+publishable finding about this specific construction, and would be a stronger and more honest contribution
+than an unconditional proof claim that does not withstand the scrutiny given in §3.
+4.3 Weil’s Positivity Criterion, for Context
+For readers who wish to pursue the RH-adjacent direction rigorously rather than heuristically, the relevant
+unconditional equivalence is Weil’s positivity criterion: RH holds if and only if, for every suitable test function
+g and f= g∗g∗, the explicit-formula quantity W(f) built purely from primes and the Gamma-function
+term (no zeros appear) satisfies W(f) ≥0. This reformulates RH as a positive-definiteness question about
+a quadratic form indexed by primes, and is the object that Connes’ program and the related Li-criterion
+literature actually attack. Nothing in the present construction currently interfaces with this criterion; doing
+so — e.g. by showing the lattice generates a natural family of test functions gfor which W(g∗g∗) ≥0 can be
+verified directly from lattice combinatorics — would be a substantive, novel contribution, but is a distinct
+research problem from anything established in §1–§2, and we do not claim progress on it here.
+Declarations
+Statement of Contribution: This manuscript’s rigorous content is Theorem 1 (self-adjointness of
+∆K) and Proposition 1 (its scope). §2–§4 present a heuristic construction, an explicitly labeled open
+conjecture (Conjecture 1), a precise account of why that conjecture and the eigenvalue correspondence
+together would not constitute a proof of RH even if established (§3), and a concrete, RH-independent,
+numerically tractable research question (§4.1) intended as this work’s actual proposed contribution.
+5
+Competing Interests: The author declares no competing financial or non-financial interests.
+Data Availability: All underlying software code, vectorized generation scripts, and simulation
+datasets supporting this research are openly archived and publicly accessible via GitHub (Slowvan7/Scarlet-Cosmologi
+and Zenodo (Record 18224710).
+Author Contributions: T.V. conceived the theoretical framework, performed the algebraic proofs,
+and developed the numerical validation architecture.
