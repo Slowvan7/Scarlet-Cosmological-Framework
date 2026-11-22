@@ -333,3 +333,9 @@ In cosmological reduction, SCARLET 2.0 becomes:
 
 a GR-coupled scalar–fluid effective field theory in which cosmic expansion is governed by the combined evolution of baryonic matter and a nonlinear coherence field, producing a redshift-dependent effective equation of state w_{\mathrm{eff}}(z) and structure-dependent deviations from ΛCDM.
 
+AM.15 — Note on Lorentz Invariance and the Preferred Frame
+
+The EFT of this appendix is formulated with a preferred baryon-fluid frame (AM.2). This frame is a property of the state, not of the dynamical laws. Any fluid with four-velocity u^μ singles out a rest frame in an otherwise Lorentz-invariant theory, so the coherence field Φₚ may be written covariantly, with its kinetic and gradient terms built from g^{μν} and u^μ, without breaking local Lorentz symmetry in the action. We therefore set c_P = c in the vacuum sector. Any difference between the propagation speed of Φₚ and c arises only through coupling to the fluid and is a medium effect, not a modification of the underlying kinematics.
+
+The origin of the preferred time direction is microscopic. In Appendix AI the substrate evolves in an internal phase parameter t, and a Lorentzian 4D clock emerges only after the buckling transition (AI.10.1). Any residual Lorentz-violating contribution from the torsion sector is suppressed by powers of β = ℓ*/L (AI.9.3) and is negligible at the scales relevant here, where L ≫ ℓ*. Appendix AI is therefore cited here only to explain why a preferred frame can exist at all, not as a source of observable Lorentz violation at void scales.
+
